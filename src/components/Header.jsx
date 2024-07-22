@@ -19,7 +19,6 @@ const Header = () => (
         <img src="logo.svg" alt="Zellular Logo" style={{ height: "30px" }} />
       </Box>
       <Box sx={{ display: "flex" }}>
-        {/* Apply textTransform directly to each Button */}
         <Button color="inherit" href="#news" sx={{ textTransform: "none" }}>
           News
         </Button>
