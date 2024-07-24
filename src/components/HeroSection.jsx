@@ -3,7 +3,7 @@ import { Box, Typography, Button } from "@mui/material";
 import backgroundImage from "../assets/images/background.svg";
 import image1 from "../assets/images/img1.svg";
 import image2 from "../assets/images/img2.svg";
-import ArrowIcon from "../assets/images/arrows.svg"; // Assuming you've placed your SVG here
+import ArrowIcon from "../assets/images/arrows.svg";
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(image1);
@@ -34,14 +34,45 @@ const HeroSection = () => {
           padding: "0 0 0 5%",
         }}
       >
-        <Box>
+        <Box position="relative">
+          <Box
+            sx={{
+              width: 15,
+              height: 15,
+              backgroundColor: "#92E6A7",
+              borderRadius: "50%",
+              position: "absolute",
+              top: "-5px",
+              left: "-15px",
+            }}
+          />
           <Typography
             variant="h3"
             component="h1"
             gutterBottom
-            sx={{ color: "#FDF5E6", fontWeight: "bold" }}
+            sx={{
+              color: "#FDF5E6",
+              fontWeight: "bold",
+              fontFamily: "Space Grotesk",
+              fontSize: "3rem",
+              display: "inline",
+            }}
           >
-            Filling the Gap between Web2 & Web3
+            Filling the Gap between
+          </Typography>
+          <Typography
+            variant="h3"
+            component="h1"
+            gutterBottom
+            sx={{
+              color: "#FDF5E6",
+              fontWeight: "bold",
+              fontFamily: "Space Grotesk",
+              fontSize: "3rem",
+              paddingLeft: "350px",
+            }}
+          >
+            Web2 & Web3
           </Typography>
           <Button
             variant="contained"
@@ -50,14 +81,21 @@ const HeroSection = () => {
               color: "#003A6C",
               borderRadius: "70px",
               textTransform: "none",
-              display: "flex", // Ensures contents inside button are flex items
-              alignItems: "center", // Centers items vertically
+              display: "flex",
+              alignItems: "center",
+              fontFamily: "Courier New, Courier, monospace",
+              marginTop: "10px",
+              padding: "10px 20px",
             }}
             endIcon={
               <Box
                 component="img"
                 src={ArrowIcon}
-                sx={{ width: 24, height: 24, ml: 1 }} // Add margin-left to ensure space between text and icon
+                sx={{
+                  width: 24,
+                  height: 24,
+                  ml: 1,
+                }}
               />
             }
           >
@@ -65,10 +103,20 @@ const HeroSection = () => {
           </Button>
           <Typography
             variant="subtitle1"
-            sx={{ mb: 2, color: "#92E6A7", paddingTop: "30px" }}
+            sx={{
+              color: "#92E6A7",
+              fontFamily: "Courier New, Courier, monospace",
+              fontSize: "1.2rem",
+              textAlign: "center",
+              marginTop: "20px",
+              lineHeight: "1.5",
+            }}
           >
-            Develop sub-second finality high-throughput dApps in any programming
-            language.
+            Develop sub-second finality
+            <br />
+            high-throughput dApps
+            <br />
+            in any programming language.
           </Typography>
           <Button
             variant="contained"
@@ -79,6 +127,7 @@ const HeroSection = () => {
               border: "1px solid #FDF5E6",
               borderRadius: 0,
               padding: "1px 10px",
+              fontFamily: "Courier New, Courier, monospace",
             }}
           >
             Secured by Eigen Layer

@@ -19,19 +19,33 @@ const Header = () => (
         <img src="logo.svg" alt="Zellular Logo" style={{ height: "30px" }} />
       </Box>
       <Box sx={{ display: "flex" }}>
-        <Button color="inherit" href="#news" sx={{ textTransform: "none" }}>
+        <Button
+          href="#news"
+          sx={{
+            textTransform: "none",
+            fontFamily: "Courier New, Courier, monospace",
+            color: "#003A6C",
+          }}
+        >
           News
         </Button>
-        <Button color="inherit" href="#about" sx={{ textTransform: "none" }}>
+        <Button
+          href="#about"
+          sx={{
+            textTransform: "none",
+            fontFamily: "Courier New, Courier, monospace",
+            color: "#003A6C",
+          }}
+        >
           About
         </Button>
-        <Button color="inherit" href="#services" sx={{ textTransform: "none" }}>
-          Services
-        </Button>
         <Button
-          color="inherit"
           href="#advantages"
-          sx={{ textTransform: "none" }}
+          sx={{
+            textTransform: "none",
+            fontFamily: "Courier New, Courier, monospace",
+            color: "#003A6C",
+          }}
         >
           Advantages
         </Button>
