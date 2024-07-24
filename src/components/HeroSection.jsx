@@ -83,7 +83,7 @@ const HeroSection = () => {
               textTransform: "none",
               display: "flex",
               alignItems: "center",
-              fontFamily: "Courier New, Courier, monospace",
+              fontFamily: "Courier Prime, Courier, monospace",
               marginTop: "10px",
               padding: "10px 20px",
             }}
@@ -105,7 +105,7 @@ const HeroSection = () => {
             variant="subtitle1"
             sx={{
               color: "#92E6A7",
-              fontFamily: "Courier New, Courier, monospace",
+              fontFamily: "Courier Prime, Courier, monospace",
               fontSize: "1.2rem",
               textAlign: "center",
               marginTop: "20px",
@@ -127,7 +127,7 @@ const HeroSection = () => {
               border: "1px solid #FDF5E6",
               borderRadius: 0,
               padding: "1px 10px",
-              fontFamily: "Courier New, Courier, monospace",
+              fontFamily: "Courier Prime, Courier, monospace",
             }}
           >
             Secured by Eigen Layer

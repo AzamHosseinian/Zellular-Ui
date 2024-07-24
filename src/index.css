@@ -13,7 +13,14 @@ code {
 }
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('./assets/fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Courier Prime';
+  src: url('./assets/fonts/Courier_Prime/CourierPrime-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

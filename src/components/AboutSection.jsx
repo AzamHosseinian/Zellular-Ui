@@ -1,42 +1,79 @@
 // AboutSection.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import logo from "../assets/images/AboutSection/info_logo1.svg";
-import logoHover from "../assets/images/AboutSection/info_logo2.svg";
+import logo from "../assets/images/AboutSection/logo.svg";
+import logotype from "../assets/images/AboutSection/logotype.svg";
 import infoImage from "../assets/images/AboutSection/info-img.svg";
 
 const AboutSection = () => {
   const [hovered, setHovered] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
+        // Scrolling up
+        setHovered(true);
+      } else {
+        // Scrolling down
+        setHovered(false);
+      }
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   return (
     <Box
       sx={{
         backgroundColor: "#FDF5E6",
         alignContent: "center",
-        padding: "100px",
+        padding: "80px",
       }}
     >
       <Grid container spacing={2}>
         <Grid container item spacing={2} sx={{ marginBottom: 8 }}>
           <Grid item xs={12} md={6}>
-            <img
-              src={hovered ? logoHover : logo}
-              alt="Logo"
-              style={{ width: "70%", height: "auto", paddingLeft: "80px" }}
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-            />
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "flex-end",
+                margin: "40px",
+                gap: "40px",
+              }}
+            >
+              <img
+                src={logo}
+                alt="Logo"
+                style={{
+                  width: hovered ? "40px" : "75px",
+                  height: "auto",
+                  transition: "width 2s ease-in-out",
+                }}
+              />
+              <img
+                src={logotype}
+                alt="Logotype"
+                style={{
+                  width: hovered ? "380px" : "422px",
+                  height: "auto",
+                  transition: "width 2s ease-in-out",
+                }}
+              />
+            </Box>
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography
               variant="body1"
               sx={{
                 color: "#003A6C",
-                fontFamily: "Courier New, Courier, monospace",
+                fontFamily: "Courier Prime, Courier, monospace",
                 fontWeight: "bold",
-                paddingTop: hovered ? "70px" : "120px",
-                fontSize: hovered ? "17px" : "16px",
-                transition: "padding-top 0.3s ease",
+                paddingTop: hovered ? "130px" : "150px",
+                transition: "padding-top 1.5s ease",
               }}
             >
               Zellular is a decentralized sequencer that enables developing
@@ -54,7 +91,7 @@ const AboutSection = () => {
                 variant="body1"
                 sx={{
                   color: "#003A6C",
-                  fontFamily: "Courier New, Courier, monospace",
+                  fontFamily: "Courier Prime, Courier, monospace",
                 }}
               >
                 Without requiring a blockchain, these dapps can be decentralized
@@ -67,7 +104,7 @@ const AboutSection = () => {
                 variant="body1"
                 sx={{
                   color: "#003A6C",
-                  fontFamily: "Courier New, Courier, monospace",
+                  fontFamily: "Courier Prime, Courier, monospace",
                 }}
               >
                 Zellular enables the replicas to maintain uniformity of state by
@@ -89,7 +126,7 @@ const AboutSection = () => {
               src={infoImage}
               alt="Information"
               style={{
-                width: "60%",
+                width: "40%",
                 height: "auto",
               }}
             />
