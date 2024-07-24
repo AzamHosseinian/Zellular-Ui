@@ -1,11 +1,14 @@
-// Advantage.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Box, Grid, Typography, Paper } from "@mui/material";
-import bgImage from "../assets/images/ad-bg.svg";
-import icon1 from "../assets/images/icon1.svg";
-import icon2 from "../assets/images/icon2.svg";
-import icon3 from "../assets/images/icon3.svg";
-import icon4 from "../assets/images/icon4.svg";
+import bgImage from "../assets/images/advantages/ad-bg.svg";
+import icon1 from "../assets/images/advantages/icon1.svg";
+import icon1Hover from "../assets/images/advantages/icon1-1.svg";
+import icon2 from "../assets/images/advantages/icon2.svg";
+import icon2Hover from "../assets/images/advantages/icon2-1.svg";
+import icon3 from "../assets/images/advantages/icon3.svg";
+import icon3Hover from "../assets/images/advantages/icon3-1.svg";
+import icon4 from "../assets/images/advantages/icon4.svg";
+import icon4Hover from "../assets/images/advantages/icon4-1.svg";
 
 const advantages = [
   {
@@ -14,12 +17,14 @@ const advantages = [
     description:
       "Enables developing decentralized apps using high-level programming languages.",
     icon: icon1,
+    hoverIcon: icon1Hover,
   },
   {
     id: 2,
     title: "Rapid Finality",
     description: "Achieves state finalization in under a second.",
     icon: icon2,
+    hoverIcon: icon2Hover,
   },
   {
     id: 3,
@@ -27,6 +32,7 @@ const advantages = [
     description:
       "Supports 100k transactions per second per zApp, and unlimited throughput across the system.",
     icon: icon3,
+    hoverIcon: icon3Hover,
   },
   {
     id: 4,
@@ -34,10 +40,13 @@ const advantages = [
     description:
       "Enables zApps to hire required level of security from EigenLayer by specifying the amount of restaked ETH that is required for their nodes.",
     icon: icon4,
+    hoverIcon: icon4Hover,
   },
 ];
 
 const Advantage = () => {
+  const [hoveredIcon, setHoveredIcon] = useState(null);
+
   return (
     <Box
       sx={{
@@ -87,14 +96,11 @@ const Advantage = () => {
                   "&:hover": {
                     backgroundColor: "#003A6C",
                     color: "#FDF5E6",
-                    // transform: "translateY(-10px)",
                     boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-                    "& img .icon-color": {
-                      fill: "#FDF5E6", // Change fill color on hover
-                      stroke: "#FDF5E6", // Change stroke color on hover if needed
-                    },
                   },
                 }}
+                onMouseEnter={() => setHoveredIcon(adv.id)}
+                onMouseLeave={() => setHoveredIcon(null)}
               >
                 <Typography
                   variant="h5"
@@ -115,7 +121,7 @@ const Advantage = () => {
                   }}
                 >
                   <img
-                    src={adv.icon}
+                    src={hoveredIcon === adv.id ? adv.hoverIcon : adv.icon}
                     alt={adv.title}
                     style={{ width: "100px", height: "100px" }}
                   />

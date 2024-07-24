@@ -1,9 +1,9 @@
 // AboutSection.jsx
 import React, { useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import logo from "../assets/images/logo/info_logo1.svg";
-import logoHover from "../assets/images/logo/info_logo2.svg";
-import infoImage from "../assets/images/info-img.svg";
+import logo from "../assets/images/AboutSection/info_logo1.svg";
+import logoHover from "../assets/images/AboutSection/info_logo2.svg";
+import infoImage from "../assets/images/AboutSection/info-img.svg";
 
 const AboutSection = () => {
   const [hovered, setHovered] = useState(false);

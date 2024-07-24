@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Button } from "@mui/material";
-import backgroundImage from "../assets/images/background.svg";
-import image1 from "../assets/images/img1.svg";
-import image2 from "../assets/images/img2.svg";
-import ArrowIcon from "../assets/images/arrows.svg";
+import backgroundImage from "../assets/images/HeroSection/background.svg";
+import image1 from "../assets/images/HeroSection/img1.svg";
+import image2 from "../assets/images/HeroSection/img2.svg";
+import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(image1);

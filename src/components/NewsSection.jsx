@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import { Box, Grid, Typography, Paper, IconButton } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import sdkImage from "../assets/images/Releasing EigenLayer TypeScript and Python SDK.svg";
-import hackathonImage from "../assets/images/Earning Top Place in EigenLayer Hackathon.svg";
-import docsImage from "../assets/images/Releasing Zellular Docs MVP.svg";
+import sdkImage from "../assets/images/NewsSection/Releasing EigenLayer TypeScript and Python SDK.svg";
+import hackathonImage from "../assets/images/NewsSection/Earning Top Place in EigenLayer Hackathon.svg";
+import docsImage from "../assets/images/NewsSection/Releasing Zellular Docs MVP.svg";
 
 const newsItems = [
   {
