@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { motion } from "framer-motion";
 import backgroundImage from "../assets/images/HeroSection/background.svg";
 import image1 from "../assets/images/HeroSection/img1.svg";
 import image2 from "../assets/images/HeroSection/img2.svg";
@@ -7,28 +8,27 @@ import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(image1);
-  const [isFading, setIsFading] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const heroRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsFading(true);
-      setTimeout(() => {
-        setCurrentImage(image2);
-        setIsFading(false);
-      }, 1000);
-    }, 3000);
+      setIsTransitioning(true);
+      setCurrentImage(image2);
+    }, 2000);
 
     return () => clearTimeout(timer);
-  }, [currentImage]);
+  }, []);
 
   return (
     <Box
       ref={heroRef}
       sx={{
+        position: "relative",
         display: "flex",
         justifyContent: "center",
         width: "100%",
+        height: "100vh",
       }}
     >
       <Box
@@ -40,8 +40,10 @@ const HeroSection = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           color: "#FFFFFF",
-          width: "88%",
-          padding: "0 0 0 5%",
+          width: "100%",
+          padding: "0 5%",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <Box position="relative">
@@ -81,7 +83,6 @@ const HeroSection = () => {
               fontFamily: "Space Grotesk",
               fontSize: "3rem",
               display: "inline-block",
-              marginLeft: "25rem", // space between text and button
               marginBottom: "5%",
             }}
           >
@@ -97,11 +98,11 @@ const HeroSection = () => {
               display: "flex",
               alignItems: "center",
               fontFamily: "Courier Prime",
-              marginLeft: "69%",
+              marginLeft: "25%",
               padding: "10px 20px",
               "&:hover": {
                 bgcolor: "#FDF5E6",
-                color: "#003A6C", // Optional: change text color on hover
+                color: "#003A6C",
               },
             }}
             endIcon={
@@ -131,59 +132,55 @@ const HeroSection = () => {
           >
             Develop sub-second finality
             <br />
-            <Typography
-              variant="subtitle1"
-              sx={{
-                color: "#92E6A7",
-                fontFamily: "Courier Prime",
-                fontSize: "1.2rem",
-                textAlign: "left",
-                paddingLeft: "15rem",
-                lineHeight: "1.5",
-              }}
-            >
-              high-throughput dApps
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              sx={{
-                color: "#92E6A7",
-                fontFamily: "Courier Prime",
-                fontSize: "1.2rem",
-                textAlign: "left",
-                paddingLeft: "25rem",
-                lineHeight: "1.5",
-              }}
-            >
+            <span style={{ paddingLeft: "15rem" }}>high-throughput dApps</span>
+            <br />
+            <span style={{ paddingLeft: "25rem" }}>
               in any programming language.
-            </Typography>
+            </span>
           </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              bgcolor: "transparent",
-              color: "#FDF5E6",
-              textTransform: "none",
-              border: "1px solid #FDF5E6",
-              borderRadius: 0,
-              padding: "1px 10px",
-              fontFamily: "Courier Prime",
-              marginTop: "10%", //space between text and button
-              marginLeft: "70%",
-            }}
-          >
-            Secured by Eigen Layer
-          </Button>
+          <Box position="relative">
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                marginTop: "15%",
+              }}
+            >
+              <Box
+                sx={{
+                  width: 15,
+                  height: 15,
+                  backgroundColor: "#92E6A7",
+                  borderRadius: "50%",
+                  position: "relative",
+                  marginRight: "10px",
+                  marginLeft: "65%",
+                }}
+              />
+              <Typography
+                sx={{
+                  bgcolor: "transparent",
+                  color: "#FDF5E6",
+                  textTransform: "none",
+                  boxShadow: 0,
+                  borderRadius: 0,
+                  fontFamily: "Courier Prime",
+                }}
+              >
+                Secured by Eigen Layer
+              </Typography>
+            </Box>
+          </Box>
         </Box>
-        <Box
-          component="img"
+        <motion.img
           src={currentImage}
-          sx={{
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2, delay: isTransitioning ? 2 : 0 }}
+          style={{
             width: "25%",
-            height: "auto",
+            height: "100vh",
             maxWidth: "500px",
-            opacity: isFading ? 0 : 1,
-            transition: "opacity 1s ease-in-out",
           }}
         />
       </Box>

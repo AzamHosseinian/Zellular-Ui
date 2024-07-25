@@ -6,25 +6,39 @@ import Box from "@mui/material/Box";
 
 const Header = () => (
   <AppBar
-    position="static"
-    color="default"
+    position="absolute"
+    color="transparent"
     sx={{
-      backgroundColor: "#FDF5E6",
+      backgroundColor: "transparent",
       boxShadow: "none",
-      padding: "0 30px",
+      padding: "20px 30px", // Adjust padding if needed
+      zIndex: 10,
     }}
   >
-    <Toolbar>
-      <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
+    <Toolbar
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+      }}
+    >
+      <Box sx={{ display: "flex", alignItems: "center" }}>
         <img src="logo.svg" alt="Zellular Logo" style={{ height: "30px" }} />
       </Box>
-      <Box sx={{ display: "flex" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexGrow: 1,
+          gap: 2,
+        }}
+      >
         <Button
           href="#news"
           sx={{
             textTransform: "none",
-            fontFamily: "Courier New, Courier, monospace",
-            color: "#003A6C",
+            fontFamily: "Courier Prime",
+            color: "#92E6A7",
+            fontWeight: "bold",
           }}
         >
           News
@@ -33,8 +47,9 @@ const Header = () => (
           href="#about"
           sx={{
             textTransform: "none",
-            fontFamily: "Courier New, Courier, monospace",
-            color: "#003A6C",
+            fontFamily: "Courier Prime",
+            color: "#92E6A7",
+            fontWeight: "bold",
           }}
         >
           About
@@ -43,13 +58,26 @@ const Header = () => (
           href="#advantages"
           sx={{
             textTransform: "none",
-            fontFamily: "Courier New, Courier, monospace",
-            color: "#003A6C",
+            fontFamily: "Courier Prime",
+            color: "#92E6A7",
+            fontWeight: "bold",
           }}
         >
           Advantages
         </Button>
+        <Button
+          href="#advantages"
+          sx={{
+            textTransform: "none",
+            fontFamily: "Courier Prime",
+            color: "#92E6A7",
+            fontWeight: "bold",
+          }}
+        >
+          Social Media
+        </Button>
       </Box>
+      <Box sx={{ width: "30px" }} />
     </Toolbar>
   </AppBar>
 );
