@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import backgroundImage from "../assets/images/HeroSection/background.svg";
 import image1 from "../assets/images/HeroSection/img1.svg";
@@ -8,19 +8,29 @@ import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(image1);
   const [isFading, setIsFading] = useState(false);
+  const heroRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsFading(true);
       setTimeout(() => {
         setCurrentImage(image2);
         setIsFading(false);
-      }, 0);
+      }, 1000);
     }, 3000);
-  }, []);
+
+    return () => clearTimeout(timer);
+  }, [currentImage]);
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
+    <Box
+      ref={heroRef}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        width: "100%",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -44,6 +54,7 @@ const HeroSection = () => {
               position: "absolute",
               top: "-5px",
               left: "-15px",
+              marginTop: "15%",
             }}
           />
           <Typography
@@ -55,7 +66,7 @@ const HeroSection = () => {
               fontWeight: "bold",
               fontFamily: "Space Grotesk",
               fontSize: "3rem",
-              display: "inline",
+              marginTop: "15%",
             }}
           >
             Filling the Gap between
@@ -69,7 +80,9 @@ const HeroSection = () => {
               fontWeight: "bold",
               fontFamily: "Space Grotesk",
               fontSize: "3rem",
-              paddingLeft: "350px",
+              display: "inline-block",
+              marginLeft: "25rem", // space between text and button
+              marginBottom: "5%",
             }}
           >
             Web2 & Web3
@@ -83,9 +96,13 @@ const HeroSection = () => {
               textTransform: "none",
               display: "flex",
               alignItems: "center",
-              fontFamily: "Courier Prime, Courier, monospace",
-              marginTop: "10px",
+              fontFamily: "Courier Prime",
+              marginLeft: "69%",
               padding: "10px 20px",
+              "&:hover": {
+                bgcolor: "#FDF5E6",
+                color: "#003A6C", // Optional: change text color on hover
+              },
             }}
             endIcon={
               <Box
@@ -105,18 +122,41 @@ const HeroSection = () => {
             variant="subtitle1"
             sx={{
               color: "#92E6A7",
-              fontFamily: "Courier Prime, Courier, monospace",
+              fontFamily: "Courier Prime",
               fontSize: "1.2rem",
-              textAlign: "center",
-              marginTop: "20px",
+              textAlign: "left",
+              marginTop: "10%",
               lineHeight: "1.5",
             }}
           >
             Develop sub-second finality
             <br />
-            high-throughput dApps
-            <br />
-            in any programming language.
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: "#92E6A7",
+                fontFamily: "Courier Prime",
+                fontSize: "1.2rem",
+                textAlign: "left",
+                paddingLeft: "15rem",
+                lineHeight: "1.5",
+              }}
+            >
+              high-throughput dApps
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: "#92E6A7",
+                fontFamily: "Courier Prime",
+                fontSize: "1.2rem",
+                textAlign: "left",
+                paddingLeft: "25rem",
+                lineHeight: "1.5",
+              }}
+            >
+              in any programming language.
+            </Typography>
           </Typography>
           <Button
             variant="contained"
@@ -127,7 +167,9 @@ const HeroSection = () => {
               border: "1px solid #FDF5E6",
               borderRadius: 0,
               padding: "1px 10px",
-              fontFamily: "Courier Prime, Courier, monospace",
+              fontFamily: "Courier Prime",
+              marginTop: "10%", //space between text and button
+              marginLeft: "70%",
             }}
           >
             Secured by Eigen Layer

@@ -105,7 +105,7 @@ const Advantage = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontFamily: "Courier New, Courier, monospace",
+                    fontFamily: "Courier Prime",
                     textAlign: "left",
                     fontSize: "35px",
                     paddingBottom: "20px",
@@ -129,7 +129,7 @@ const Advantage = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    fontFamily: "Courier New, Courier, monospace",
+                    fontFamily: "Courier Prime",
                     textAlign: "left",
                     fontWeight: "bold",
                     height: "80px",
@@ -140,7 +140,7 @@ const Advantage = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    fontFamily: "Courier New, Courier, monospace",
+                    fontFamily: "Courier Prime",
                     textAlign: "left",
                     marginTop: 2,
                   }}

@@ -1,4 +1,3 @@
-// Slider.jsx
 import React, { useState, useEffect } from "react";
 import { Box, Grid, Typography, Paper, IconButton } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
@@ -112,7 +111,7 @@ const Slider = () => {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
-                    transition: "all 0.3s ease",
+                    transition: "all 0.2s ease",
                     position: "relative",
                     zIndex: 1,
                     "&:hover": {
@@ -165,6 +164,11 @@ const Slider = () => {
                         fontFamily: "Courier Prime, Courier, monospace",
                         fontWeight: "bold",
                         textAlign: "left",
+                        height: "3em",
+                        overflow: "hidden",
+                        display: "-webkit-box",
+                        WebkitBoxOrient: "vertical",
+                        WebkitLineClamp: 2,
                       }}
                     >
                       {item.title}
@@ -176,6 +180,7 @@ const Slider = () => {
                         fontFamily: "Courier Prime, Courier, monospace",
                         textAlign: "left",
                         marginTop: 2,
+                        height: "7em",
                       }}
                     >
                       {item.description}

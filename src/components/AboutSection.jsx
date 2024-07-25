@@ -1,33 +1,36 @@
-// AboutSection.jsx
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import logo from "../assets/images/AboutSection/logo.svg";
 import logotype from "../assets/images/AboutSection/logotype.svg";
 import infoImage from "../assets/images/AboutSection/info-img.svg";
 
-const AboutSection = () => {
-  const [hovered, setHovered] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+const AboutSection = ({ isHovered, onIntersect }) => {
+  const aboutRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      if (prevScrollPos > currentScrollPos) {
-        // Scrolling up
-        setHovered(true);
-      } else {
-        // Scrolling down
-        setHovered(false);
-      }
-      setPrevScrollPos(currentScrollPos);
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          onIntersect(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.25 }
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, [onIntersect]);
 
   return (
     <Box
+      ref={aboutRef}
       sx={{
         backgroundColor: "#FDF5E6",
         alignContent: "center",
@@ -35,7 +38,7 @@ const AboutSection = () => {
       }}
     >
       <Grid container spacing={2}>
-        <Grid container item spacing={2} sx={{ marginBottom: 8 }}>
+        <Grid container item spacing={2} sx={{ marginBottom: "12%" }}>
           <Grid item xs={12} md={6}>
             <Box
               sx={{
@@ -49,7 +52,7 @@ const AboutSection = () => {
                 src={logo}
                 alt="Logo"
                 style={{
-                  width: hovered ? "40px" : "75px",
+                  width: isHovered ? "40px" : "75px",
                   height: "auto",
                   transition: "width 2s ease-in-out",
                 }}
@@ -58,7 +61,7 @@ const AboutSection = () => {
                 src={logotype}
                 alt="Logotype"
                 style={{
-                  width: hovered ? "380px" : "422px",
+                  width: isHovered ? "380px" : "422px",
                   height: "auto",
                   transition: "width 2s ease-in-out",
                 }}
@@ -70,9 +73,9 @@ const AboutSection = () => {
               variant="body1"
               sx={{
                 color: "#003A6C",
-                fontFamily: "Courier Prime, Courier, monospace",
+                fontFamily: "Courier Prime",
                 fontWeight: "bold",
-                paddingTop: hovered ? "130px" : "150px",
+                paddingTop: isHovered ? "90px" : "160px",
                 transition: "padding-top 1.5s ease",
               }}
             >
@@ -83,7 +86,7 @@ const AboutSection = () => {
             </Typography>
           </Grid>
         </Grid>
-        {/* Second Row */}
+
         <Grid container item spacing={2}>
           <Grid container item xs={12} md={6} spacing={2}>
             <Grid item xs={12}>
@@ -91,7 +94,9 @@ const AboutSection = () => {
                 variant="body1"
                 sx={{
                   color: "#003A6C",
-                  fontFamily: "Courier Prime, Courier, monospace",
+                  fontFamily: "Courier Prime",
+                  width: "80%",
+                  marginBottom: "40px",
                 }}
               >
                 Without requiring a blockchain, these dapps can be decentralized
@@ -104,7 +109,8 @@ const AboutSection = () => {
                 variant="body1"
                 sx={{
                   color: "#003A6C",
-                  fontFamily: "Courier Prime, Courier, monospace",
+                  fontFamily: "Courier Prime",
+                  width: "80%",
                 }}
               >
                 Zellular enables the replicas to maintain uniformity of state by
