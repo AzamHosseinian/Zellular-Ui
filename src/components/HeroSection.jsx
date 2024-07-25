@@ -176,7 +176,7 @@ const HeroSection = () => {
           src={currentImage}
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.2, delay: isTransitioning ? 2 : 0 }}
+          transition={{ duration: 0.8, delay: isTransitioning ? 3 : 0 }}
           style={{
             width: "25%",
             height: "100vh",
