@@ -11,7 +11,7 @@ const Header = () => (
     sx={{
       backgroundColor: "transparent",
       boxShadow: "none",
-      padding: "20px 30px", // Adjust padding if needed
+      padding: "20px 30px",
       zIndex: 10,
     }}
   >
