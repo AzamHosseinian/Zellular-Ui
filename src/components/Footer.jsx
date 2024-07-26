@@ -7,13 +7,19 @@ const Footer = () => {
     <Box
       sx={{
         backgroundColor: "#003A6C",
-        padding: "20px 90px",
         color: "#FFFFFF",
       }}
     >
       <Grid container alignItems="center">
         <Grid item xs={12} md={6}>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              margin: "20px",
+              paddingLeft: "80px",
+            }}
+          >
             <img src={logo} alt="Logo" style={{ height: "50px" }} />
           </Box>
         </Grid>
@@ -22,7 +28,7 @@ const Footer = () => {
             sx={{
               display: "flex",
               justifyContent: "flex-end",
-              padding: "20px",
+              marginRight: "40px",
             }}
           >
             {["X", "Discord", "Email"].map((text, index) => (

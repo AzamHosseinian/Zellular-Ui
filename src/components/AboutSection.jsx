@@ -14,7 +14,7 @@ const AboutSection = ({ isHovered, onIntersect }) => {
           onIntersect(entry.isIntersecting);
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0.22 }
     );
 
     if (aboutRef.current) {
