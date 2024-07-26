@@ -105,9 +105,9 @@ const Advantage = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontFamily: "Chakra Petch Bold",
+                    fontFamily: "Chakra Petch",
                     textAlign: "left",
-                    fontSize: "35px",
+                    fontSize: "70px",
                     paddingBottom: "20px",
                   }}
                 >
