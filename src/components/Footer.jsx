@@ -31,7 +31,7 @@ const Footer = () => {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  marginRight: "40px",
+                  marginRight: "80px",
                   position: "relative",
                 }}
               >
@@ -49,7 +49,7 @@ const Footer = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    fontFamily: "Courier New, Courier, monospace",
+                    fontFamily: "Courier Prime",
                     fontWeight: "bold",
                     color: "#FDF5E6",
                     paddingLeft: "10px", // Space for the green circle

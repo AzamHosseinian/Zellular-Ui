@@ -1,0 +1,19 @@
+@keyframes typing {
+    from { width: 0; }
+    to { width: 35%; }
+  }
+  
+  .typing-effect {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #92E6A7;
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+    vertical-align: bottom; /* Align the typing effect with the text baseline */
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #92E6A7; }
+  }
+  

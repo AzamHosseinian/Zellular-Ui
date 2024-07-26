@@ -5,6 +5,7 @@ import backgroundImage from "../assets/images/HeroSection/background.svg";
 import image1 from "../assets/images/HeroSection/img1.svg";
 import image2 from "../assets/images/HeroSection/img2.svg";
 import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
+import "./HeroSection.css"; // Import the CSS file where the typing effect is defined
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(image1);
@@ -83,6 +84,7 @@ const HeroSection = () => {
               fontFamily: "Space Grotesk",
               fontSize: "3rem",
               display: "inline-block",
+              marginLeft: "25rem", // space between text and button
               marginBottom: "5%",
             }}
           >
@@ -98,11 +100,11 @@ const HeroSection = () => {
               display: "flex",
               alignItems: "center",
               fontFamily: "Courier Prime",
-              marginLeft: "25%",
+              marginLeft: "69%",
               padding: "10px 20px",
               "&:hover": {
                 bgcolor: "#FDF5E6",
-                color: "#003A6C",
+                color: "#003A6C", // Optional: change text color on hover
               },
             }}
             endIcon={
@@ -135,7 +137,8 @@ const HeroSection = () => {
             <span style={{ paddingLeft: "15rem" }}>high-throughput dApps</span>
             <br />
             <span style={{ paddingLeft: "25rem" }}>
-              in any programming language.
+              in an
+              <span className="typing-effect">y programming language.</span>
             </span>
           </Typography>
           <Box position="relative">

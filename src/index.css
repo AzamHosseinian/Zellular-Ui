@@ -24,3 +24,17 @@ code {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Chakra Petch';
+  src: url('./assets/fonts/Chakra_Petch/Chakra_Petch/ChakraPetch-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chakra Petch Bold';
+  src: url('./assets/fonts/Chakra_Petch/Chakra_Petch/ChakraPetch-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

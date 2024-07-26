@@ -105,7 +105,7 @@ const Advantage = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontFamily: "Courier Prime",
+                    fontFamily: "Chakra Petch Bold",
                     textAlign: "left",
                     fontSize: "35px",
                     paddingBottom: "20px",
@@ -129,23 +129,18 @@ const Advantage = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    fontFamily: "Courier Prime",
+                    paddingTop: "28px",
+                    fontFamily:
+                      hoveredIcon === adv.id
+                        ? "Chakra Petch Regular"
+                        : "Chakra Petch Bold",
+                    fontSize: hoveredIcon === adv.id ? "18px" : "32px",
                     textAlign: "left",
                     fontWeight: "bold",
                     height: "80px",
                   }}
                 >
-                  {adv.title}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontFamily: "Courier Prime",
-                    textAlign: "left",
-                    marginTop: 2,
-                  }}
-                >
-                  {adv.description}
+                  {hoveredIcon === adv.id ? adv.description : adv.title}
                 </Typography>
               </Paper>
             </Grid>
