@@ -1,8 +1,9 @@
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Triangular from "../assets/images/HeaderIcon/triangular.svg";
 
 const Header = () => (
   <AppBar
@@ -29,55 +30,59 @@ const Header = () => (
           display: "flex",
           justifyContent: "center",
           flexGrow: 1,
-          gap: 2,
+          gap: 4,
         }}
       >
-        <Button
-          href="#news"
-          sx={{
-            textTransform: "none",
-            fontFamily: "Courier Prime",
-            color: "#92E6A7",
-            fontWeight: "bold",
-          }}
-        >
-          News
-        </Button>
-        <Button
-          href="#about"
-          sx={{
-            textTransform: "none",
-            fontFamily: "Courier Prime",
-            color: "#92E6A7",
-            fontWeight: "bold",
-          }}
-        >
-          About
-        </Button>
-        <Button
-          href="#advantages"
-          sx={{
-            textTransform: "none",
-            fontFamily: "Courier Prime",
-            color: "#92E6A7",
-            fontWeight: "bold",
-          }}
-        >
-          Advantages
-        </Button>
-        <Button
-          href="#advantages"
-          sx={{
-            textTransform: "none",
-            fontFamily: "Courier Prime",
-            color: "#92E6A7",
-            fontWeight: "bold",
-          }}
-        >
-          Social Media
-        </Button>
+        {["About", "News", "Advantages", "Social Media"].map((text, index) => (
+          <Box
+            key={index}
+            component="a"
+            href={`#${text.toLowerCase().replace(/ /g, "")}`}
+            sx={{
+              textTransform: "none",
+              color: "#92E6A7",
+              fontWeight: "bold",
+              position: "relative",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              "&:hover .triangle": {
+                animation: "slideIn 6s ease-out forwards", // Slower animation with ease-out
+                visibility: "visible", // Triangle becomes visible on hover
+              },
+            }}
+          >
+            <Typography
+              variant="h6"
+              component="span"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                fontFamily: "Courier Prime",
+                fontWeight: "bold",
+                // paddingLeft: "15px",
+              }}
+            >
+              {text}
+              <Box
+                className="triangle"
+                component="span"
+                sx={{
+                  visibility: "hidden", // Triangle is always taking up space but not visible
+                  padding: "0 10px", // Ensure padding does not affect layout disproportionately
+                }}
+              >
+                <img
+                  src={Triangular}
+                  alt="Triangle"
+                  style={{ height: "12px" }}
+                />
+              </Box>
+            </Typography>
+          </Box>
+        ))}
       </Box>
-      <Box sx={{ width: "30px" }} />
+      <Box sx={{ width: "120px" }} />
     </Toolbar>
   </AppBar>
 );

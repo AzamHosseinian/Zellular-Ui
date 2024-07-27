@@ -84,11 +84,11 @@ const HeroSection = () => {
               fontFamily: "Space Grotesk",
               fontSize: "3rem",
               display: "inline-block",
-              marginLeft: "25rem", // space between text and button
-              marginBottom: "5%",
+              marginLeft: "24rem", // space between text and button
+              marginBottom: "10%",
             }}
           >
-            Web2 & Web3
+            Web2 <span style={{ fontFamily: "CabinetGrotesk" }}>&</span> Web3
           </Typography>
           <Button
             variant="contained"
@@ -100,7 +100,7 @@ const HeroSection = () => {
               display: "flex",
               alignItems: "center",
               fontFamily: "Courier Prime",
-              marginLeft: "69%",
+              marginLeft: "530px",
               padding: "10px 20px",
               "&:hover": {
                 bgcolor: "#FDF5E6",
@@ -130,15 +130,16 @@ const HeroSection = () => {
               textAlign: "left",
               marginTop: "10%",
               lineHeight: "1.5",
+              // fontSize: "40px",
             }}
           >
             Develop sub-second finality
             <br />
-            <span style={{ paddingLeft: "15rem" }}>high-throughput dApps</span>
+            <span style={{ paddingLeft: "8rem" }}>high-throughput dApps</span>
             <br />
-            <span style={{ paddingLeft: "25rem" }}>
-              in an
-              <span className="typing-effect">y programming language.</span>
+            <span style={{ paddingLeft: "15rem" }}>
+              in{" "}
+              <span className="typing-effect">any programming language.</span>
             </span>
           </Typography>
           <Box position="relative">
@@ -157,7 +158,7 @@ const HeroSection = () => {
                   borderRadius: "50%",
                   position: "relative",
                   marginRight: "10px",
-                  marginLeft: "65%",
+                  marginLeft: "60%",
                 }}
               />
               <Typography
@@ -168,6 +169,8 @@ const HeroSection = () => {
                   boxShadow: 0,
                   borderRadius: 0,
                   fontFamily: "Courier Prime",
+                  padding: 0,
+                  fontSize: "20px",
                 }}
               >
                 Secured by Eigen Layer

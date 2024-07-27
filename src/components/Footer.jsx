@@ -16,11 +16,11 @@ const Footer = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              margin: "20px",
-              paddingLeft: "80px",
+              margin: "30px 80px",
+              // paddingLeft: "80px",
             }}
           >
-            <img src={logo} alt="Logo" style={{ height: "50px" }} />
+            <img src={logo} alt="Logo" style={{ height: "30px" }} />
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -37,7 +37,7 @@ const Footer = () => {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  marginRight: "80px",
+                  marginRight: "40px",
                   position: "relative",
                 }}
               >

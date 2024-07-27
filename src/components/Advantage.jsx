@@ -132,9 +132,9 @@ const Advantage = () => {
                     paddingTop: "28px",
                     fontFamily:
                       hoveredIcon === adv.id
-                        ? "Chakra Petch Regular"
+                        ? "Courier Prime"
                         : "Chakra Petch Bold",
-                    fontSize: hoveredIcon === adv.id ? "18px" : "32px",
+                    fontSize: hoveredIcon === adv.id ? "16px" : "32px",
                     textAlign: "left",
                     fontWeight: "bold",
                     height: "80px",

@@ -10,6 +10,8 @@
     border-right: 2px solid #92E6A7;
     animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
     vertical-align: bottom; /* Align the typing effect with the text baseline */
+    font-weight: bold;
+    font-style: italic;
   }
   
   @keyframes blink-caret {
