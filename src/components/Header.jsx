@@ -47,8 +47,8 @@ const Header = () => (
               display: "flex",
               alignItems: "center",
               "&:hover .triangle": {
-                animation: "slideIn 6s ease-out forwards", // Slower animation with ease-out
-                visibility: "visible", // Triangle becomes visible on hover
+                animation: "slideIn 6s ease-out forwards",
+                visibility: "visible",
               },
             }}
           >
@@ -68,8 +68,8 @@ const Header = () => (
                 className="triangle"
                 component="span"
                 sx={{
-                  visibility: "hidden", // Triangle is always taking up space but not visible
-                  padding: "0 10px", // Ensure padding does not affect layout disproportionately
+                  visibility: "hidden",
+                  padding: "0 10px",
                 }}
               >
                 <img

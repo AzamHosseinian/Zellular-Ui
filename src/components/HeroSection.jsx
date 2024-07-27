@@ -5,7 +5,7 @@ import backgroundImage from "../assets/images/HeroSection/background.svg";
 import image1 from "../assets/images/HeroSection/img1.svg";
 import image2 from "../assets/images/HeroSection/img2.svg";
 import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
-import "./HeroSection.css"; // Import the CSS file where the typing effect is defined
+import "./HeroSection.css";
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(image1);
@@ -104,7 +104,7 @@ const HeroSection = () => {
               padding: "10px 20px",
               "&:hover": {
                 bgcolor: "#FDF5E6",
-                color: "#003A6C", // Optional: change text color on hover
+                color: "#003A6C",
               },
             }}
             endIcon={
