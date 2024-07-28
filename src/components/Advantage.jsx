@@ -136,7 +136,6 @@ const Advantage = () => {
                         : "Courier Prime Bold",
                     fontSize: hoveredIcon === adv.id ? "16px" : "32px",
                     textAlign: "left",
-                    fontWeight: "bold",
                     height: "80px",
                   }}
                 >
