@@ -64,7 +64,7 @@ const Advantage = () => {
         sx={{
           paddingTop: 4,
           color: "#003A6C",
-          fontFamily: "Space Grotesk",
+          fontFamily: "Courier Prime",
           marginBottom: 2,
           alignSelf: "flex-start",
           marginLeft: "5%",
@@ -105,7 +105,7 @@ const Advantage = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontFamily: "Chakra Petch",
+                    fontFamily: "Courier Prime",
                     textAlign: "left",
                     fontSize: "70px",
                     paddingBottom: "20px",
@@ -133,7 +133,7 @@ const Advantage = () => {
                     fontFamily:
                       hoveredIcon === adv.id
                         ? "Courier Prime"
-                        : "Chakra Petch Bold",
+                        : "Courier Prime Bold",
                     fontSize: hoveredIcon === adv.id ? "16px" : "32px",
                     textAlign: "left",
                     fontWeight: "bold",
