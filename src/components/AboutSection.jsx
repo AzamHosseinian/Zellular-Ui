@@ -1,142 +1,138 @@
-import React, { useEffect, useRef } from "react";
-import { Box, Grid, Typography } from "@mui/material";
-import logo from "../assets/images/AboutSection/logo.svg";
+import React from "react";
+import { Box, Typography, Grid } from "@mui/material";
 import logotype from "../assets/images/AboutSection/logotype.svg";
 import infoImage from "../assets/images/AboutSection/info-img.svg";
+import triangular from "../assets/images/AboutSection/triangular.svg";
 
-const AboutSection = ({ isHovered, onIntersect }) => {
-  const aboutRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          onIntersect(entry.isIntersecting);
-        });
-      },
-      { threshold: 0.22 }
-    );
-
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
-    }
-
-    return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
-      }
-    };
-  }, [onIntersect]);
-
+const AboutSection = () => {
   return (
     <Box
-      ref={aboutRef}
       sx={{
         backgroundColor: "#FDF5E6",
-        alignContent: "center",
-        padding: "80px",
+        padding: 0,
       }}
     >
-      <Grid container spacing={2}>
-        <Grid container item spacing={2} sx={{ marginBottom: "12%" }}>
-          <Grid item xs={12} md={6}>
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "flex-end",
-                margin: "40px",
-                gap: "40px",
+      <Grid container sx={{ borderBottom: "2px solid #003A6C" }}>
+        <Grid item xs={12} md={6} sx={{ padding: "80px" }}>
+          <img
+            src={logotype}
+            alt="Logotype"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
+        </Grid>
+        <Grid item xs={12} md={6} sx={{ padding: "80px" }}>
+          <Typography
+            variant="body1"
+            sx={{
+              color: "#003A6C",
+              fontFamily: "Courier Prime",
+              fontWeight: "bold",
+              paddingTop: "160px",
+            }}
+          >
+            Zellular is a decentralized sequencer that enables developing
+            high-throughput dapps (100,000+ TPS) implemented in high-level
+            languages (such as JS, GO, and Python) and hosted on EigenLayer and
+            other restaking platforms to ensure security.
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            borderRight: { md: "2px solid #003A6C" },
+            borderBottom: { xs: "2px solid #003A6C", md: "none" },
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "flex-start",
+              marginBottom: "20px",
+              padding: "80px",
+            }}
+          >
+            <img
+              src={triangular}
+              alt="Triangular Shape"
+              style={{
+                marginRight: "20px",
+                width: "15px",
+                height: "auto",
               }}
-            >
-              <img
-                src={logo}
-                alt="Logo"
-                style={{
-                  width: isHovered ? "40px" : "75px",
-                  height: "auto",
-                  transition: "width 2s ease-in-out",
-                }}
-              />
-              <img
-                src={logotype}
-                alt="Logotype"
-                style={{
-                  width: isHovered ? "380px" : "422px",
-                  height: "auto",
-                  transition: "width 2s ease-in-out",
-                }}
-              />
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={6}>
+            />
             <Typography
               variant="body1"
               sx={{
                 color: "#003A6C",
                 fontFamily: "Courier Prime",
-                fontWeight: "bold",
-                paddingTop: isHovered ? "90px" : "160px",
-                transition: "padding-top 1.5s ease",
+                width: "80%",
               }}
             >
-              Zellular is a decentralized sequencer that enables developing
-              high-throughput dapps (100,000+ TPS) implemented in high-level
-              languages (such as JS, GO, and Python) and hosted on EigenLayer
-              and other restaking platforms to ensure security.
+              Without requiring a blockchain, these dapps can be decentralized
+              as Byzantine Fault Tolerant (BFT) services replicated on a number
+              of nodes.
             </Typography>
-          </Grid>
-        </Grid>
-
-        <Grid container item spacing={2}>
-          <Grid container item xs={12} md={6} spacing={2}>
-            <Grid item xs={12}>
-              <Typography
-                variant="body1"
-                sx={{
-                  color: "#003A6C",
-                  fontFamily: "Courier Prime",
-                  width: "80%",
-                  marginBottom: "40px",
-                }}
-              >
-                Without requiring a blockchain, these dapps can be decentralized
-                as Byzantine Fault Tolerant (BFT) services replicated on a
-                number of nodes.
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography
-                variant="body1"
-                sx={{
-                  color: "#003A6C",
-                  fontFamily: "Courier Prime",
-                  width: "80%",
-                }}
-              >
-                Zellular enables the replicas to maintain uniformity of state by
-                applying updates in the same sequence.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+          </Box>
+          <hr
+            style={{
+              border: "none",
+              borderBottom: "2px solid #003A6C",
+              width: "100%",
+              margin: "20px 0",
             }}
+          />
+          <Box
+            sx={{ display: "flex", alignItems: "flex-start", padding: "80px" }}
           >
             <img
-              src={infoImage}
-              alt="Information"
+              src={triangular}
+              alt="Triangular Shape"
               style={{
-                width: "40%",
+                marginRight: "20px",
+                width: "15px",
                 height: "auto",
               }}
             />
-          </Grid>
+            <Typography
+              variant="body1"
+              sx={{
+                color: "#003A6C",
+                fontFamily: "Courier Prime",
+                width: "80%",
+              }}
+            >
+              Zellular enables the replicas to maintain uniformity of state by
+              applying updates in the same sequence.
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "80px",
+          }}
+        >
+          <img
+            src={infoImage}
+            alt="Information"
+            style={{
+              width: "80%",
+              height: "auto",
+            }}
+          />
         </Grid>
       </Grid>
     </Box>

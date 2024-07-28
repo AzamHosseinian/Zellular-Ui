@@ -173,7 +173,7 @@ const HeroSection = () => {
                   fontSize: "20px",
                 }}
               >
-                Secured by Eigen Layer
+                Secured by EigenLayer
               </Typography>
             </Box>
           </Box>
