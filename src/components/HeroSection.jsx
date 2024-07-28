@@ -42,7 +42,7 @@ const HeroSection = () => {
           backgroundPosition: "center",
           color: "#FFFFFF",
           width: "100%",
-          padding: "0 5%",
+          padding: "80px",
           position: "relative",
           zIndex: 1,
         }}
@@ -50,13 +50,13 @@ const HeroSection = () => {
         <Box position="relative">
           <Box
             sx={{
-              width: 15,
-              height: 15,
+              width: 25,
+              height: 25,
               backgroundColor: "#92E6A7",
               borderRadius: "50%",
               position: "absolute",
               top: "-5px",
-              left: "-15px",
+              left: "-30px",
               marginTop: "15%",
             }}
           />
@@ -68,8 +68,9 @@ const HeroSection = () => {
               color: "#FDF5E6",
               fontWeight: "bold",
               fontFamily: "Space Grotesk",
-              fontSize: "3rem",
+              fontSize: "80px",
               marginTop: "15%",
+              lineHeight: "0.8",
             }}
           >
             Filling the Gap between
@@ -82,10 +83,11 @@ const HeroSection = () => {
               color: "#FDF5E6",
               fontWeight: "bold",
               fontFamily: "Space Grotesk",
-              fontSize: "3rem",
+              fontSize: "80px",
               display: "inline-block",
-              marginLeft: "24rem", // space between text and button
-              marginBottom: "10%",
+              paddingLeft: "40rem", // space between text and button
+              // marginLeft: "10px",
+              marginBottom: "5%",
             }}
           >
             Web2 <span style={{ fontFamily: "CabinetGrotesk" }}>&</span> Web3
@@ -94,13 +96,14 @@ const HeroSection = () => {
             variant="contained"
             sx={{
               bgcolor: "#92E6A7",
+              fontSize: "24px",
               color: "#003A6C",
               borderRadius: "70px",
               textTransform: "none",
               display: "flex",
               alignItems: "center",
               fontFamily: "Courier Prime",
-              marginLeft: "530px",
+              marginLeft: "45rem",
               padding: "10px 20px",
               "&:hover": {
                 bgcolor: "#FDF5E6",
@@ -126,18 +129,17 @@ const HeroSection = () => {
             sx={{
               color: "#92E6A7",
               fontFamily: "Courier Prime",
-              fontSize: "1.2rem",
+              fontSize: "40px",
               textAlign: "left",
               marginTop: "10%",
-              lineHeight: "1.5",
-              // fontSize: "40px",
+              lineHeight: "1.125",
             }}
           >
             Develop sub-second finality
             <br />
-            <span style={{ paddingLeft: "8rem" }}>high-throughput dApps</span>
+            <span style={{ paddingLeft: "15rem" }}>high-throughput dApps</span>
             <br />
-            <span style={{ paddingLeft: "15rem" }}>
+            <span style={{ paddingLeft: "20rem" }}>
               in{" "}
               <span className="typing-effect">any programming language.</span>
             </span>
@@ -147,7 +149,7 @@ const HeroSection = () => {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                marginTop: "15%",
+                marginTop: "5%",
               }}
             >
               <Box
@@ -158,7 +160,7 @@ const HeroSection = () => {
                   borderRadius: "50%",
                   position: "relative",
                   marginRight: "10px",
-                  marginLeft: "60%",
+                  marginLeft: "55%",
                 }}
               />
               <Typography
@@ -170,7 +172,7 @@ const HeroSection = () => {
                   borderRadius: 0,
                   fontFamily: "Courier Prime",
                   padding: 0,
-                  fontSize: "20px",
+                  fontSize: "24px",
                 }}
               >
                 Secured by EigenLayer
@@ -184,9 +186,7 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: isTransitioning ? 3 : 0 }}
           style={{
-            width: "25%",
             height: "100vh",
-            maxWidth: "500px",
           }}
         />
       </Box>

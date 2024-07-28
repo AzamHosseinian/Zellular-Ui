@@ -51,8 +51,8 @@ const Advantage = () => {
     <Box
       sx={{
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        minHeight: "102vh",
+        backgroundSize: "contain", // Changed from "fixed" to "contain"
+        backgroundRepeat: "repeat", // Ensures the image does not repeat
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -88,7 +88,7 @@ const Advantage = () => {
                   padding: 2,
                   backgroundColor: "#FDF5E6",
                   color: "#003A6C",
-                  height: "470px",
+                  height: "645px",
                   border: "2px solid #003A6C",
                   borderRadius: 0,
                   boxShadow: "none",
@@ -117,7 +117,7 @@ const Advantage = () => {
                   sx={{
                     display: "flex",
                     justifyContent: "center",
-                    my: 2,
+                    my: 12,
                   }}
                 >
                   <img
@@ -129,12 +129,12 @@ const Advantage = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    paddingTop: "28px",
+                    paddingTop: "50px",
                     fontFamily:
                       hoveredIcon === adv.id
                         ? "Courier Prime"
                         : "Courier Prime Bold",
-                    fontSize: hoveredIcon === adv.id ? "16px" : "32px",
+                    fontSize: hoveredIcon === adv.id ? "18px" : "32px",
                     textAlign: "left",
                     height: "80px",
                   }}

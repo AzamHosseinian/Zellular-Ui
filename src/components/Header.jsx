@@ -58,8 +58,8 @@ const Header = () => (
               sx={{
                 display: "flex",
                 alignItems: "center",
-                fontFamily: "Courier Prime",
-                fontWeight: "bold",
+                fontFamily: "Courier Prime Bold",
+                fontSize: "24px",
                 // paddingLeft: "15px",
               }}
             >

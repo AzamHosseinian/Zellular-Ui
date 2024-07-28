@@ -1,21 +1,29 @@
+
+
+.typing-effect {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #92E6A7;
+  animation: typing 3.5s steps(30, end) 0s infinite, blink-caret .75s step-end 7.5s infinite;
+  vertical-align: bottom; 
+  font-weight: bold;
+  font-style: italic;
+}
+
 @keyframes typing {
-    from { width: 0; }
-    to { width: 35%; }
+  0%, 46.67% {
+    width: 0;
   }
-  
-  .typing-effect {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #92E6A7;
-    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
-    vertical-align: bottom; 
-    font-weight: bold;
-    font-style: italic;
+  46.67% {
+    width: 52%;
   }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #92E6A7; }
+  100% {
+    width: 52%;
   }
-  
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  25%, 75% { border-color: #92E6A7; } 
+}
