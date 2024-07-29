@@ -150,7 +150,8 @@ const Slider = () => {
                       variant="body2"
                       sx={{
                         color: "#003A6C",
-                        fontFamily: "Courier Prime, Courier, monospace",
+                        fontFamily: "Courier Prime",
+                        fontSize: "16px",
                         textAlign: "left",
                       }}
                     >
@@ -160,9 +161,8 @@ const Slider = () => {
                       variant="h6"
                       sx={{
                         color: "#003A6C",
-                        fontSize: "16px",
-                        fontFamily: "Courier Prime, Courier, monospace",
-                        fontWeight: "bold",
+                        fontSize: "18px",
+                        fontFamily: "Courier Prime Bold",
                         textAlign: "left",
                         height: "3em",
                         overflow: "hidden",
@@ -177,7 +177,8 @@ const Slider = () => {
                       variant="body2"
                       sx={{
                         color: "#003A6C",
-                        fontFamily: "Courier Prime, Courier, monospace",
+                        fontFamily: "Courier Prime",
+                        fontSize: "16px",
                         textAlign: "left",
                         marginTop: 2,
                         height: "7em",

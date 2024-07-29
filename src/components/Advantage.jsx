@@ -68,6 +68,7 @@ const Advantage = () => {
           marginBottom: 2,
           alignSelf: "flex-start",
           marginLeft: "5%",
+          fontSize: "40px",
         }}
       >
         - Advantages
