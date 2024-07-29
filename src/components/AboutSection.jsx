@@ -7,6 +7,7 @@ import triangular from "../assets/images/AboutSection/triangular.svg";
 const AboutSection = () => {
   return (
     <Box
+      id="about"
       sx={{
         backgroundColor: "#FDF5E6",
       }}

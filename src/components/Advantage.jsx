@@ -49,10 +49,11 @@ const Advantage = () => {
 
   return (
     <Box
+      id="advantages" // Added id here for navigation purposes
       sx={{
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: "contain", // Changed from "fixed" to "contain"
-        backgroundRepeat: "repeat", // Ensures the image does not repeat
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

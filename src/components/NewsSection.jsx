@@ -64,6 +64,7 @@ const Slider = () => {
 
   return (
     <Box
+      id="news"
       sx={{
         backgroundColor: "#FDF5E6",
         padding: "50px 0",
