@@ -1,8 +1,20 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import logo from "../assets/images/Footer/footer-logo.svg";
 
+import discordIcon from "../assets/images/Footer/discord.svg";
+import emailIcon from "../assets/images/Footer/email.svg";
+import mediumIcon from "../assets/images/Footer/medium.svg";
+import xIcon from "../assets/images/Footer/X.svg";
+
 const Footer = () => {
+  const socialMedias = [
+    { name: "Medium", icon: mediumIcon },
+    { name: "X", icon: xIcon },
+    { name: "Discord", icon: discordIcon },
+    { name: "Email", icon: emailIcon },
+  ];
+
   return (
     <Box
       sx={{
@@ -17,7 +29,6 @@ const Footer = () => {
               display: "flex",
               alignItems: "center",
               margin: "30px 80px",
-              // paddingLeft: "80px",
             }}
           >
             <img src={logo} alt="Logo" style={{ height: "30px" }} />
@@ -31,7 +42,7 @@ const Footer = () => {
               marginRight: "40px",
             }}
           >
-            {["X", "Discord", "Email"].map((text, index) => (
+            {socialMedias.map((social, index) => (
               <Box
                 key={index}
                 sx={{
@@ -52,17 +63,11 @@ const Footer = () => {
                     left: -10,
                   }}
                 />
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontFamily: "Courier Prime",
-                    fontWeight: "bold",
-                    color: "#FDF5E6",
-                    paddingLeft: "10px", // Space for the green circle
-                  }}
-                >
-                  {text}
-                </Typography>
+                <img
+                  src={social.icon}
+                  alt={social.name}
+                  style={{ height: "30px", paddingLeft: "10px" }}
+                />
               </Box>
             ))}
           </Box>

@@ -95,7 +95,7 @@ const Advantage = () => {
                   border: "2px solid #003A6C",
                   borderRadius: 0,
                   boxShadow: "none",
-                  transition: "all 0.3s ease",
+                  transition: "all 0.1s ease",
                   "&:hover": {
                     backgroundColor: "#003A6C",
                     color: "#FDF5E6",
