@@ -9,10 +9,18 @@ import xIcon from "../assets/images/Footer/X.svg";
 
 const Footer = () => {
   const socialMedias = [
-    { name: "Medium", icon: mediumIcon },
-    { name: "X", icon: xIcon },
-    { name: "Discord", icon: discordIcon },
-    { name: "Email", icon: emailIcon },
+    {
+      name: "Medium",
+      icon: mediumIcon,
+      url: "https://medium.com/@zellular",
+    },
+    { name: "X", icon: xIcon, url: "https://x.com/zellular_xyz" },
+    {
+      name: "Discord",
+      icon: discordIcon,
+      url: "https://discord.com/invite/zellular",
+    },
+    { name: "Email", icon: emailIcon, url: "mailto:info@zellular.xyz" },
   ];
 
   return (
@@ -43,32 +51,39 @@ const Footer = () => {
             }}
           >
             {socialMedias.map((social, index) => (
-              <Box
+              <a
+                href={social.url}
                 key={index}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginRight: "40px",
-                  position: "relative",
-                }}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
               >
                 <Box
                   sx={{
-                    width: 10,
-                    height: 10,
-                    backgroundColor: "#92E6A7",
-                    borderRadius: "50%",
-                    position: "absolute",
-                    top: 0,
-                    left: -10,
+                    display: "flex",
+                    alignItems: "center",
+                    marginRight: "40px",
+                    position: "relative",
                   }}
-                />
-                <img
-                  src={social.icon}
-                  alt={social.name}
-                  style={{ height: "30px", paddingLeft: "10px" }}
-                />
-              </Box>
+                >
+                  <Box
+                    sx={{
+                      width: 10,
+                      height: 10,
+                      backgroundColor: "#92E6A7",
+                      borderRadius: "50%",
+                      position: "absolute",
+                      top: 0,
+                      left: -10,
+                    }}
+                  />
+                  <img
+                    src={social.icon}
+                    alt={social.name}
+                    style={{ height: "30px", paddingLeft: "10px" }}
+                  />
+                </Box>
+              </a>
             ))}
           </Box>
         </Grid>

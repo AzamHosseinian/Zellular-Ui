@@ -11,6 +11,12 @@ const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
+  const socialLinks = {
+    Discord: "https://discord.com/invite/zellular",
+    Medium: "https://medium.com/@zellular",
+    X: "https://x.com/zellular_xyz",
+  };
+
   const handleClick = (event) => {
     const targetName = event.currentTarget.textContent;
     if (targetName === "Social Media") {
@@ -25,6 +31,15 @@ const Header = () => {
     }
   };
 
+  const handleMenuClick = (event) => {
+    const site = event.currentTarget.textContent;
+    const url = socialLinks[site];
+    if (url) {
+      window.open(url, "_blank");
+    }
+    setAnchorEl(null);
+  };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -33,7 +48,7 @@ const Header = () => {
     fontFamily: "Courier Prime",
     fontSize: "24px",
     color: "#92E6A7",
-    backgroundColor: "transparent", // Background is transparent unless the menu is open
+    backgroundColor: "transparent",
   };
 
   return (
@@ -129,8 +144,12 @@ const Header = () => {
               },
             }}
           >
-            {["Telegram", "Discord", "Medium", "X"].map((option) => (
-              <MenuItem key={option} onClick={handleClose} sx={menuItemStyle}>
+            {["Discord", "Medium", "X"].map((option) => (
+              <MenuItem
+                key={option}
+                onClick={handleMenuClick}
+                sx={menuItemStyle}
+              >
                 {option}
               </MenuItem>
             ))}
