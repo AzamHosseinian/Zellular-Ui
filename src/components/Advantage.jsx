@@ -120,7 +120,7 @@ const Advantage = () => {
                   sx={{
                     display: "flex",
                     justifyContent: "center",
-                    my: 12,
+                    my: 8,
                   }}
                 >
                   <img
