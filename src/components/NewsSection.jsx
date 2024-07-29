@@ -76,7 +76,8 @@ const Slider = () => {
         sx={{
           color: "#003A6C",
           fontFamily: "Space Grotesk",
-          marginBottom: 4,
+          marginBottom: 8,
+          fontSize: "40px",
         }}
       >
         - News -

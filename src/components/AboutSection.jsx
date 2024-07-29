@@ -84,6 +84,7 @@ const AboutSection = () => {
               alt="Triangular Shape"
               style={{
                 marginRight: "20px",
+                paddingTop: "5px",
                 width: "15px",
                 height: "auto",
               }}
@@ -116,6 +117,7 @@ const AboutSection = () => {
               alt="Triangular Shape"
               style={{
                 marginRight: "20px",
+                paddingTop: "5px",
                 width: "15px",
                 height: "auto",
               }}
