@@ -9,29 +9,48 @@ const AboutSection = () => {
     <Box
       sx={{
         backgroundColor: "#FDF5E6",
-        padding: 0,
       }}
     >
-      <Grid container sx={{ borderBottom: "2px solid #003A6C" }}>
-        <Grid item xs={12} md={4}>
+      <Grid
+        container
+        sx={{
+          borderBottom: "2px solid #003A6C",
+        }}
+      >
+        <Grid
+          item
+          xs={12}
+          md={4}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <img
             src={logotype}
             alt="Logotype"
             style={{
-              padding: "80px",
-              width: "100%",
-              height: "auto",
+              maxWidth: "100%",
+              maxHeight: "100%",
+              objectFit: "contain",
             }}
           />
         </Grid>
-        <Grid item xs={12} md={8} sx={{ padding: "80px" }}>
+        <Grid
+          item
+          xs={12}
+          md={8}
+          sx={{
+            padding: "80px 120px",
+          }}
+        >
           <Typography
             variant="body1"
             sx={{
               color: "#003A6C",
               fontFamily: "Courier Prime Bold",
-              fontWeight: "bold",
-              padding: "50px 80px",
+              fontSize: "32px",
             }}
           >
             Zellular is a decentralized sequencer that enables developing
@@ -74,6 +93,7 @@ const AboutSection = () => {
                 color: "#003A6C",
                 fontFamily: "Courier Prime",
                 width: "80%",
+                fontSize: "24px",
               }}
             >
               Zellular enables the replicas to maintain uniformity of state by
@@ -105,6 +125,7 @@ const AboutSection = () => {
                 color: "#003A6C",
                 fontFamily: "Courier Prime",
                 width: "80%",
+                fontSize: "24px",
               }}
             >
               Without requiring a blockchain, these dapps can be decentralized
