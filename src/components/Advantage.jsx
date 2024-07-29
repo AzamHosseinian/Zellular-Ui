@@ -49,7 +49,7 @@ const Advantage = () => {
 
   return (
     <Box
-      id="advantages" // Added id here for navigation purposes
+      id="advantages"
       sx={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "contain",
@@ -58,6 +58,7 @@ const Advantage = () => {
         flexDirection: "column",
         alignItems: "center",
         paddingTop: 4,
+        height: "1110px",
       }}
     >
       <Typography
@@ -125,7 +126,7 @@ const Advantage = () => {
                   <img
                     src={hoveredIcon === adv.id ? adv.hoverIcon : adv.icon}
                     alt={adv.title}
-                    style={{ width: "100px", height: "100px" }}
+                    style={{ width: "150px", height: "150px" }}
                   />
                 </Box>
                 <Typography
