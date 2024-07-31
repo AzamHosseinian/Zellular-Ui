@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import backgroundImage from "../assets/images/HeroSection/background.svg";
-import animationGif from "../assets/images/HeroSection/animation.gif";
-import finalFrameImage from "../assets/images/HeroSection/img2.svg";
+import animationWebm from "../assets/images/HeroSection/animation.webm";
 import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
 import "./HeroSection.css";
 
 const HeroSection = () => {
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    setLoading(true);
     const timeout = setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.currentTime = videoRef.current.duration;
+      }
       setLoading(false);
-    }, 3100);
+    }, 3000);
 
     return () => {
       clearTimeout(timeout);
@@ -83,7 +86,7 @@ const HeroSection = () => {
               fontFamily: "Space Grotesk",
               fontSize: "80px",
               display: "inline-block",
-              paddingLeft: "40rem", // space between text and button
+              paddingLeft: "40rem",
               marginBottom: "5%",
             }}
           >
@@ -99,7 +102,6 @@ const HeroSection = () => {
               textTransform: "none",
               display: "flex",
               alignItems: "center",
-              fontFamily: "Courier Prime",
               marginLeft: "45rem",
               padding: "10px 20px",
               "&:hover": {
@@ -178,25 +180,31 @@ const HeroSection = () => {
           </Box>
         </Box>
         {isLoading ? (
-          <img
-            src={animationGif}
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
             style={{
               height: "100vh",
               opacity: 1,
               transition: "opacity 0.001s",
             }}
             alt="Hero Section Animation"
-          />
+          >
+            <source src={animationWebm} type="video/webm" />
+          </video>
         ) : (
-          <img
-            src={finalFrameImage}
+          <video
+            ref={videoRef}
             style={{
               height: "100vh",
               opacity: 1,
               transition: "opacity 0.001s",
             }}
-            alt="Hero Section Animation"
-          />
+            controls={false}
+          >
+            <source src={animationWebm} type="video/webm" />
+          </video>
         )}
       </Box>
     </Box>
