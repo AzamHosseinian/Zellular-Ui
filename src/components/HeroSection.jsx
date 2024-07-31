@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Box, Typography, Button } from "@mui/material";
-import { motion } from "framer-motion";
 import backgroundImage from "../assets/images/HeroSection/background.svg";
 import animationGif from "../assets/images/HeroSection/animation.gif";
 import finalFrameImage from "../assets/images/HeroSection/img2.svg";
@@ -19,7 +18,7 @@ const HeroSection = () => {
       setIsLoaded(true);
       setIsGifPlaying(true);
 
-      const gifDuration = 3000;
+      const gifDuration = 2800;
       setTimeout(() => {
         setIsGifPlaying(false);
       }, gifDuration);
@@ -92,7 +91,6 @@ const HeroSection = () => {
                 fontSize: "80px",
                 display: "inline-block",
                 paddingLeft: "40rem", // space between text and button
-                // marginLeft: "10px",
                 marginBottom: "5%",
               }}
             >
@@ -188,14 +186,14 @@ const HeroSection = () => {
               </Box>
             </Box>
           </Box>
-          <motion.img
+          <img
             src={isGifPlaying ? animationGif : finalFrameImage}
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.001 }}
             style={{
               height: "100vh",
+              opacity: 1,
+              transition: "opacity 0.001s",
             }}
+            alt="Hero Section Animation"
           />
         </Box>
       )}
