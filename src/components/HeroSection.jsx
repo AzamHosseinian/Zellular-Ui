@@ -7,13 +7,13 @@ import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
 import "./HeroSection.css";
 
 const HeroSection = () => {
-  const [isLoading, setLoading] = useState(true);
-  const gifSrc = `${animationGif}?v=${new Date().getTime()}`;
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 3100); // Adjust the timeout value to match your GIF's duration
+    }, 3100);
 
     return () => {
       clearTimeout(timeout);
@@ -179,7 +179,7 @@ const HeroSection = () => {
         </Box>
         {isLoading ? (
           <img
-            src={gifSrc}
+            src={animationGif}
             style={{
               height: "100vh",
               opacity: 1,
