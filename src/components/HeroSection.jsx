@@ -2,21 +2,20 @@ import React, { useState, useEffect, useRef } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import backgroundImage from "../assets/images/HeroSection/background.svg";
-import image1 from "../assets/images/HeroSection/img1.svg";
-import image2 from "../assets/images/HeroSection/img2.svg";
+import animationGif from "../assets/images/HeroSection/animation.gif"; // Import the GIF
+import finalFrameImage from "../assets/images/HeroSection/img2.svg"; // Import the static image representing the final frame
 import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
 import "./HeroSection.css";
 
 const HeroSection = () => {
-  const [currentImage, setCurrentImage] = useState(image1);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isGifPlaying, setIsGifPlaying] = useState(true);
   const heroRef = useRef(null);
 
   useEffect(() => {
+    const gifDuration = 2570; // Set this to the duration of your GIF in milliseconds
     const timer = setTimeout(() => {
-      setIsTransitioning(true);
-      setCurrentImage(image2);
-    }, 2000);
+      setIsGifPlaying(false);
+    }, gifDuration);
 
     return () => clearTimeout(timer);
   }, []);
@@ -181,10 +180,10 @@ const HeroSection = () => {
           </Box>
         </Box>
         <motion.img
-          src={currentImage}
+          src={isGifPlaying ? animationGif : finalFrameImage}
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: isTransitioning ? 3 : 0 }}
+          transition={{ duration: 0.8 }}
           style={{
             height: "100vh",
           }}
