@@ -8,7 +8,7 @@ import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
 import "./HeroSection.css";
 
 const HeroSection = () => {
-  const [isGifPlaying, setIsGifPlaying] = useState(false);
+  const [isGifPlaying, setIsGifPlaying] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
   const heroRef = useRef(null);
 
@@ -18,9 +18,11 @@ const HeroSection = () => {
     img.onload = () => {
       setIsLoaded(true);
       setIsGifPlaying(true);
+
+      const gifDuration = 3000;
       setTimeout(() => {
         setIsGifPlaying(false);
-      }, 3180); // Set this to the duration of your GIF in milliseconds
+      }, gifDuration);
     };
   }, []);
 
@@ -190,7 +192,7 @@ const HeroSection = () => {
             src={isGifPlaying ? animationGif : finalFrameImage}
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.1 }}
+            transition={{ duration: 0.001 }}
             style={{
               height: "100vh",
             }}
