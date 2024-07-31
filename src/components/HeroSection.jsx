@@ -8,6 +8,7 @@ import "./HeroSection.css";
 
 const HeroSection = () => {
   const [isLoading, setLoading] = useState(true);
+  const gifSrc = `${animationGif}?v=${new Date().getTime()}`;
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -178,7 +179,7 @@ const HeroSection = () => {
         </Box>
         {isLoading ? (
           <img
-            src={animationGif}
+            src={gifSrc}
             style={{
               height: "100vh",
               opacity: 1,
