@@ -20,7 +20,7 @@ const HeroSection = () => {
       setIsGifPlaying(true);
       setTimeout(() => {
         setIsGifPlaying(false);
-      }, 2560); // Set this to the duration of your GIF in milliseconds
+      }, 2600); // Set this to the duration of your GIF in milliseconds
     };
   }, []);
 
