@@ -9,6 +9,7 @@ import "./HeroSection.css";
 const HeroSection = () => {
   const [isGifPlaying, setIsGifPlaying] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showGif, setShowGif] = useState(false);
   const heroRef = useRef(null);
 
   useEffect(() => {
@@ -17,10 +18,12 @@ const HeroSection = () => {
     img.onload = () => {
       setIsLoaded(true);
       setIsGifPlaying(true);
+      setShowGif(true);
 
-      const gifDuration = 2800;
+      const gifDuration = 3100;
       setTimeout(() => {
         setIsGifPlaying(false);
+        setShowGif(false);
       }, gifDuration);
     };
   }, []);
@@ -186,15 +189,27 @@ const HeroSection = () => {
               </Box>
             </Box>
           </Box>
-          <img
-            src={isGifPlaying ? animationGif : finalFrameImage}
-            style={{
-              height: "100vh",
-              opacity: 1,
-              transition: "opacity 0.001s",
-            }}
-            alt="Hero Section Animation"
-          />
+          {showGif ? (
+            <img
+              src={animationGif}
+              style={{
+                height: "100vh",
+                opacity: 1,
+                transition: "opacity 0.001s",
+              }}
+              alt="Hero Section Animation"
+            />
+          ) : (
+            <img
+              src={finalFrameImage}
+              style={{
+                height: "100vh",
+                opacity: 1,
+                transition: "opacity 0.001s",
+              }}
+              alt="Hero Section Animation"
+            />
+          )}
         </Box>
       )}
     </Box>
