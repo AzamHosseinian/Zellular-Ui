@@ -20,7 +20,7 @@ const HeroSection = () => {
       setIsGifPlaying(true);
       setTimeout(() => {
         setIsGifPlaying(false);
-      }, 2600); // Set this to the duration of your GIF in milliseconds
+      }, 3180); // Set this to the duration of your GIF in milliseconds
     };
   }, []);
 
@@ -190,7 +190,7 @@ const HeroSection = () => {
             src={isGifPlaying ? animationGif : finalFrameImage}
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.1 }}
             style={{
               height: "100vh",
             }}
