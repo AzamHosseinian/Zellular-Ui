@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Grid, Typography, Paper } from "@mui/material";
 import bgImage from "../assets/images/advantages/ad-bg.svg";
 import icon1 from "../assets/images/advantages/icon1.svg";

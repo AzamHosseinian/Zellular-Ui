@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import backgroundImage from "../assets/images/HeroSection/background.svg";
 import animationWebm from "../assets/images/HeroSection/animation.webm";
@@ -29,8 +29,8 @@ const HeroSection = () => {
         position: "relative",
         display: "flex",
         justifyContent: "center",
-        width: "100%",
-        height: "100vh",
+        width: "100vw",
+        height: "100svh",
       }}
     >
       <Box
