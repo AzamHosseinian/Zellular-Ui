@@ -13,7 +13,7 @@ import icon4Hover from "../assets/images/advantages/icon4-1.svg";
 const advantages = [
   {
     id: 1,
-    title: "Flexibility in Development",
+    title: "Flexible Development",
     description:
       "Enables developing decentralized apps using high-level programming languages.",
     icon: icon1,
@@ -22,7 +22,15 @@ const advantages = [
   {
     id: 2,
     title: "Rapid Finality",
-    description: "Achieves state finalization in under a second.",
+    description: (
+      <>
+        Achieves state
+        <br />
+        finalization in
+        <br />
+        under a second.
+      </>
+    ),
     icon: icon2,
     hoverIcon: icon2Hover,
   },
@@ -30,7 +38,7 @@ const advantages = [
     id: 3,
     title: "High Throughput",
     description:
-      "Supports 100k transactions per second per zApp, and unlimited throughput across the system.",
+      "Supports +100k transactions per second per zApp, and unlimited throughput across the system.",
     icon: icon3,
     hoverIcon: icon3Hover,
   },
@@ -52,13 +60,15 @@ const Advantage = () => {
       id="advantages"
       sx={{
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: "contain",
+        backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         paddingTop: 4,
-        height: "1110px",
+        minHeight: "100svh",
+        borderTop: "4px solid #003A6C",
+        borderBottom: "4px solid #003A6C",
       }}
     >
       <Typography
@@ -77,12 +87,14 @@ const Advantage = () => {
       </Typography>
       <Box
         sx={{
-          width: "70%",
+          width: "85%",
           padding: 4,
           borderRadius: 2,
         }}
       >
-        <Grid container spacing={2} justifyContent="center">
+        <Grid container spacing={9} justifyContent="center">
+          {" "}
+          {/* Adjusted spacing to roughly 72px */}
           {advantages.map((adv) => (
             <Grid item xs={12} sm={6} md={3} key={adv.id}>
               <Paper
@@ -91,6 +103,7 @@ const Advantage = () => {
                   padding: 2,
                   backgroundColor: "#FDF5E6",
                   color: "#003A6C",
+                  width: "325px",
                   height: "645px",
                   border: "2px solid #003A6C",
                   borderRadius: 0,
@@ -120,26 +133,27 @@ const Advantage = () => {
                   sx={{
                     display: "flex",
                     justifyContent: "center",
-                    my: 8,
+                    my: 2,
                   }}
                 >
                   <img
                     src={hoveredIcon === adv.id ? adv.hoverIcon : adv.icon}
                     alt={adv.title}
-                    style={{ width: "150px", height: "150px" }}
+                    style={{ width: "150px", height: "200px" }}
                   />
                 </Box>
                 <Typography
                   variant="h6"
                   sx={{
-                    paddingTop: "50px",
+                    paddingTop: hoveredIcon === adv.id ? "50px" : "150px",
                     fontFamily:
                       hoveredIcon === adv.id
                         ? "Courier Prime"
                         : "Courier Prime Bold",
                     fontSize: hoveredIcon === adv.id ? "18px" : "32px",
                     textAlign: "left",
-                    height: "80px",
+                    paddingLeft: "24px ",
+                    paddingRight: hoveredIcon === adv.id ? "30px" : "40px",
                   }}
                 >
                   {hoveredIcon === adv.id ? adv.description : adv.title}
