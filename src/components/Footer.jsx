@@ -79,7 +79,7 @@ const Footer = () => {
                   <img
                     src={social.icon}
                     alt={social.name}
-                    style={{ height: "30px", paddingLeft: "10px" }}
+                    style={{ height: "22px", paddingLeft: "10px" }}
                   />
                 </Box>
               </a>
