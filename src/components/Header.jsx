@@ -49,6 +49,10 @@ const Header = () => {
     fontSize: "24px",
     color: "#92E6A7",
     backgroundColor: "transparent",
+    "&:hover": {
+      backgroundColor: "rgba(0, 0, 0, 0)",
+      color: "#92E6A7",
+    },
   };
 
   return (
@@ -94,9 +98,12 @@ const Header = () => {
                   display: "flex",
                   alignItems: "center",
                   cursor: "pointer",
-                  "&:hover .triangle": {
-                    animation: "slideIn 6s ease-out forwards",
-                    visibility: "visible",
+                  "&:hover": {
+                    color: "#92E6A7",
+                    ".triangle": {
+                      animation: "slideIn 6s ease-out forwards",
+                      visibility: "visible",
+                    },
                   },
                 }}
               >
@@ -139,16 +146,34 @@ const Header = () => {
             }}
             PaperProps={{
               style: {
-                backgroundColor: "transparent",
+                backgroundColor: "rgba(0, 0, 0, 0)",
                 boxShadow: "none",
+                width: "200px",
+                margin: "0px",
+                padding: "0px",
               },
             }}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
           >
-            {["Discord", "Medium", "X"].map((option) => (
+            {["Discord", "Medium", "X"].map((option, index) => (
               <MenuItem
                 key={option}
                 onClick={handleMenuClick}
-                sx={menuItemStyle}
+                sx={{
+                  ...menuItemStyle,
+                  padding: "0px 0px",
+                  marginTop: index === 0 ? "20px" : "0px",
+                  "&:hover": {
+                    bgcolor: "transparent",
+                  },
+                }}
               >
                 {option}
               </MenuItem>
