@@ -5,7 +5,7 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #92E6A7;
-  animation: typing 3.5s steps(30, end) 0s infinite, blink-caret .75s step-end 7.5s infinite;
+  animation: typing 8.5s steps(30, end) 0s infinite, blink-caret .75s step-end 9.5s infinite;
   vertical-align: bottom; 
   font-weight: bold;
   font-style: italic;
