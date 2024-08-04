@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import backgroundImage from "../assets/images/HeroSection/background.svg";
 import animationWebm from "../assets/images/HeroSection/animation.webm";
-import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
+
 import "./HeroSection.css";
 
 const HeroSection = () => {
@@ -56,7 +56,7 @@ const HeroSection = () => {
               backgroundColor: "#92E6A7",
               borderRadius: "50%",
               position: "absolute",
-              top: "-5px",
+              top: "-25px",
               left: "-30px",
               marginTop: "15%",
             }}
@@ -68,7 +68,7 @@ const HeroSection = () => {
             sx={{
               color: "#FDF5E6",
               fontWeight: "bold",
-              fontFamily: "Space Grotesk",
+              fontFamily: "Space Grotesk Bold",
               fontSize: "80px",
               marginTop: "15%",
               lineHeight: "0.8",
@@ -83,7 +83,7 @@ const HeroSection = () => {
             sx={{
               color: "#FDF5E6",
               fontWeight: "bold",
-              fontFamily: "Space Grotesk",
+              fontFamily: "Space Grotesk Bold",
               fontSize: "80px",
               display: "inline-block",
               paddingLeft: "40rem",
@@ -92,37 +92,7 @@ const HeroSection = () => {
           >
             Web2 <span style={{ fontFamily: "CabinetGrotesk" }}>&</span> Web3
           </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              bgcolor: "#92E6A7",
-              fontSize: "24px",
-              color: "#003A6C",
-              borderRadius: "70px",
-              textTransform: "none",
-              display: "flex",
-              alignItems: "center",
-              marginLeft: "45rem",
-              padding: "10px 20px",
-              "&:hover": {
-                bgcolor: "#FDF5E6",
-                color: "#003A6C",
-              },
-            }}
-            endIcon={
-              <Box
-                component="img"
-                src={ArrowIcon}
-                sx={{
-                  width: 24,
-                  height: 24,
-                  ml: 1,
-                }}
-              />
-            }
-          >
-            Build on Zellular
-          </Button>
+
           <Typography
             variant="subtitle1"
             sx={{
@@ -148,7 +118,10 @@ const HeroSection = () => {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                marginTop: "5%",
+                position: "absolute",
+                bottom: "-110px",
+                width: "135%",
+                justifyContent: "center",
               }}
             >
               <Box
@@ -158,8 +131,6 @@ const HeroSection = () => {
                   backgroundColor: "#92E6A7",
                   borderRadius: "50%",
                   position: "relative",
-                  marginRight: "10px",
-                  marginLeft: "55%",
                 }}
               />
               <Typography
@@ -172,6 +143,7 @@ const HeroSection = () => {
                   fontFamily: "Courier Prime",
                   padding: 0,
                   fontSize: "24px",
+                  marginLeft: "5px",
                 }}
               >
                 Secured by EigenLayer
