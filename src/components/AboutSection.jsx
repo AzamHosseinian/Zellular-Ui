@@ -165,7 +165,6 @@ function AboutSection() {
         >
           <img
             src={slides[slideIndex].image}
-            alt={`Slide ${slideIndex + 1}`}
             style={{ width: "100%", maxHeight: "100%" }}
           />
         </Box>
