@@ -97,7 +97,7 @@ const Slider = () => {
           onClick={handlePrev}
           sx={{
             "&:hover": { backgroundColor: "transparent" },
-            marginRight: isMobile ? 0 : "20px",
+            marginRight: isMobile ? "5px" : "20px",
             marginLeft: "auto",
             width: isMobile ? 32 : 48,
             height: isMobile ? 32 : 48,
@@ -105,10 +105,10 @@ const Slider = () => {
         >
           <img src={CustomBackIcon} alt="Previous" />
         </IconButton>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] gap-[40px] justify-center w-full items-center">
+        <div className="flex gap-[40px] justify-center w-full items-center">
           {getItemsToShow().map((item, index) => (
             <div key={index} className="flex items-center justify-center">
-              <div className="bg-[#FDF5E6] border-2 items-center hover:shadow-myShadow border-[#003A6C] w-[320px] sm:w-[510px] h-[544px] flex flex-col justify-center transition-all duration-[0.2s] ease-[ease] hover:translate-x-[5px] hover:translate-y-[-5px]">
+              <div className="bg-[#FDF5E6] border-2 items-center hover:shadow-myShadow border-[#003A6C] w-[320px] sm:w-full h-[544px] flex flex-col justify-center transition-all duration-[0.2s] ease-[ease] hover:translate-x-[5px] hover:translate-y-[-5px]">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -164,7 +164,7 @@ const Slider = () => {
           onClick={handleNext}
           sx={{
             "&:hover": { backgroundColor: "transparent" },
-            marginLeft: isMobile ? 0 : "20px",
+            marginLeft: isMobile ? "5px" : "20px",
             marginRight: "auto",
             width: isMobile ? 32 : 48,
             height: isMobile ? 32 : 48,

@@ -62,7 +62,7 @@ function AboutSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % slides.length);
-    }, 100000);
+    }, 10000000);
 
     return () => clearInterval(interval);
   }, [slideIndex]);
@@ -114,7 +114,7 @@ function AboutSection() {
       </Box>
 
       <div
-        className="flex  md:flex-row flex-col-reverse px-[40px] py-[80px] items-center justify-center gap-[30px] border-t-[#003A6C] border-b-[#003A6C] border-2 border-dashed "
+        className="flex lg:flex-row flex-col-reverse px-[40px] py-[80px] items-center justify-center gap-[30px] border-t-[#003A6C] border-b-[#003A6C] border-2 border-dashed "
         sx={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
