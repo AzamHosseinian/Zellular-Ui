@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useTheme, useMediaQuery } from "@mui/material";
+
 import { Box, Grid, Typography, Paper, IconButton } from "@mui/material";
 import CustomBackIcon from "../assets/images/Icons/arrowback.svg";
 import CustomForwardIcon from "../assets/images/Icons/arrowforward.svg";
@@ -29,10 +31,14 @@ const newsItems = [
     image: docsImage,
   },
 ];
-
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slidesToShow = 3;
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+
+  let slidesToShow = isDesktop ? 3 : isTablet ? 2 : 1;
 
   const handlePrev = () => {
     setCurrentIndex(
@@ -47,15 +53,8 @@ const Slider = () => {
     );
   };
 
-  useEffect(() => {
-    const autoplay = setInterval(() => {
-      handleNext();
-    }, 3000);
-    return () => clearInterval(autoplay);
-  }, [currentIndex]);
-
   const getItemsToShow = () => {
-    const items = [];
+    let items = [];
     for (let i = 0; i < slidesToShow; i++) {
       items.push(newsItems[(currentIndex + i) % newsItems.length]);
     }
@@ -98,8 +97,10 @@ const Slider = () => {
           onClick={handlePrev}
           sx={{
             "&:hover": { backgroundColor: "transparent" },
-            marginRight: "20px",
+            marginRight: isMobile ? 0 : "20px",
             marginLeft: "auto",
+            width: isMobile ? 32 : 48,
+            height: isMobile ? 32 : 48,
           }}
         >
           <img src={CustomBackIcon} alt="Previous" />
@@ -163,8 +164,10 @@ const Slider = () => {
           onClick={handleNext}
           sx={{
             "&:hover": { backgroundColor: "transparent" },
-            marginLeft: "20px",
+            marginLeft: isMobile ? 0 : "20px",
             marginRight: "auto",
+            width: isMobile ? 32 : 48,
+            height: isMobile ? 32 : 48,
           }}
         >
           <img src={CustomForwardIcon} alt="Next" />
