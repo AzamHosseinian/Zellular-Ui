@@ -169,8 +169,8 @@ button:focus, button:focus-visible {
   position: absolute;
   top: 100%; 
   left: 0;
-  background-color: #003A6C;
-  padding: 8px;
+  background-color: transparent;
+  padding-top: 10px;
   z-index: 1;
   transition: opacity 0.3s ease; 
   opacity: 1;
@@ -184,10 +184,6 @@ button:focus, button:focus-visible {
   cursor: pointer;
 }
 
-.social-dropdown div:hover {
-  background-color: #92E6A7;
-  color: #003A6C;
-}
 
 .typing-effect {
   display: inline-block;
@@ -206,10 +202,10 @@ button:focus, button:focus-visible {
     width: 0;
   }
   46.67% {
-    width: 40%;
+    width: 36%;
   }
   100% {
-    width: 40%;
+    width: 36%;
   }
 }
 
