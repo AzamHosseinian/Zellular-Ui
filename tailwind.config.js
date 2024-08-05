@@ -7,6 +7,7 @@ export default {
         courierPrime: ["CourierPrime"],
         cabinetGrotesk: ["CabinetGrotesk"],
         chakraPetch: ["ChakraPetch"],
+        spaceGrotesk: ["SpaceGrotesk"],
       },
       screens: {
         "lt-1596": { max: "1520px", min: "640px" },
