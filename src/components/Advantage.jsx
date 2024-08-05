@@ -99,8 +99,8 @@ const Advantage = () => {
         <div className="grid grid-cols-[repeat(auto-fit,minmax(301px,1fr))] w-full gap-[68px] max-w-[1414px] ">
           {" "}
           {/* Adjusted spacing to roughly 72px */}
-          {advantages.map((adv) => (
-            <div className="">
+          {advantages.map((adv, index) => (
+            <div className="" key={index}>
               <Paper
                 elevation={3}
                 sx={{

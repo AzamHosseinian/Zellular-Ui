@@ -5,6 +5,7 @@ import HeroSection from "./components/Heder/Header";
 import AboutSection from "./components/AboutSection";
 import Advantage from "./components/Advantage";
 import Footer from "./components/Footer";
+import "./App.css";
 
 const App = () => {
   const [isHovered, setIsHovered] = useState(false);

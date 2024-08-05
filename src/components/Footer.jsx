@@ -29,24 +29,21 @@ const Footer = () => {
         color: "#FFFFFF",
       }}
     >
-      <Grid container alignItems="center">
+      <div className="flex flex-col md:flex-row gap-10 sm:gap-10 justify-between items-center px-5 py-8">
         <Grid item xs={12} md={6}>
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              margin: "30px 80px",
             }}
           >
             <img src={logo} alt="Logo" style={{ height: "30px" }} />
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid>
           <Box
             sx={{
               display: "flex",
-              justifyContent: "flex-end",
-              marginRight: "40px",
             }}
           >
             {socialMedias.map((social, index) => (
@@ -92,7 +89,7 @@ const Footer = () => {
             ))}
           </Box>
         </Grid>
-      </Grid>
+      </div>
     </Box>
   );
 };
