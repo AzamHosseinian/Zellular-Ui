@@ -89,7 +89,9 @@ const Advantage = () => {
       </Typography>
       <Box
         sx={{
-          width: "85%",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
           padding: 4,
           borderRadius: 2,
         }}
@@ -108,6 +110,7 @@ const Advantage = () => {
                   width: "302px",
                   height: "645px",
                   border: "2px solid #003A6C",
+                  alignItems: "center",
                   borderRadius: 0,
                   boxShadow: "none",
                   transition: "all 0.1s ease",

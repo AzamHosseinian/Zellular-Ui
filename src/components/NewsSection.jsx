@@ -69,6 +69,9 @@ const Slider = () => {
         backgroundColor: "#FDF5E6",
         padding: "190px 0",
         textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       <Typography
@@ -86,147 +89,98 @@ const Slider = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
+          width: "100%",
         }}
       >
         <IconButton
           onClick={handlePrev}
           sx={{
-            "&:hover": {
-              backgroundColor: "transparent",
-            },
-            "&:focus": {
-              outline: "none",
-              boxShadow: "none",
-            },
+            "&:hover": { backgroundColor: "transparent" },
+            marginLeft: "40px",
           }}
         >
-          <img
-            src={CustomBackIcon}
-            alt="Previous"
-            style={{ color: "#003A6C", margin: "20px" }}
-          />
+          <img src={CustomBackIcon} alt="Previous" />
         </IconButton>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] w-full  gap-[40px]">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] w-full gap-[40px] justify-center">
           {getItemsToShow().map((item, index) => (
             <Grid item xs={12} md={4} key={index}>
-              <Box
+              <Paper
                 sx={{
-                  position: "relative",
-                  marginBottom: "20px",
-                  height: "100%",
+                  backgroundColor: "#FDF5E6",
+                  border: "2px solid #003A6C",
+                  boxShadow: "none",
+                  width: "510px",
+                  height: "544px",
                   display: "flex",
                   flexDirection: "column",
+                  justifyContent: "space-between",
+                  transition: "all 0.2s ease",
+                  "&:hover": {
+                    transform: "translate(5px, -5px)",
+                    boxShadow: "-10px -10px 0px 0px #003A6C",
+                  },
                 }}
               >
-                <Paper
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <Box
                   sx={{
-                    backgroundColor: "#FDF5E6",
-                    border: "2px solid #003A6C",
-                    boxShadow: "none",
-                    width: "510px",
-                    height: "576px",
-                    display: "flex",
+                    padding: 2,
+                    flexGrow: 1,
                     flexDirection: "column",
                     justifyContent: "space-between",
-                    transition: "all 0.2s ease",
-                    position: "relative",
-                    zIndex: 1,
-                    "&:hover": {
-                      transform: "translate(5px, -5px)",
-                      boxShadow: "-10px -10px 0px 0px #003A6C",
-                      zIndex: 2,
-                    },
                   }}
                 >
-                  <Box>
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Box>
-                  <Box
+                  <Typography
+                    variant="body2"
                     sx={{
-                      padding: 2,
-                      flexGrow: 1,
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
+                      color: "#003A6C",
+                      fontFamily: "Courier Prime",
+                      fontSize: "20px",
+                      textAlign: "left",
+                      paddingBottom: "16px",
                     }}
                   >
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "#003A6C",
-                        fontFamily: "Courier Prime",
-                        fontSize: "20px",
-                        textAlign: "left",
-                        paddingBottom: "16px",
-                      }}
-                    >
-                      {item.date}
-                    </Typography>
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        color: "#003A6C",
-                        fontSize: "24px",
-                        lineHeight: "30px",
-                        fontFamily: "Courier Prime Bold",
-                        textAlign: "left",
-                        height: "3em",
-                        overflow: "hidden",
-                        display: "-webkit-box",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 2,
-                      }}
-                    >
-                      {item.title}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "#003A6C",
-                        fontFamily: "Courier Prime",
-                        fontSize: "20px",
-                        textAlign: "left",
-                        marginTop: "32px",
-                        height: "7em",
-                        padding: "0 10px 32px 0",
-                      }}
-                    >
-                      {item.description}
-                    </Typography>
-                  </Box>
-                </Paper>
-              </Box>
+                    {item.date}
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "#003A6C",
+                      fontFamily: "Courier Prime Bold",
+                      textAlign: "left",
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#003A6C",
+                      fontFamily: "Courier Prime",
+                      textAlign: "left",
+                      marginTop: "32px",
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Paper>
             </Grid>
           ))}
         </div>
         <IconButton
           onClick={handleNext}
           sx={{
-            "&:hover": {
-              backgroundColor: "transparent",
-            },
-            "&:focus": {
-              outline: "none",
-              boxShadow: "none",
-            },
+            "&:hover": { backgroundColor: "transparent" },
+            marginRight: "80px",
           }}
         >
-          <img
-            src={CustomForwardIcon}
-            alt="Next"
-            style={{
-              marginLeft: "20px",
-            }}
-          />
+          <img src={CustomForwardIcon} alt="Next" />
         </IconButton>
       </Box>
     </Box>

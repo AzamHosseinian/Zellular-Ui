@@ -19,34 +19,34 @@ code {
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Space Grotesk Bold';
-  src: url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Bold.ttf') format('truetype');
+  src: url('./assets/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Courier Prime';
-  src: url('./assets/fonts/Courier_Prime/CourierPrime-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/CourierPrime/CourierPrime-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Courier Prime Bold';
-  src: url('./assets/fonts/Courier_Prime/CourierPrime-Bold.ttf') format('truetype');
+  src: url('./assets/fonts/CourierPrime/CourierPrime-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Chakra Petch';
-  src: url('./assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/ChakraPetch/ChakraPetch-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
