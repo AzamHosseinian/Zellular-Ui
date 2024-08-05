@@ -14,7 +14,7 @@ const Header = () => {
     >
       <div className="">
         <ZelAnimation />
-        <div className="animate-fadeIn opacity-0 lg:animate-none lg:opacity-100">
+        <div className="animate-fadeIn opacity-0  sm:animate-none sm:opacity-100">
           <div className="navigation">
             <div className="flex items-center w-full h-[140px] lg:h-[calc(4.5vw_+_4.5vh)] ml-[clamp(30px,5vw,88px)]">
               <div className="w-full max-w-[calc(26vh_+_12vw)]">
@@ -63,12 +63,12 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="md:mt-[calc(28vh_-100px)] mt-[40px] relative font-courierPrime">
+          <div className="md:mt-[calc(28vh_-100px)] mt-[40px] relative font-courierPrime  text-[clamp(1.5rem,3vw_+_1rem,5rem)]">
             <div className="h-6 w-6 bg-[#92E6A7] absolute rounded-full left-4 md:left-20 top-2 md:-top-3"></div>
-            <div className="text-[clamp(24px,4vw,80px)] leading-[80px] text-white ml-10 md:ml-28">
+            <div className=" leading-[80px] text-white ml-10 md:ml-28">
               <div>Filling the Gap</div>
             </div>
-            <div className="text-[clamp(24px,4vw,80px)] leading-[80px] text-white justify-center ml-[40px] lg:ml-[calc(100vw_-_75vw_-20px)] -mt-10 md:mt-3">
+            <div className=" leading-[80px] text-white justify-center ml-[40px] md:ml-[110px] lg:ml-[calc(100vw_-_75vw_-20px)] -mt-9 md:-mt-5 lg:mt-3">
               <div className="">between Web2 & Web3</div>
             </div>
           </div>

@@ -7,6 +7,9 @@ export default {
         courierPrime: ["CourierPrime"],
         CabinetGrotesk: ["cabinetGrotesk"],
       },
+      screens: {
+        "lt-1596": { max: "1596px", min: "640px" },
+      },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },

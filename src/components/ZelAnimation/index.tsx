@@ -1,7 +1,7 @@
 import React from "react";
 const ZelAnimation = () => {
   return (
-    <div className="absolute right-0 left-0 lg:left-auto lg:right-8 lg:max-w-[432px] flex items-center justify-center h-[100svh] animate-fadeOut lg:animate-none ">
+    <div className="absolute right-0 left-0 lg:left-auto lg:right-8 lg:max-w-[432px]  flex md:hidden lt-1596:hidden lg:flex  items-center justify-center h-[100svh] animate-fadeOut lg:animate-none ">
       <div className="relative h-[100svh] flex flex-col justify-between">
         {/* each row */}
         <div className="mt-2 top-2">
