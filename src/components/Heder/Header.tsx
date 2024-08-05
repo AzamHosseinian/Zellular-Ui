@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <div
-      className="h-[100vh] bg-cover bg-no-repeat bg-center relative bg-[#003A6C] overflow-hidden"
+      className="h-[100vh] bg-[url('../../assets/images/HeroSection/backgroundImage.png')] bg-cover bg-no-repeat bg-center relative bg-[#003A6C] overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}

@@ -107,7 +107,7 @@ const Slider = () => {
             style={{ color: "#003A6C", margin: "20px" }}
           />
         </IconButton>
-        <Grid container spacing={8} sx={{ width: "90%" }}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] w-full  gap-[40px]">
           {getItemsToShow().map((item, index) => (
             <Grid item xs={12} md={4} key={index}>
               <Box
@@ -207,7 +207,7 @@ const Slider = () => {
               </Box>
             </Grid>
           ))}
-        </Grid>
+        </div>
         <IconButton
           onClick={handleNext}
           sx={{

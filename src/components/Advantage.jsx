@@ -93,11 +93,11 @@ const Advantage = () => {
           borderRadius: 2,
         }}
       >
-        <Grid container spacing={9} justifyContent="center">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(301px,1fr))] w-full gap-[68px] max-w-[1414px] ">
           {" "}
           {/* Adjusted spacing to roughly 72px */}
           {advantages.map((adv) => (
-            <Grid item xs={12} sm={6} md={3} key={adv.id}>
+            <div className="">
               <Paper
                 elevation={3}
                 sx={{
@@ -160,9 +160,9 @@ const Advantage = () => {
                   {hoveredIcon === adv.id ? adv.description : adv.title}
                 </Typography>
               </Paper>
-            </Grid>
+            </div>
           ))}
-        </Grid>
+        </div>
       </Box>
     </Box>
   );
