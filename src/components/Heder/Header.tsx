@@ -37,7 +37,7 @@ const Header = () => {
               </div>
 
               {/* Menu Items with Hover Effect */}
-              <div className="lg:flex hidden gap-[56px] text-[#92E6A7] text-[24px] font-courierPrime font-bold leading-[26.95px]">
+              <div className="md:flex hidden gap-[56px] text-[#92E6A7] text-[24px] font-courierPrime font-bold leading-[26.95px]">
                 <div className="menu-item cursor-pointer">
                   <span>About</span>
                 </div>
