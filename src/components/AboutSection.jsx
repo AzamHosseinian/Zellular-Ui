@@ -89,6 +89,9 @@ function AboutSection() {
         height: "100svh",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "left",
+        alignItems: "left",
+        boxSizing: "border-box",
       }}
     >
       <Box
@@ -97,11 +100,11 @@ function AboutSection() {
           width: isMobile ? mobileLogoSize : logoSize,
           height: isMobile ? mobileLogoSize : logoSize,
           transition: "width 0.8s, height 0.8s",
-          // mb: 2,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          margin: isMobile ? "10px" : "80px",
+          // margin: isMobile ? "10px" : "80px",
+          marginLeft: "80px",
         }}
       >
         <Box
@@ -125,6 +128,7 @@ function AboutSection() {
           padding: isMobile ? "20px" : "40px 80px",
           gap: 30,
           flex: "0 0 480px",
+          boxSizing: "border-box",
         }}
       >
         <Box
