@@ -80,7 +80,6 @@ export default {
         },
 
         move13: {
-          "0%": { top: "128px" },
           "100%": { top: "41.5%" },
         },
         move14: {
@@ -112,7 +111,6 @@ export default {
           "100%": { top: "44%" },
         },
         move21: {
-          "0%": { top: "80px" },
           "100%": { top: "46.5%" },
         },
         move22: {
@@ -173,7 +171,7 @@ export default {
           "100%": { bottom: "39.7%" },
         },
         move37: {
-          "100%": { bottom: "37.5%" },
+          "100%": { bottom: "37.7%" },
         },
 
         move38: {
@@ -213,9 +211,10 @@ export default {
           "100%": { bottom: "32%" },
         },
 
-        moveDown30: { "100%": { transform: "translateY(30px)" } },
+        moveDown30: { "100%": { transform: "translateY(70px)" } },
         moveDown10: { "100%": { transform: "translateY(10px)" } },
         moveTop20: { "100%": { transform: "translateY(-20px)" } },
+        moveDown50: { "100%": { transform: "translateY(50px)" } },
       },
       animation: {
         fadeIn: "fadeIn 1s forwards 4s",
@@ -267,9 +266,10 @@ export default {
         move45: "move45 1s forwards 2s",
         move46: "move46 1s forwards 2s",
         move47: "move47 1s forwards 2s",
-        moveDown30: "moveDown30 1s forwards 2s",
-        moveDown10: "moveDown10 1s forwards 2s",
-        moveTop20: "moveTop20 1s forwards 2s",
+        moveDown30: "moveDown30 .9s forwards 2s",
+        moveDown50: "moveDown50 .7s forwards 2s",
+        moveDown10: "moveDown10 .8s forwards 2s",
+        moveTop20: "moveTop20 .7s forwards 2s",
       },
     },
   },
