@@ -47,7 +47,7 @@ const Header = () => {
                 </svg>
               </div>
 
-              <div className="md:flex hidden gap-[56px] text-[#92E6A7] text-[24px] font-courierPrime font-bold leading-[26.95px]">
+              <div className="lg:flex hidden gap-[56px] text-[#92E6A7] text-[24px] font-courierPrime font-bold leading-[26.95px]">
                 <div
                   className="menu-item cursor-pointer"
                   onClick={() => scrollToSection("about")}
