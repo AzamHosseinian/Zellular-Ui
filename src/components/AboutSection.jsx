@@ -103,7 +103,6 @@ function AboutSection() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          // margin: isMobile ? "10px" : "80px",
           marginLeft: "80px",
         }}
       >
