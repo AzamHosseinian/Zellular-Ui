@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -138,3 +143,84 @@ button:focus, button:focus-visible {
 * {
   scrollbar-width: none; /* Firefox */
 }
+
+
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-item:hover:after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #92E6A7; 
+  width: 0;
+  height: 0;
+}
+
+
+.social-dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #003A6C;
+  padding: 8px;
+  z-index: 1;
+  transition: opacity 0.3s ease; 
+  opacity: 1;
+  display: block;
+}
+
+.social-dropdown div {
+  color: #92E6A7;
+  padding: 5px 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.social-dropdown div:hover {
+  background-color: #92E6A7;
+  color: #003A6C;
+}
+
+.typing-effect {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #92E6A7;
+  animation: typing 8.5s steps(30, end) 0s infinite, blink-caret 0.75s step-end 9.5s infinite;
+  vertical-align: bottom;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@keyframes typing {
+  0%,
+  46.67% {
+    width: 0;
+  }
+  46.67% {
+    width: 40%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  25%,
+  75% {
+    border-color: #92E6A7;
+  }
+}
+

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import NewsSection from "./components/NewsSection";
-import HeroSection from "./components/HeroSection";
+import HeroSection from "./components/Heder/Header";
 import AboutSection from "./components/AboutSection";
 import Advantage from "./components/Advantage";
 import Footer from "./components/Footer";
@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div style={{ backgroundColor: "#FDF5E6" }}>
-      <Header />
+      {/* <Header /> */}
       <HeroSection />
       <AboutSection onIntersect={handleIntersect} isHovered={isHovered} />
       <Advantage />
