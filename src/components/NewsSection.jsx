@@ -102,11 +102,7 @@ const Slider = () => {
         >
           <img src={CustomBackIcon} alt="Previous" />
         </IconButton>
-<<<<<<< HEAD
         <div className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] w-full gap-[40px] justify-center">
-=======
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] w-full gap-[40px]">
->>>>>>> e2388875ae1093fc0fc24932281d9ddfd6c77edc
           {getItemsToShow().map((item, index) => (
             <Grid item xs={12} md={4} key={index}>
               <Paper
