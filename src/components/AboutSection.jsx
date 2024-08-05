@@ -62,7 +62,7 @@ function AboutSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % slides.length);
-    }, 7000);
+    }, 100000);
 
     return () => clearInterval(interval);
   }, [slideIndex]);
@@ -83,7 +83,7 @@ function AboutSection() {
       sx={{
         textAlign: "center",
         bgcolor: "#FDF5E6",
-        height: "100svh",
+        minHeight: "100svh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "left",
@@ -100,6 +100,8 @@ function AboutSection() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          paddingTop: isMobile ? "35px" : "80px",
+          paddingBottom: isMobile ? "35px" : "80px",
           marginLeft: "80px",
         }}
       >
@@ -107,11 +109,12 @@ function AboutSection() {
           component="img"
           src={LogoType}
           alt="Zellular Logotype"
-          sx={{ width: "100%", height: "100%" }}
+          sx={{ width: "100%", height: "100%", minWidth: "200px" }}
         />
       </Box>
 
-      <Box
+      <div
+        className="flex  md:flex-row flex-col-reverse px-[40px] py-[80px] items-center justify-center gap-[30px] border-t-[#003A6C] border-b-[#003A6C] border-2 border-dashed "
         sx={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
@@ -119,11 +122,11 @@ function AboutSection() {
           borderBottom: "3px dashed #003A6C",
           textAlign: "center",
           alignItems: "center",
-          height: "480px",
+          minHeight: "480px",
           justifyContent: "center",
           padding: isMobile ? "20px" : "40px 80px",
           gap: 30,
-          flex: "0 0 480px",
+          // flex: "0 0 480px ",
           boxSizing: "border-box",
         }}
       >
@@ -157,6 +160,7 @@ function AboutSection() {
             alignItems: "center",
             justifyContent: isMobile ? "center" : "flex-start",
             height: "100%",
+            minWidth: "200px",
           }}
         >
           <img
@@ -164,7 +168,7 @@ function AboutSection() {
             style={{ width: "100%", maxHeight: "100%" }}
           />
         </Box>
-      </Box>
+      </div>
 
       <Box
         sx={{
