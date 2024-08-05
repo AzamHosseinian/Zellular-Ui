@@ -18,7 +18,7 @@ const App = () => {
     <div style={{ backgroundColor: "#FDF5E6" }}>
       {/* <Header /> */}
       <HeroSection />
-      <AboutSection onIntersect={handleIntersect} isHovered={isHovered} />
+      {/* <AboutSection onIntersect={handleIntersect} isHovered={isHovered} /> */}
       <Advantage />
       <NewsSection />
       <Footer />

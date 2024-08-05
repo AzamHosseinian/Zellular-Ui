@@ -103,30 +103,26 @@ const Slider = () => {
         >
           <img src={CustomBackIcon} alt="Previous" />
         </IconButton>
-        <div
-          className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] gap-[40px] justify-center"
-          style={{
-            width: "90%",
-          }}
-        >
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] gap-[40px] justify-center w-full items-center">
           {getItemsToShow().map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Paper
-                sx={{
-                  backgroundColor: "#FDF5E6",
-                  border: "2px solid #003A6C",
-                  boxShadow: "none",
-                  width: "510px",
-                  height: "544px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  transition: "all 0.2s ease",
-                  "&:hover": {
-                    transform: "translate(5px, -5px)",
-                    boxShadow: "-10px -10px 0px 0px #003A6C",
-                  },
-                }}
+            <div key={index} className="flex items-center justify-center">
+              <div
+                className="bg-[#FDF5E6] border-2 items-center border-[#003A6C] w-[320px] sm:w-[510px] h-[544px] flex flex-col justify-center transition-all duration-[0.2s] ease-[ease] hover:translate-x-[5px] hover:translate-y-[-5px]"
+                // sx={{
+                //   backgroundColor: "#FDF5E6",
+                //   border: "2px solid #003A6C",
+                //   boxShadow: "none",
+                //   width: "510px",
+                //   height: "544px",
+                //   display: "flex",
+                //   flexDirection: "column",
+                //   justifyContent: "space-between",
+                //   transition: "all 0.2s ease",
+                //   "&:hover": {
+                //     transform: "translate(5px, -5px)",
+                //     boxShadow: "-10px -10px 0px 0px #003A6C",
+                //   },
+                // }}
               >
                 <img
                   src={item.image}
@@ -175,8 +171,8 @@ const Slider = () => {
                     {item.description}
                   </Typography>
                 </Box>
-              </Paper>
-            </Grid>
+              </div>
+            </div>
           ))}
         </div>
         <IconButton
