@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         courierPrime: ["CourierPrime"],
         cabinetGrotesk: ["CabinetGrotesk"],
+        chakraPetch: ["ChakraPetch"],
       },
       screens: {
         "lt-1596": { max: "1520px", min: "640px" },

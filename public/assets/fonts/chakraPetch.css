@@ -1,16 +1,16 @@
 @font-face {
-    font-family: ChakraPetch;
-    font-style: normal;
-    font-weight: bold;
-    src: url("ChakraPetch/Chakra_Petch/ChakraPetch-Bold.ttf") format("truetype");
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: ChakraPetchBold;
-    font-style: normal;
-    font-weight: normal;
-    src: url("ChakraPetch/Chakra_Petch/ChakraPetch-Regular.ttf") format("truetype");
-    font-display: swap;
-  }
-  
+  font-family: ChakraPetch;
+  font-style: normal;
+  font-weight: bold;
+  src: url("ChakraPetch/Chakra_Petch/ChakraPetch-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ChakraPetch;
+  font-style: normal;
+  font-weight: normal;
+  src: url("ChakraPetch/Chakra_Petch/ChakraPetch-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+}
