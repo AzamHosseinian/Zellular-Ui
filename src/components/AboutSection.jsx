@@ -46,7 +46,7 @@ function AboutSection() {
 
       if (
         window.scrollY >
-        0.6 * document.body.scrollHeight - window.innerHeight
+        0.5 * document.body.scrollHeight - window.innerHeight
       ) {
         setMoveRowUp(true);
       } else {
@@ -65,7 +65,7 @@ function AboutSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % slides.length);
-    }, 10000000);
+    }, 100000);
 
     return () => clearInterval(interval);
   }, [slideIndex]);
@@ -117,8 +117,9 @@ function AboutSection() {
       </Box>
 
       <div
-        className="flex lg:flex-row flex-col-reverse px-[40px] py-[80px] items-center justify-center gap-[30px] border-t-[#003A6C] border-b-[#003A6C] border-2 border-dashed "
+        className="flex  md:flex-row flex-col-reverse px-[40px] py-[80px] items-center justify-center gap-[30px] border-t-[#003A6C] border-b-[#003A6C] border-2 border-dashed "
         sx={{
+          position: "relative",
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
           borderTop: "3px dashed #003A6C",
@@ -127,12 +128,30 @@ function AboutSection() {
           alignItems: "center",
           minHeight: "480px",
           justifyContent: "center",
-          padding: isMobile ? "20px" : "40px 80px",
+          padding: isTablet ? "20px" : "40px 80px",
           gap: 30,
           // flex: "0 0 480px ",
           boxSizing: "border-box",
         }}
       >
+        <Box
+          component="img"
+          alt="Arrow back icon"
+          src={ArrowBack}
+          onClick={handlePreviousSlide}
+          sx={{
+            position: "absolute",
+            left: isMobile ? "10px" : "40px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            cursor: slideIndex > 0 ? "pointer" : "default",
+            width: 24,
+            height: 24,
+            opacity: slideIndex > 0 ? 1 : 0.5,
+            pointerEvents: slideIndex > 0 ? "auto" : "none",
+            zIndex: 1000,
+          }}
+        />
         <Box
           sx={{
             width: isMobile ? "100%" : "60%",
@@ -147,7 +166,7 @@ function AboutSection() {
             variant="body1"
             sx={{
               fontFamily: "Courier Prime Bold",
-              fontSize: isMobile ? "18px" : "28px",
+              fontSize: isTablet ? "20px" : "28px",
               color: "#003A6C",
               textAlign: "left",
               lineHeight: 1.5,
@@ -171,18 +190,38 @@ function AboutSection() {
             style={{ width: "100%", maxHeight: "100%" }}
           />
         </Box>
+        <Box
+          component="img"
+          alt="Arrow forward icon"
+          src={ArrowForward}
+          onClick={handleNextSlide}
+          sx={{
+            position: "absolute",
+            right: isMobile ? "10px" : "40px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            cursor: slideIndex < slides.length - 1 ? "pointer" : "default",
+            width: 24,
+            height: 24,
+            opacity: slideIndex < slides.length - 1 ? 1 : 0.5,
+            pointerEvents: slideIndex < slides.length - 1 ? "auto" : "none",
+            zIndex: 1000,
+          }}
+        />
       </div>
 
       <Box
         sx={{
           display: "flex",
           flexDirection: isTablet ? "column" : "row",
-          justifyContent: "space-between",
+          justifyContent: isTablet ? "center" : "space-between",
           alignItems: "center",
           marginLeft: "80px",
-          transition: "transform 0.8s ease-in-out",
-          transform: moveRowUp ? "translateY(-20px)" : "translateY(0)",
+          transition: "transform 1s ease-in-out",
+          transform: moveRowUp ? "translateY(-40px)" : "translateY(0)",
           flex: 1,
+          padding: "0 40px",
+          margin: "20px",
         }}
       >
         <Button
@@ -204,11 +243,14 @@ function AboutSection() {
               border: "2px solid #003A6C",
               boxShadow: "none",
             },
+            marginLeft: "auto",
           }}
         >
           Build on Zellular
         </Button>
-        <Box
+      </Box>
+
+      {/* <Box
           sx={{
             display: "flex",
             alignItems: "center",
@@ -244,8 +286,7 @@ function AboutSection() {
               pointerEvents: slideIndex < slides.length - 1 ? "auto" : "none",
             }}
           />
-        </Box>
-      </Box>
+        </Box> */}
     </Box>
   );
 }
