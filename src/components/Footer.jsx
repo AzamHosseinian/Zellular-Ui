@@ -62,11 +62,17 @@ const Footer = () => {
                     display: "flex",
                     alignItems: "center",
                     marginRight: "40px",
+                    paddingTop: "5px",
                     position: "relative",
+                    "&:hover .green-circle": {
+                      display: "block",
+                    },
                   }}
                 >
                   <Box
+                    className="green-circle"
                     sx={{
+                      display: "none",
                       width: 10,
                       height: 10,
                       backgroundColor: "#92E6A7",

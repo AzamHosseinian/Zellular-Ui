@@ -6,9 +6,8 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import ArrowIcon from "../assets/images/HeroSection/arrows.svg";
-import ArrowForward from "../assets/images/AboutSection/arrowforward.svg";
-import ArrowBack from "../assets/images/AboutSection/arrowback.svg";
+import ArrowForward from "../assets/images/Icons/arrowforward.svg";
+import ArrowBack from "../assets/images/Icons/arrowback.svg";
 import LogoType from "../assets/images/AboutSection/logotype.svg";
 import SlideOne from "../assets/images/AboutSection/SlideImages/slide1.svg";
 import SlideTwo from "../assets/images/AboutSection/SlideImages/slide2.svg";
@@ -47,7 +46,7 @@ function AboutSection() {
 
       if (
         window.scrollY >
-        0.7 * document.body.scrollHeight - window.innerHeight
+        0.6 * document.body.scrollHeight - window.innerHeight
       ) {
         setMoveRowUp(true);
       } else {
@@ -66,11 +65,11 @@ function AboutSection() {
     return () => clearInterval(interval);
   }, []);
 
-  const logoSize = scrollY >= window.innerHeight * 0.3 ? "40%" : "25%";
-  const mobileLogoSize = scrollY >= window.innerHeight * 0.2 ? "35%" : "15%";
+  const logoSize = scrollY >= window.innerHeight * 0.3 ? "30%" : "15%";
+  const mobileLogoSize = scrollY >= window.innerHeight * 0.2 ? "25%" : "10%";
 
   return (
-    <Box sx={{ textAlign: "center" }}>
+    <Box sx={{ textAlign: "center", bgcolor: "#FDF5E6" }}>
       <Box
         id="about"
         sx={{
@@ -95,21 +94,24 @@ function AboutSection() {
         sx={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
-          justifyContent: "space-between",
           borderTop: "3px dotted #003A6C",
           borderBottom: "3px dotted #003A6C",
+          textAlign: "center",
           height: "480px",
-          justifyContent: "center",
           alignItems: "center",
+          justifyContent: "center",
+          padding: isMobile ? "20px" : "40px 80px",
+          gap: 30,
         }}
       >
         <Box
           sx={{
-            width: isMobile ? "80%" : "50%",
-            margin: isMobile ? "40px" : "80px",
+            width: isMobile ? "100%" : "60%",
             display: "flex",
             alignItems: "center",
+            justifyContent: isMobile ? "center" : "flex-end",
             height: "100%",
+            marginRight: isMobile ? "0" : "80px",
           }}
         >
           <Typography
@@ -119,6 +121,7 @@ function AboutSection() {
               fontSize: isMobile ? "18px" : "28px",
               color: "#003A6C",
               textAlign: "left",
+              lineHeight: 1.5,
             }}
           >
             {slides[slideIndex].text}
@@ -127,9 +130,9 @@ function AboutSection() {
         <Box
           sx={{
             width: isMobile ? "100%" : "20%",
-            margin: isMobile ? "0px" : "80px",
             display: "flex",
             alignItems: "center",
+            justifyContent: isMobile ? "center" : "flex-start",
             height: "100%",
           }}
         >
@@ -162,24 +165,15 @@ function AboutSection() {
             textTransform: "none",
             display: "flex",
             alignItems: "center",
-
+            fontFamily: "Courier Prime",
+            padding: isMobile ? "10px 20px" : "15px 30px",
             "&:hover": {
               bgcolor: "#FDF5E6",
               color: "#003A6C",
+              border: "2px solid #003A6C",
+              boxShadow: "none",
             },
           }}
-          endIcon={
-            <Box
-              component="img"
-              src={ArrowIcon}
-              sx={{
-                width: 24,
-                height: 24,
-                ml: 1,
-              }}
-              alt="Arrow icon"
-            />
-          }
         >
           Build on Zellular
         </Button>

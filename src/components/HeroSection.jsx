@@ -119,8 +119,8 @@ const HeroSection = () => {
                 display: "flex",
                 alignItems: "center",
                 position: "absolute",
-                bottom: "-110px",
-                width: "135%",
+                bottom: "-130px",
+                width: "155%",
                 justifyContent: "center",
               }}
             >
@@ -143,7 +143,7 @@ const HeroSection = () => {
                   fontFamily: "Courier Prime",
                   padding: 0,
                   fontSize: "24px",
-                  marginLeft: "5px",
+                  marginLeft: "15px",
                 }}
               >
                 Secured by EigenLayer

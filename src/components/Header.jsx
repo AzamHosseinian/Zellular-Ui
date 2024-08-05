@@ -81,6 +81,7 @@ const Header = () => {
             justifyContent: "center",
             flexGrow: 1,
             gap: 4,
+            paddingTop: "3px",
           }}
         >
           {["About", "News", "Advantages", "Social Media"].map(

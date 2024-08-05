@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box, Grid, Typography, Paper, IconButton } from "@mui/material";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CustomBackIcon from "../assets/images/Icons/arrowback.svg";
+import CustomForwardIcon from "../assets/images/Icons/arrowforward.svg";
 import sdkImage from "../assets/images/NewsSection/Releasing EigenLayer TypeScript and Python SDK.svg";
 import hackathonImage from "../assets/images/NewsSection/Earning Top Place in EigenLayer Hackathon.svg";
 import docsImage from "../assets/images/NewsSection/Releasing Zellular Docs MVP.svg";
@@ -67,7 +67,7 @@ const Slider = () => {
       id="news"
       sx={{
         backgroundColor: "#FDF5E6",
-        padding: "50px 0",
+        padding: "190px 0",
         textAlign: "center",
       }}
     >
@@ -89,10 +89,25 @@ const Slider = () => {
           justifyContent: "center",
         }}
       >
-        <IconButton onClick={handlePrev}>
-          <ArrowBackIosIcon sx={{ color: "#003A6C" }} />
+        <IconButton
+          onClick={handlePrev}
+          sx={{
+            "&:hover": {
+              backgroundColor: "transparent",
+            },
+            "&:focus": {
+              outline: "none",
+              boxShadow: "none",
+            },
+          }}
+        >
+          <img
+            src={CustomBackIcon}
+            alt="Previous"
+            style={{ color: "#003A6C", margin: "20px" }}
+          />
         </IconButton>
-        <Grid container spacing={4} sx={{ width: "80%" }}>
+        <Grid container spacing={8} sx={{ width: "90%" }}>
           {getItemsToShow().map((item, index) => (
             <Grid item xs={12} md={4} key={index}>
               <Box
@@ -107,9 +122,10 @@ const Slider = () => {
                 <Paper
                   sx={{
                     backgroundColor: "#FDF5E6",
-                    border: "1px solid #003A6C",
+                    border: "2px solid #003A6C",
                     boxShadow: "none",
-                    height: "100%",
+                    width: "510px",
+                    height: "576px",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
@@ -123,12 +139,7 @@ const Slider = () => {
                     },
                   }}
                 >
-                  <Box
-                    sx={{
-                      height: "180px",
-                      backgroundColor: "#d3d3d3",
-                    }}
-                  >
+                  <Box>
                     <img
                       src={item.image}
                       alt={item.title}
@@ -153,8 +164,9 @@ const Slider = () => {
                       sx={{
                         color: "#003A6C",
                         fontFamily: "Courier Prime",
-                        fontSize: "16px",
+                        fontSize: "20px",
                         textAlign: "left",
+                        paddingBottom: "16px",
                       }}
                     >
                       {item.date}
@@ -163,7 +175,8 @@ const Slider = () => {
                       variant="h6"
                       sx={{
                         color: "#003A6C",
-                        fontSize: "18px",
+                        fontSize: "24px",
+                        lineHeight: "30px",
                         fontFamily: "Courier Prime Bold",
                         textAlign: "left",
                         height: "3em",
@@ -180,10 +193,11 @@ const Slider = () => {
                       sx={{
                         color: "#003A6C",
                         fontFamily: "Courier Prime",
-                        fontSize: "16px",
+                        fontSize: "20px",
                         textAlign: "left",
-                        marginTop: 2,
+                        marginTop: "32px",
                         height: "7em",
+                        padding: "0 10px 32px 0",
                       }}
                     >
                       {item.description}
@@ -194,8 +208,25 @@ const Slider = () => {
             </Grid>
           ))}
         </Grid>
-        <IconButton onClick={handleNext}>
-          <ArrowForwardIosIcon sx={{ color: "#003A6C" }} />
+        <IconButton
+          onClick={handleNext}
+          sx={{
+            "&:hover": {
+              backgroundColor: "transparent",
+            },
+            "&:focus": {
+              outline: "none",
+              boxShadow: "none",
+            },
+          }}
+        >
+          <img
+            src={CustomForwardIcon}
+            alt="Next"
+            style={{
+              marginLeft: "20px",
+            }}
+          />
         </IconButton>
       </Box>
     </Box>

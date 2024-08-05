@@ -69,6 +69,7 @@ const Advantage = () => {
         minHeight: "100svh",
         borderTop: "4px solid #003A6C",
         borderBottom: "4px solid #003A6C",
+        width: "100vw",
       }}
     >
       <Typography
@@ -103,7 +104,7 @@ const Advantage = () => {
                   padding: 2,
                   backgroundColor: "#FDF5E6",
                   color: "#003A6C",
-                  width: "325px",
+                  width: "302px",
                   height: "645px",
                   border: "2px solid #003A6C",
                   borderRadius: 0,
