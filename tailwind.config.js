@@ -10,6 +10,9 @@ export default {
       screens: {
         "lt-1596": { max: "1596px", min: "640px" },
       },
+      boxShadow: {
+        myShadow: "-10px -10px 0px 0px #003A6C",
+      },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },
