@@ -62,6 +62,7 @@ const Advantage = () => {
         backgroundImage: `url(${bgImage})`,
         backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
