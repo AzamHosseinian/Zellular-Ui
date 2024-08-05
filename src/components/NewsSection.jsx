@@ -67,11 +67,12 @@ const Slider = () => {
       id="news"
       sx={{
         backgroundColor: "#FDF5E6",
-        padding: "190px 0",
+        padding: "90px  30px",
         textAlign: "center",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        marginBottom: "150px",
       }}
     >
       <Typography

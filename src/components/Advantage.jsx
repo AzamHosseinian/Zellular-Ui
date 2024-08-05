@@ -100,7 +100,7 @@ const Advantage = () => {
           {" "}
           {/* Adjusted spacing to roughly 72px */}
           {advantages.map((adv, index) => (
-            <div className="" key={index}>
+            <div className="flex items-center justify-center" key={index}>
               <Paper
                 elevation={3}
                 sx={{
