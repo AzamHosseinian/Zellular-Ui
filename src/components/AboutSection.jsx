@@ -24,18 +24,15 @@ function AboutSection() {
 
   const slides = [
     {
-      text:
-        "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python and hosted on Eigenlayer and other restaking platforms to ensure security.",
+      text: "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python and hosted on Eigenlayer and other restaking platforms to ensure security.",
       image: SlideOne,
     },
     {
-      text:
-        "Without requiring a blockchain, these dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated on a number of nodes.",
+      text: "Without requiring a blockchain, these dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated on a number of nodes.",
       image: SlideTwo,
     },
     {
-      text:
-        "Zellular enables the replicas to maintain uniformity of state by applying updates in the same sequence.",
+      text: "Zellular enables the replicas to maintain uniformity of state by applying updates in the same sequence.",
       image: SlideThreeGif,
     },
   ];
@@ -117,7 +114,7 @@ function AboutSection() {
       </Box>
 
       <div
-        className="flex  md:flex-row flex-col-reverse px-[40px] py-[80px] items-center justify-center gap-[30px] border-t-[#003A6C] border-b-[#003A6C] border-2 border-dashed "
+        className="flex  md:flex-row flex-col-reverse px-[40px] py-[80px] items-center justify-center gap-[30px] border-t-[#003A6C] border-b-[#003A6C] border-2 border-dashed min-h-[450px]"
         sx={{
           position: "relative",
           display: "flex",
@@ -141,8 +138,8 @@ function AboutSection() {
           onClick={handlePreviousSlide}
           sx={{
             position: "absolute",
-            left: isMobile ? "10px" : "40px",
-            top: "50%",
+            left: isMobile ? "10px" : "10px",
+
             transform: "translateY(-50%)",
             cursor: slideIndex > 0 ? "pointer" : "default",
             width: 24,
@@ -197,8 +194,7 @@ function AboutSection() {
           onClick={handleNextSlide}
           sx={{
             position: "absolute",
-            right: isMobile ? "10px" : "40px",
-            top: "50%",
+            right: isMobile ? "10px" : "10px",
             transform: "translateY(-50%)",
             cursor: slideIndex < slides.length - 1 ? "pointer" : "default",
             width: 24,
