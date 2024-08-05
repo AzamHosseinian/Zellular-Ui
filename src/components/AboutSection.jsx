@@ -11,7 +11,7 @@ import ArrowBack from "../assets/images/Icons/arrowback.svg";
 import LogoType from "../assets/images/AboutSection/logotype.svg";
 import SlideOne from "../assets/images/AboutSection/SlideImages/slide1.svg";
 import SlideTwo from "../assets/images/AboutSection/SlideImages/slide2.svg";
-import SlideThree from "../assets/images/AboutSection/SlideImages/slide3.svg";
+import SlideThreeGif from "../assets/images/AboutSection/SlideImages/slideTree.gif";
 
 function AboutSection() {
   const theme = useTheme();
@@ -36,7 +36,7 @@ function AboutSection() {
     {
       text:
         "Zellular enables the replicas to maintain uniformity of state by applying updates in the same sequence.",
-      image: SlideThree,
+      image: SlideThreeGif,
     },
   ];
 
@@ -58,29 +58,50 @@ function AboutSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const changeSlide = (newIndex) => {
+    setSlideIndex(newIndex);
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % slides.length);
-    }, 10000);
+    }, 7000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [slideIndex]);
+
+  const handleNextSlide = () => {
+    changeSlide((slideIndex + 1) % slides.length);
+  };
+
+  const handlePreviousSlide = () => {
+    changeSlide((slideIndex - 1 + slides.length) % slides.length);
+  };
 
   const logoSize = scrollY >= window.innerHeight * 0.3 ? "30%" : "15%";
   const mobileLogoSize = scrollY >= window.innerHeight * 0.2 ? "25%" : "10%";
 
   return (
-    <Box sx={{ textAlign: "center", bgcolor: "#FDF5E6" }}>
+    <Box
+      sx={{
+        textAlign: "center",
+        bgcolor: "#FDF5E6",
+        height: "100svh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Box
         id="about"
         sx={{
           width: isMobile ? mobileLogoSize : logoSize,
           height: isMobile ? mobileLogoSize : logoSize,
           transition: "width 0.8s, height 0.8s",
-          mb: 2,
+          // mb: 2,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          margin: isMobile ? "40px" : "80px",
+          margin: isMobile ? "10px" : "80px",
         }}
       >
         <Box
@@ -90,18 +111,20 @@ function AboutSection() {
           sx={{ width: "100%", height: "100%" }}
         />
       </Box>
+
       <Box
         sx={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
-          borderTop: "3px dotted #003A6C",
-          borderBottom: "3px dotted #003A6C",
+          borderTop: "3px dashed #003A6C",
+          borderBottom: "3px dashed #003A6C",
           textAlign: "center",
-          height: "480px",
           alignItems: "center",
+          height: "480px",
           justifyContent: "center",
           padding: isMobile ? "20px" : "40px 80px",
           gap: 30,
+          flex: "0 0 480px",
         }}
       >
         <Box
@@ -143,15 +166,17 @@ function AboutSection() {
           />
         </Box>
       </Box>
+
       <Box
         sx={{
           display: "flex",
           flexDirection: isTablet ? "column" : "row",
           justifyContent: "space-between",
           alignItems: "center",
-          margin: "80px",
+          marginLeft: "80px",
           transition: "transform 0.8s ease-in-out",
-          transform: moveRowUp ? "translateY(-50px)" : "translateY(0)",
+          transform: moveRowUp ? "translateY(-20px)" : "translateY(0)",
+          flex: 1,
         }}
       >
         <Button
@@ -181,43 +206,38 @@ function AboutSection() {
           sx={{
             display: "flex",
             alignItems: "center",
-            marginRight: isMobile ? "40px" : "80px",
+            marginRight: isMobile ? "10px" : "80px",
           }}
         >
-          {slideIndex > 0 && (
-            <Box
-              component="img"
-              alt="Arrow back icon"
-              src={ArrowBack}
-              onClick={() =>
-                setSlideIndex(
-                  (prev) => (prev - 1 + slides.length) % slides.length
-                )
-              }
-              sx={{
-                cursor: "pointer",
-                width: 24,
-                height: 24,
-                marginRight: "10px",
-              }}
-            />
-          )}
-          {slideIndex < slides.length - 1 && (
-            <Box
-              component="img"
-              alt="Arrow forward icon"
-              src={ArrowForward}
-              onClick={() =>
-                setSlideIndex((prev) => (prev + 1) % slides.length)
-              }
-              sx={{
-                cursor: "pointer",
-                width: 24,
-                height: 24,
-                marginLeft: "10px",
-              }}
-            />
-          )}
+          <Box
+            component="img"
+            alt="Arrow back icon"
+            src={ArrowBack}
+            onClick={handlePreviousSlide}
+            sx={{
+              cursor: slideIndex > 0 ? "pointer" : "default",
+              width: 24,
+              height: 24,
+              marginRight: "10px",
+              opacity: slideIndex > 0 ? 1 : 0.5,
+              pointerEvents: slideIndex > 0 ? "auto" : "none",
+            }}
+          />
+
+          <Box
+            component="img"
+            alt="Arrow forward icon"
+            src={ArrowForward}
+            onClick={handleNextSlide}
+            sx={{
+              cursor: slideIndex < slides.length - 1 ? "pointer" : "default",
+              width: 24,
+              height: 24,
+              marginLeft: "10px",
+              opacity: slideIndex < slides.length - 1 ? 1 : 0.5,
+              pointerEvents: slideIndex < slides.length - 1 ? "auto" : "none",
+            }}
+          />
         </Box>
       </Box>
     </Box>
