@@ -158,7 +158,7 @@ const Advantage = () => {
                     fontSize: hoveredIcon === adv.id ? "18px" : "32px",
                     textAlign: "left",
                     paddingLeft: "24px ",
-                    paddingRight: hoveredIcon === adv.id ? "30px" : "40px",
+                    paddingRight: hoveredIcon === adv.id ? 0 : "40px",
                   }}
                 >
                   {hoveredIcon === adv.id ? adv.description : adv.title}
