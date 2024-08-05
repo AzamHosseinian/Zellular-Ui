@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Grid, Typography, Paper } from "@mui/material";
+import { Box, Typography, Paper } from "@mui/material";
 import bgImage from "../assets/images/advantages/ad-bg.svg";
 import icon1 from "../assets/images/advantages/icon1.svg";
 import icon1Hover from "../assets/images/advantages/icon1-1.svg";
@@ -66,6 +66,7 @@ const Advantage = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        justifyContent: "center",
         paddingTop: 4,
         minHeight: "100svh",
         borderTop: "4px solid #003A6C",
@@ -92,13 +93,13 @@ const Advantage = () => {
           width: "100%",
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
           padding: 4,
           borderRadius: 2,
+          maxWidth: "1414px",
         }}
       >
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(301px,1fr))] w-full gap-[68px] max-w-[1414px] ">
-          {" "}
-          {/* Adjusted spacing to roughly 72px */}
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(301px,1fr))] w-full gap-[68px]">
           {advantages.map((adv, index) => (
             <div className="" key={index}>
               <Paper
@@ -114,6 +115,9 @@ const Advantage = () => {
                   borderRadius: 0,
                   boxShadow: "none",
                   transition: "all 0.1s ease",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
                   "&:hover": {
                     backgroundColor: "#003A6C",
                     color: "#FDF5E6",
