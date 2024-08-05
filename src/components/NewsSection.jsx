@@ -89,7 +89,7 @@ const Slider = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "center",
           width: "100%",
         }}
       >
@@ -97,12 +97,18 @@ const Slider = () => {
           onClick={handlePrev}
           sx={{
             "&:hover": { backgroundColor: "transparent" },
-            marginLeft: "40px",
+            marginRight: "20px",
+            marginLeft: "auto",
           }}
         >
           <img src={CustomBackIcon} alt="Previous" />
         </IconButton>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] w-full gap-[40px] justify-center">
+        <div
+          className="grid grid-cols-[repeat(auto-fit,minmax(470px,1fr))] gap-[40px] justify-center"
+          style={{
+            width: "90%",
+          }}
+        >
           {getItemsToShow().map((item, index) => (
             <Grid item xs={12} md={4} key={index}>
               <Paper
@@ -177,7 +183,8 @@ const Slider = () => {
           onClick={handleNext}
           sx={{
             "&:hover": { backgroundColor: "transparent" },
-            marginRight: "80px",
+            marginLeft: "20px",
+            marginRight: "auto",
           }}
         >
           <img src={CustomForwardIcon} alt="Next" />

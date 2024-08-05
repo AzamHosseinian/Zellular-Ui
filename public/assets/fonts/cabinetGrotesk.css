@@ -1,0 +1,15 @@
+@font-face {
+  font-family: CabinetGrotesk;
+  font-style: normal;
+  font-weight: bold;
+  src: url("CabinetGrotesk/CabinetGrotesk-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CabinetGrotesk;
+  font-style: normal;
+  font-weight: normal;
+  src: url("CabinetGrotesk/CabinetGrotesk-Regular.ttf") format("truetype");
+  font-display: swap;
+}

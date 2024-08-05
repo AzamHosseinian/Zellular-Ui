@@ -5,6 +5,17 @@ import backgroundImage from "../../assets/images/HeroSection/background.png";
 const Header = () => {
   const [isSocialOpen, setSocialOpen] = useState(false);
 
+  const scrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const openLink = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div
       className="h-[100vh] w-full bg-cover bg-no-repeat bg-center relative bg-[#003A6C] overflow-hidden select-none"
@@ -14,7 +25,7 @@ const Header = () => {
     >
       <div className="">
         <ZelAnimation />
-        <div className="animate-fadeIn opacity-0  sm:animate-none sm:opacity-100">
+        <div className="animate-fadeIn opacity-0 sm:animate-none sm:opacity-100">
           <div className="navigation">
             <div className="flex items-center w-full h-[140px] lg:h-[calc(4.5vw_+_4.5vh)] ml-[clamp(30px,5vw,88px)]">
               <div className="w-full max-w-[calc(26vh_+_12vw)]">
@@ -36,15 +47,23 @@ const Header = () => {
                 </svg>
               </div>
 
-              {/* Menu Items with Hover Effect */}
               <div className="md:flex hidden gap-[56px] text-[#92E6A7] text-[24px] font-courierPrime font-bold leading-[26.95px]">
-                <div className="menu-item cursor-pointer">
+                <div
+                  className="menu-item cursor-pointer"
+                  onClick={() => scrollToSection("about")}
+                >
                   <span>About</span>
                 </div>
-                <div className="menu-item cursor-pointer">
+                <div
+                  className="menu-item cursor-pointer"
+                  onClick={() => scrollToSection("news")}
+                >
                   <span>News</span>
                 </div>
-                <div className="menu-item cursor-pointer">
+                <div
+                  className="menu-item cursor-pointer"
+                  onClick={() => scrollToSection("advantages")}
+                >
                   <span>Advantages</span>
                 </div>
                 <div
@@ -54,21 +73,38 @@ const Header = () => {
                   <span>Social Media</span>
                   {isSocialOpen && (
                     <div className="social-dropdown">
-                      <div className="cursor-pointer">Discord</div>
-                      <div className="cursor-pointer">Telegram</div>
-                      <div className="cursor-pointer">X</div>
+                      <div
+                        className="cursor-pointer"
+                        onClick={() =>
+                          openLink("https://discord.com/invite/zellular")
+                        }
+                      >
+                        Discord
+                      </div>
+                      <div
+                        className="cursor-pointer"
+                        onClick={() => openLink("https://medium.com/@zellular")}
+                      >
+                        Medium
+                      </div>
+                      <div
+                        className="cursor-pointer"
+                        onClick={() => openLink("https://x.com/zellular_xyz")}
+                      >
+                        X
+                      </div>
                     </div>
                   )}
                 </div>
               </div>
             </div>
           </div>
-          <div className="md:mt-[calc(28vh_-100px)] mt-[40px] relative font-courierPrime  text-[clamp(1.5rem,3vw_+_1rem,5rem)]">
+          <div className="md:mt-[calc(28vh_-100px)] mt-[40px] relative font-courierPrime text-[clamp(1.5rem,3vw_+_1rem,5rem)]">
             <div className="h-6 w-6 bg-[#92E6A7] absolute rounded-full left-4 md:left-20 top-2 md:-top-3"></div>
-            <div className=" leading-[80px] text-white ml-10 md:ml-28">
+            <div className="leading-[80px] text-white ml-10 md:ml-28">
               <div>Filling the Gap</div>
             </div>
-            <div className=" leading-[80px] text-white justify-center ml-[40px] md:ml-[110px] lg:ml-[calc(100vw_-_75vw_-20px)] -mt-9 md:-mt-5 lg:mt-3">
+            <div className="leading-[80px] text-white justify-center ml-[40px] md:ml-[110px] lg:ml-[calc(100vw_-_75vw_-20px)] -mt-9 md:-mt-5 lg:mt-3">
               <div className="">between Web2 & Web3</div>
             </div>
           </div>

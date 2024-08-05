@@ -1,0 +1,15 @@
+@font-face {
+  font-family: CourierPrime;
+  font-style: normal;
+  font-weight: bold;
+  src: url("CourierPrime/CourierPrime-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CourierPrime;
+  font-style: normal;
+  font-weight: normal;
+  src: url("CourierPrime/CourierPrime-Regular.ttf") format("truetype");
+  font-display: swap;
+}

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        courierPrime: ["CourierPrime"],
+        courierPrime: ["courierPrime"],
         CabinetGrotesk: ["cabinetGrotesk"],
       },
       screens: {

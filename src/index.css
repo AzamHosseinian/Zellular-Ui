@@ -19,48 +19,49 @@ code {
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('./assets/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf') format('truetype');
+  src: url('/public/assets/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Space Grotesk Bold';
-  src: url('./assets/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf') format('truetype');
+  src: url('/public/assets/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Courier Prime';
-  src: url('./assets/fonts/CourierPrime/CourierPrime-Regular.ttf') format('truetype');
+  src: url('/public/assets/fonts/CourierPrime/CourierPrime-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Courier Prime Bold';
-  src: url('./assets/fonts/CourierPrime/CourierPrime-Bold.ttf') format('truetype');
+  src: url('/public/assets/fonts/CourierPrime/CourierPrime-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Chakra Petch';
-  src: url('./assets/fonts/ChakraPetch/ChakraPetch-Regular.ttf') format('truetype');
+  src: url('/public/assets/fonts/ChakraPetch/ChakraPetch-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Chakra Petch Bold';
-  src: url('./assets/fonts/Chakra_Petch/ChakraPetch-Bold.ttf') format('truetype');
+  src: url('/public/assets/fonts/ChakraPetch/ChakraPetch-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('./assets/fonts/CabinetGrotesk-Bold.otf') format('opentype');
+  font-family: 'Cabinet Grotesk';
+  src: url('/public/assets/fonts/CabinetGrotesk/CabinetGrotesk-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
@@ -202,10 +203,10 @@ button:focus, button:focus-visible {
     width: 0;
   }
   46.67% {
-    width: 36%;
+    width: 40%;
   }
   100% {
-    width: 36%;
+    width: 40%;
   }
 }
 
