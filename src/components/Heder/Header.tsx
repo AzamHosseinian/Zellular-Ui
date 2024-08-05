@@ -12,6 +12,8 @@ const Header = () => {
     }
   };
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const openLink = (url) => {
     window.open(url, "_blank");
   };
@@ -28,7 +30,7 @@ const Header = () => {
         <div className="animate-fadeIn opacity-0 sm:animate-none sm:opacity-100">
           <div className="navigation">
             <div className="flex items-center w-full h-[140px] lg:h-[calc(4.5vw_+_4.5vh)] ml-[clamp(30px,5vw,88px)]">
-              <div className="w-full max-w-[calc(26vh_+_12vw)]">
+              <div className="w-full lt-1024:max-w-[170px] max-w-[calc(26vh_+_12vw)]">
                 <svg
                   width="61"
                   height="48"
@@ -47,7 +49,77 @@ const Header = () => {
                 </svg>
               </div>
 
-              <div className="lg:flex hidden gap-[56px] text-[#92E6A7] text-[24px] font-courierPrime font-bold leading-[26.95px]">
+              <div className="bt-827:flex hidden gap-[56px] text-[#92E6A7] text-[24px] font-courierPrime font-bold leading-[26.95px]">
+                <div
+                  className="menu-item cursor-pointer"
+                  onClick={() => scrollToSection("about")}
+                >
+                  <span>About</span>
+                </div>
+                <div
+                  className="menu-item cursor-pointer"
+                  onClick={() => scrollToSection("news")}
+                >
+                  <span>News</span>
+                </div>
+                <div
+                  className="menu-item cursor-pointer"
+                  onClick={() => scrollToSection("advantages")}
+                >
+                  <span>Advantages</span>
+                </div>
+                <div
+                  className="menu-item cursor-pointer relative"
+                  onClick={() => setSocialOpen(!isSocialOpen)}
+                >
+                  <span>Social Media</span>
+                  {isSocialOpen && (
+                    <div className="social-dropdown">
+                      <div
+                        className="cursor-pointer"
+                        onClick={() =>
+                          openLink("https://discord.com/invite/zellular")
+                        }
+                      >
+                        Discord
+                      </div>
+                      <div
+                        className="cursor-pointer"
+                        onClick={() => openLink("https://medium.com/@zellular")}
+                      >
+                        Medium
+                      </div>
+                      <div
+                        className="cursor-pointer"
+                        onClick={() => openLink("https://x.com/zellular_xyz")}
+                      >
+                        X
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div
+              className={`absolute right-10 ${
+                isMenuOpen ? "top-3 right-7" : "top-14"
+              } lt-827:block w-4  hidden h-5  z-30`}
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+              }}
+            >
+              <div className="w-6 h-1 bg-[#92E6A7] mb-1 rounded-[2px] cursor-pointer"></div>
+              <div className="w-6 h-1 bg-[#92E6A7] mb-1 rounded-[2px] cursor-pointer"></div>
+              <div className="w-6 h-1 bg-[#92E6A7] mb-1 rounded-[2px] cursor-pointer"></div>
+            </div>
+
+            <div
+              className={`w-full h-[100px] absolute  transition-all ${
+                isMenuOpen ? "top-0" : "-top-[1000px]"
+              } left-0 right-0 z-20`}
+            >
+              <div className="flex bg-[#003A6C] border-b border-[#92E6A7] opacity-80  text-[#92E6A7] text-[16px] font-courierPrime font-bold items-center justify-between px-5 h-full w-full">
                 <div
                   className="menu-item cursor-pointer"
                   onClick={() => scrollToSection("about")}
