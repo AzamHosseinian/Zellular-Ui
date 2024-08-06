@@ -35,8 +35,11 @@ const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const isTablet = useMediaQuery(
+    theme.breakpoints.up("sm") + " and (max-width:1320px)"
+  );
+
+  const isDesktop = useMediaQuery("(min-width:1321px)");
 
   let slidesToShow = isDesktop ? 3 : isTablet ? 2 : 1;
 
@@ -114,7 +117,9 @@ const Slider = () => {
                   alt={item.title}
                   style={{
                     width: "100%",
-                    height: "auto",
+                    height: "220px",
+                    minHeight: "180px",
+                    objectFit: "cover",
                   }}
                 />
                 <Box
