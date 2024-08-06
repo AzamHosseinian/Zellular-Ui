@@ -141,7 +141,7 @@ function AboutSection() {
           onClick={handlePreviousSlide}
           sx={{
             position: "absolute",
-            left: isMobile ? "10px" : "10px",
+            left: isMobile ? "10px" : isTablet ? "5px" : "40px",
 
             transform: "translateY(-50%)",
             cursor: slideIndex > 0 ? "pointer" : "default",
@@ -197,7 +197,7 @@ function AboutSection() {
           onClick={handleNextSlide}
           sx={{
             position: "absolute",
-            right: isMobile ? "10px" : "10px",
+            right: isMobile ? "10px" : isTablet ? "5px" : "40px",
             transform: "translateY(-50%)",
             cursor: slideIndex < slides.length - 1 ? "pointer" : "default",
             width: 32,
