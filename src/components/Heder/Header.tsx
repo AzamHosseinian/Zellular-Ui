@@ -266,7 +266,7 @@ const Header = () => {
             </div>
             <div className="absolute bottom-10 left-0 right-0 w-full flex items-center justify-center text-[#FDF5E6] text-[16px] sm:text-[24px] font-courierPrime font-normal">
               <div className="relative">
-                <div className="w-3 h-3 sm:w-5 sm:h-5 bg-[#92E6A7] rounded-full absolute -left-4 md:-left-8 top-0"></div>
+                <div className="w-3 h-3 sm:w-5 sm:h-5 bg-[#92E6A7] rounded-full absolute -left-4 md:-left-8 top-1"></div>
                 <div>Secured by EigenLayer</div>
               </div>
             </div>
