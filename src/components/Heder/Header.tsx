@@ -236,7 +236,7 @@ const Header = () => {
               </div>
             )}
 
-            <div className="md:mt-[calc(28vh_-100px)] mt-[40px] relative font-spaceGrotesk text-[clamp(1.5rem,3vw_+_1rem,5rem)]">
+            <div className="md:mt-[calc(28vh_-100px)] mt-[120px] relative font-spaceGrotesk text-[clamp(1.5rem,3vw_+_1rem,5rem)]">
               <div className="h-6 w-6 bg-[#92E6A7] absolute rounded-full left-4 md:left-20 top-2 md:-top-3"></div>
               <div className="leading-[80px] text-[#FDF5E6] ml-10 md:ml-28 font-bold">
                 <div>Filling the Gap between</div>
