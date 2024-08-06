@@ -51,7 +51,7 @@ const Header = () => {
               {/* Hamburger Menu for Mobile */}
               <div className="bt-827:hidden absolute right-10">
                 <button
-                  className="flex flex-col items-center justify-center  w-10 h-10 text-[#92E6A7]  rounded-lg bg-gray-100 p-2  focus:outline-none"
+                  className="flex flex-col items-center justify-center  w-10 h-10 text-[#92E6A7]  rounded-lg bg-[#FDF5E6] p-2  focus:outline-none"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   aria-label="Toggle Menu"
                 >
@@ -145,7 +145,7 @@ const Header = () => {
                     aria-label="Close Menu"
                   >
                     <svg
-                      className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500  "
+                      className="h-6 w-6 text-gray-400 cursor-pointer hover:text-[#92E6A7] bg-[#FDF5E6]  "
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
