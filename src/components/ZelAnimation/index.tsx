@@ -275,6 +275,15 @@ const ZAnimationCircle = () => {
       <div className="w-3 h-3 animate-moveDown30 bg-[#92E6A7] rounded-full absolute right-9 top-40 "></div>
       <div className="w-3 h-3 animate-moveDown30 bg-[#92E6A7] rounded-full absolute right-24 top-40 "></div>
 
+      <div className="w-3 h-3  bg-[#92E6A7] rounded-full absolute right-6 bottom-20 "></div>
+      <div className="w-3 h-3 animate-moveTop50 bg-[#92E6A7] rounded-full absolute right-[68px] bottom-16 "></div>
+      <div className="w-3 h-3 animate-moveTop50 bg-[#92E6A7] rounded-full absolute right-[45px] bottom-16 "></div>
+      <div className="w-3 h-3 animate-moveTop50 bg-[#92E6A7] rounded-full absolute right-[3px] bottom-20 "></div>
+
+      <div className="w-3 h-3  bg-[#92E6A7] animate-moveTop50 rounded-full absolute left-0 bottom-24"></div>
+      <div className="w-3 h-3  bg-[#92E6A7] animate-moveTop50 rounded-full absolute left-[31px] bottom-24"></div>
+      <div className="w-3 h-3  bg-[#92E6A7] animate-moveTop50 rounded-full absolute left-0 bottom-32"></div>
+
       {/* fixed icons */}
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute ml-10 left-56 top-[105px] animate-move15"></div>
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute ml-10 left-60 top-[52px] animate-move17"></div>

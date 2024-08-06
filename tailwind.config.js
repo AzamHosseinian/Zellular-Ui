@@ -216,6 +216,7 @@ export default {
         moveDown30: { "100%": { transform: "translateY(70px)" } },
         moveDown10: { "100%": { transform: "translateY(10px)" } },
         moveTop20: { "100%": { transform: "translateY(-20px)" } },
+        moveTop50: { "100%": { transform: "translateY(-80px)" } },
         moveDown50: { "100%": { transform: "translateY(50px)" } },
       },
       animation: {
@@ -272,6 +273,7 @@ export default {
         moveDown50: "moveDown50 .7s forwards 2s",
         moveDown10: "moveDown10 .8s forwards 2s",
         moveTop20: "moveTop20 .7s forwards 2s",
+        moveTop50: "moveTop50 .7s forwards 2s",
       },
     },
   },
