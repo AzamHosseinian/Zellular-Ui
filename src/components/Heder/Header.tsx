@@ -255,9 +255,13 @@ const Header = () => {
                 high-throughput dApps
               </div>
 
-              <div className="ml-0 lg:ml-[calc(104.5vw_-_75vw_-20px)]">
+              <div className="ml-0 lg:ml-[calc(104.5vw_-_75vw_-20px)] flex gap-2">
                 in{" "}
-                <span className="typing-effect">any programming language.</span>
+                <div className="typing-container text-[20px] md:text-[clamp(24px,5vw,40px)]">
+                  <span className="typing-effect">
+                    any programming language.
+                  </span>
+                </div>
               </div>
             </div>
             <div className="absolute bottom-10 left-0 right-0 w-full flex items-center justify-center text-[#FDF5E6] text-[24px] font-courierPrime font-normal">
