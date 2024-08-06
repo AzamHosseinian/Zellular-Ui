@@ -24,18 +24,15 @@ function AboutSection() {
 
   const slides = [
     {
-      text:
-        "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python and hosted on Eigenlayer and other restaking platforms to ensure security.",
+      text: "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python and hosted on Eigenlayer and other restaking platforms to ensure security.",
       image: SlideOne,
     },
     {
-      text:
-        "Without requiring a blockchain, these dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated on a number of nodes.",
+      text: "Without requiring a blockchain, these dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated on a number of nodes.",
       image: SlideTwo,
     },
     {
-      text:
-        "Zellular enables the replicas to maintain uniformity of state by applying updates in the same sequence.",
+      text: "Zellular enables the replicas to maintain uniformity of state by applying updates in the same sequence.",
       image: SlideThreeGif,
     },
   ];
@@ -86,7 +83,7 @@ function AboutSection() {
       sx={{
         textAlign: "center",
         bgcolor: "#FDF5E6",
-        minHeight: "100svh",
+        height: "1000px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "left",
@@ -166,7 +163,7 @@ function AboutSection() {
             variant="body1"
             sx={{
               fontFamily: "Courier Prime Bold",
-              fontSize: isTablet ? "20px" : "28px",
+              fontSize: isTablet ? "20px" : "32px",
               color: "#003A6C",
               textAlign: "left",
               lineHeight: 1.5,
@@ -212,14 +209,14 @@ function AboutSection() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: isTablet ? "column" : "row",
-          justifyContent: isTablet ? "center" : "space-between",
+          flexDirection: "row",
+          justifyContent: "center",
           alignItems: "center",
           marginLeft: "80px",
           transition: "transform 1s ease-in-out",
-          transform: moveRowUp ? "translateY(-40px)" : "translateY(0)",
+          // transform: moveRowUp ? "translateY(-40px)" : "translateY(0)",
           flex: 1,
-          padding: "0 40px",
+          // padding: "0 40px",
           margin: "20px",
         }}
       >
@@ -242,7 +239,7 @@ function AboutSection() {
               border: "2px solid #003A6C",
               boxShadow: "none",
             },
-            marginLeft: "auto",
+            // marginLeft: "auto",
           }}
         >
           Build on Zellular
