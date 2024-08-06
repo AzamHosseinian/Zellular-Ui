@@ -24,15 +24,18 @@ function AboutSection() {
 
   const slides = [
     {
-      text: "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python and hosted on Eigenlayer and other restaking platforms to ensure security.",
+      text:
+        "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python and hosted on Eigenlayer and other restaking platforms to ensure security.",
       image: SlideOne,
     },
     {
-      text: "Without requiring a blockchain, these dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated on a number of nodes.",
+      text:
+        "Without requiring a blockchain, these dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated on a number of nodes.",
       image: SlideTwo,
     },
     {
-      text: "Zellular enables the replicas to maintain uniformity of state by applying updates in the same sequence.",
+      text:
+        "Zellular enables the replicas to maintain uniformity of state by applying updates in the same sequence.",
       image: SlideThreeGif,
     },
   ];
@@ -142,8 +145,8 @@ function AboutSection() {
 
             transform: "translateY(-50%)",
             cursor: slideIndex > 0 ? "pointer" : "default",
-            width: 24,
-            height: 24,
+            width: 32,
+            height: 32,
             opacity: slideIndex > 0 ? 1 : 0.5,
             pointerEvents: slideIndex > 0 ? "auto" : "none",
             zIndex: 1000,
@@ -163,7 +166,7 @@ function AboutSection() {
             variant="body1"
             sx={{
               fontFamily: "Courier Prime Bold",
-              fontSize: isTablet ? "20px" : "32px",
+              fontSize: isTablet ? "20px" : isMobile ? "16px" : "32px",
               color: "#003A6C",
               textAlign: "left",
               lineHeight: 1.5,
@@ -197,8 +200,8 @@ function AboutSection() {
             right: isMobile ? "10px" : "10px",
             transform: "translateY(-50%)",
             cursor: slideIndex < slides.length - 1 ? "pointer" : "default",
-            width: 24,
-            height: 24,
+            width: 32,
+            height: 32,
             opacity: slideIndex < slides.length - 1 ? 1 : 0.5,
             pointerEvents: slideIndex < slides.length - 1 ? "auto" : "none",
             zIndex: 1000,
