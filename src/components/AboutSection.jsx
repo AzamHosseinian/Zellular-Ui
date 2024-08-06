@@ -6,6 +6,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+
 import ArrowForward from "../assets/images/Icons/arrowforward.svg";
 import ArrowBack from "../assets/images/Icons/arrowback.svg";
 import LogoType from "../assets/images/AboutSection/logotype.svg";
@@ -20,35 +21,35 @@ function AboutSection() {
 
   const [scrollY, setScrollY] = useState(0);
   const [slideIndex, setSlideIndex] = useState(0);
-  const [moveRowUp, setMoveRowUp] = useState(false);
 
   const slides = [
     {
-      text: "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO and Python.",
+      text:
+        "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python.",
       image: SlideOne,
     },
     {
-      text: "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
+      text:
+        "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
       image: SlideTwo,
     },
     {
-      text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
+      text:
+        "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
       image: SlideThreeGif,
     },
   ];
 
   useEffect(() => {
+    slides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.image;
+    });
+  }, [slides]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-
-      if (
-        window.scrollY >
-        0.5 * document.body.scrollHeight - window.innerHeight
-      ) {
-        setMoveRowUp(true);
-      } else {
-        setMoveRowUp(false);
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -63,8 +64,9 @@ function AboutSection() {
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % slides.length);
     }, 7000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [slideIndex]);
 
   const handleNextSlide = () => {
     changeSlide((slideIndex + 1) % slides.length);
@@ -85,8 +87,8 @@ function AboutSection() {
         height: "1000px",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "left",
-        alignItems: "left",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
         boxSizing: "border-box",
       }}
     >
@@ -104,20 +106,18 @@ function AboutSection() {
           marginLeft: "80px",
         }}
       >
-        <Box
-          component="img"
+        <img
           src={LogoType}
           alt="Zellular Logotype"
-          sx={{ width: "100%", height: "100%", minWidth: "200px" }}
+          style={{ width: "100%", height: "100%", minWidth: "200px" }}
         />
       </Box>
 
-      <div
-        className="flex  md:flex-row flex-col-reverse px-[40px] py-[80px] items-center justify-center gap-[30px] border-t-[#003A6C] border-b-[#003A6C] border-2 border-dashed min-h-[450px]"
+      <Box
         sx={{
           position: "relative",
           display: "flex",
-          flexDirection: isMobile ? "column" : "row",
+          flexDirection: isMobile ? "column-reverse" : "row",
           borderTop: "3px dashed #003A6C",
           borderBottom: "3px dashed #003A6C",
           textAlign: "center",
@@ -125,21 +125,18 @@ function AboutSection() {
           minHeight: "480px",
           justifyContent: "center",
           padding: isTablet ? "20px" : "40px 80px",
-          gap: 30,
-          // flex: "0 0 480px ",
+          gap: "30px",
           boxSizing: "border-box",
+          width: "100%",
         }}
       >
-        <Box
-          component="img"
-          alt="Arrow back icon"
+        <img
           src={ArrowBack}
+          alt="Arrow back icon"
           onClick={handlePreviousSlide}
-          sx={{
+          style={{
             position: "absolute",
             left: isMobile ? "10px" : isTablet ? "5px" : "40px",
-
-            transform: "translateY(-50%)",
             cursor: slideIndex > 0 ? "pointer" : "default",
             width: 32,
             height: 32,
@@ -148,6 +145,7 @@ function AboutSection() {
             zIndex: 1000,
           }}
         />
+
         <Box
           sx={{
             width: isMobile ? "100%" : "60%",
@@ -166,11 +164,13 @@ function AboutSection() {
               color: "#003A6C",
               textAlign: "left",
               lineHeight: 1.5,
+              transition: "opacity 0.5s ease-in-out",
             }}
           >
             {slides[slideIndex].text}
           </Typography>
         </Box>
+
         <Box
           sx={{
             width: isMobile ? "100%" : "20%",
@@ -183,19 +183,25 @@ function AboutSection() {
         >
           <img
             src={slides[slideIndex].image}
-            style={{ width: "100%", maxHeight: "100%" }}
+            alt={`Slide ${slideIndex + 1}`}
+            loading="lazy"
+            style={{
+              width: "100%",
+              maxHeight: "100%",
+              transition: "opacity 0.5s ease-in-out",
+              opacity: 1,
+            }}
             key={slideIndex}
           />
         </Box>
-        <Box
-          component="img"
-          alt="Arrow forward icon"
+
+        <img
           src={ArrowForward}
+          alt="Arrow forward icon"
           onClick={handleNextSlide}
-          sx={{
+          style={{
             position: "absolute",
             right: isMobile ? "10px" : isTablet ? "5px" : "40px",
-            transform: "translateY(-50%)",
             cursor: slideIndex < slides.length - 1 ? "pointer" : "default",
             width: 32,
             height: 32,
@@ -204,7 +210,7 @@ function AboutSection() {
             zIndex: 1000,
           }}
         />
-      </div>
+      </Box>
 
       <Box
         sx={{
@@ -214,9 +220,7 @@ function AboutSection() {
           alignItems: "center",
           marginLeft: "80px",
           transition: "transform 1s ease-in-out",
-          // transform: moveRowUp ? "translateY(-40px)" : "translateY(0)",
           flex: 1,
-          // padding: "0 40px",
           margin: "20px",
         }}
       >
@@ -239,50 +243,11 @@ function AboutSection() {
               border: "2px solid #003A6C",
               boxShadow: "none",
             },
-            // marginLeft: "auto",
           }}
         >
           Build on Zellular
         </Button>
       </Box>
-
-      {/* <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            marginRight: isMobile ? "10px" : "80px",
-          }}
-        >
-          <Box
-            component="img"
-            alt="Arrow back icon"
-            src={ArrowBack}
-            onClick={handlePreviousSlide}
-            sx={{
-              cursor: slideIndex > 0 ? "pointer" : "default",
-              width: 24,
-              height: 24,
-              marginRight: "10px",
-              opacity: slideIndex > 0 ? 1 : 0.5,
-              pointerEvents: slideIndex > 0 ? "auto" : "none",
-            }}
-          />
-
-          <Box
-            component="img"
-            alt="Arrow forward icon"
-            src={ArrowForward}
-            onClick={handleNextSlide}
-            sx={{
-              cursor: slideIndex < slides.length - 1 ? "pointer" : "default",
-              width: 24,
-              height: 24,
-              marginLeft: "10px",
-              opacity: slideIndex < slides.length - 1 ? 1 : 0.5,
-              pointerEvents: slideIndex < slides.length - 1 ? "auto" : "none",
-            }}
-          />
-        </Box> */}
     </Box>
   );
 }
