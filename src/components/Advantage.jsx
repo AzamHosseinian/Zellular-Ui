@@ -46,7 +46,7 @@ const advantages = [
     id: 4,
     title: "Dynamic Security",
     description:
-      "Enables zApps to hire required level of security from EigenLayer by specifying the amount of restaked ETH that is required for their nodes.",
+      "Enables dynamic security by specifying the amount of restaked ETH that is required for running nodes.",
     icon: icon4,
     hoverIcon: icon4Hover,
   },
