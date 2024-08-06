@@ -145,6 +145,9 @@ const Slider = () => {
                   <Typography
                     variant="h6"
                     sx={{
+                      marginBottom: isTablet ? "20px" : "40px",
+                      height: "80px",
+                      minHeight: "20px",
                       color: "#003A6C",
                       fontFamily: "Courier Prime Bold",
                       textAlign: "left",
@@ -159,7 +162,7 @@ const Slider = () => {
                       color: "#003A6C",
                       fontFamily: "Courier Prime",
                       textAlign: "left",
-                      marginTop: "32px",
+                      // marginTop: "32px",
                       fontSize: isMobile ? "16px" : isTablet ? "16px" : "20px",
                     }}
                   >
