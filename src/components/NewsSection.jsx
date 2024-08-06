@@ -108,18 +108,23 @@ const Slider = () => {
         <div className="flex gap-[40px] justify-center w-full items-center">
           {getItemsToShow().map((item, index) => (
             <div key={index} className="flex items-center justify-center">
-              <div className="bg-[#FDF5E6] border-2 items-center hover:shadow-myShadow border-[#003A6C] w-[320px] sm:w-full h-[576px] flex flex-col justify-center transition-all duration-[0.2s] ease-[ease] hover:translate-x-[5px] hover:translate-y-[-5px]">
+              <div className="bg-[#FDF5E6] border-2 items-center hover:shadow-myShadow border-[#003A6C] w-[320px] sm:w-full h-[544px] flex flex-col justify-center transition-all duration-[0.2s] ease-[ease] hover:translate-x-[5px] hover:translate-y-[-5px]">
                 <img
                   src={item.image}
                   alt={item.title}
-                  style={{ width: "100%", height: "auto" }}
+                  style={{
+                    width: "100%",
+                    height: "200px",
+                    minHeight: "180px",
+                    objectFit: "cover",
+                  }}
                 />
                 <Box
                   sx={{
                     padding: 2,
                     flexGrow: 1,
                     flexDirection: "column",
-                    justifyContent: "space-between",
+                    justifyContent: "start",
                   }}
                 >
                   <Typography
@@ -152,7 +157,7 @@ const Slider = () => {
                       fontFamily: "Courier Prime",
                       textAlign: "left",
                       marginTop: "32px",
-                      fontSize: isMobile ? "16px" : isTablet ? "18px" : "20px",
+                      fontSize: isMobile ? "16px" : isTablet ? "16px" : "20px",
                     }}
                   >
                     {item.description}
