@@ -49,7 +49,7 @@ const Header = () => {
               </div>
 
               {/* Hamburger Menu for Mobile */}
-              <div className="lg:hidden">
+              <div className="bt-827:hidden absolute right-10">
                 <button
                   className="flex flex-col items-center justify-center  w-10 h-10 text-[#92E6A7]  rounded-lg bg-gray-100 p-2  focus:outline-none"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
