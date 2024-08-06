@@ -234,7 +234,7 @@ function AboutSection() {
             textTransform: "none",
             display: "flex",
             alignItems: "center",
-            fontFamily: "Courier Prime",
+            fontFamily: "Courier Prime Bold",
             padding: isMobile ? "10px 20px" : "15px 30px",
             "&:hover": {
               bgcolor: "#FDF5E6",
