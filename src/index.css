@@ -50,7 +50,7 @@ code {
 
 @font-face {
   font-family: "Chakra Petch";
-  src: url("/public/assets/fonts/ChakraPetch/ChakraPetch-Regular.ttf")
+  src: url("/public/assets/fonts/ChakraPetch/Chakra_Petch/ChakraPetch-Regular.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -58,7 +58,7 @@ code {
 
 @font-face {
   font-family: "Chakra Petch Bold";
-  src: url("/public/assets/fonts/ChakraPetch/ChakraPetch-Bold.ttf")
+  src: url("/public/assets/fonts/ChakraPetch/Chakra_Petch/ChakraPetch-Bold.ttf")
     format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -66,7 +66,7 @@ code {
 
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("/public/assets/fonts/CabinetGrotesk/CabinetGrotesk-Bold.otf")
+  src: url("/public/assets/fonts/CabinetGrotesk/CabinetGrotesk-Bold.ttf")
     format("opentype");
   font-weight: bold;
   font-style: normal;
