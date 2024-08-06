@@ -111,7 +111,7 @@ const Slider = () => {
         <div className="flex gap-[40px] justify-center w-full items-center">
           {getItemsToShow().map((item, index) => (
             <div key={index} className="flex items-center justify-center">
-              <div className="bg-[#FDF5E6] border-2 items-center hover:shadow-myShadow border-[#003A6C] w-[320px] sm:w-full h-[576px] flex flex-col justify-center transition-all duration-[0.2s] ease-[ease] hover:translate-x-[5px] hover:translate-y-[-5px]">
+              <div className="bg-[#FDF5E6] border-2 items-center hover:shadow-myShadow border-[#003A6C] w-[320px] sm:w-full sm:max-w-[510px] h-[576px] flex flex-col justify-center transition-all duration-[0.2s] ease-[ease] hover:translate-x-[5px] hover:translate-y-[-5px]">
                 <img
                   src={item.image}
                   alt={item.title}
