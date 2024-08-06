@@ -65,7 +65,7 @@ function AboutSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % slides.length);
-    }, 100000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [slideIndex]);
