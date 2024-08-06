@@ -184,6 +184,7 @@ function AboutSection() {
           <img
             src={slides[slideIndex].image}
             style={{ width: "100%", maxHeight: "100%" }}
+            key={slideIndex}
           />
         </Box>
         <Box
