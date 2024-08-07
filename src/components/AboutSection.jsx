@@ -21,6 +21,9 @@ function AboutSection() {
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   const [scrollY, setScrollY] = useState(0);
+  const handleButtonClick = () => {
+    window.open("https://docs.zellular.xyz", "_blank");
+  };
   // const [slideIndex, setSlideIndex] = useState(0);
 
   // const slides = [
@@ -246,6 +249,7 @@ function AboutSection() {
               boxShadow: "none",
             },
           }}
+          onClick={handleButtonClick}
         >
           Build on Zellular
         </Button>
