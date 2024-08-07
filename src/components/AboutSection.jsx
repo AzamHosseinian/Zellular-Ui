@@ -7,8 +7,6 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import Carousel from "react-material-ui-carousel";
-
 import ArrowForward from "../assets/images/Icons/arrowforward.svg";
 import ArrowBack from "../assets/images/Icons/arrowback.svg";
 import LogoType from "../assets/images/AboutSection/logotype.svg";
@@ -146,7 +144,9 @@ function AboutSection() {
           }}
         />
 
-        <Box
+        <CarouselItems />
+
+        {/* <Box
           sx={{
             width: isMobile ? "100%" : "60%",
             display: "flex",
@@ -169,9 +169,9 @@ function AboutSection() {
           >
             {slides[slideIndex].text}
           </Typography>
-        </Box>
+        </Box> */}
 
-        <Box
+        {/* <Box
           sx={{
             width: isMobile ? "100%" : "20%",
             display: "flex",
@@ -193,7 +193,7 @@ function AboutSection() {
             }}
             key={slideIndex}
           />
-        </Box>
+        </Box> */}
 
         <img
           src={ArrowForward}
