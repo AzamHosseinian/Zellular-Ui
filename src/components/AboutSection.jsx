@@ -114,7 +114,7 @@ function AboutSection() {
       <div
         className={`relative flex select-none
          lt-1024:flex-col-reverse
-         border-t border-dashed border-[#003A6C] border-b min-h-[480px] items-center justify-center ${
+         border-t-[3px] border-dashed border-[#003A6C] border-b-[3px] min-h-[480px] items-center justify-center ${
            isTablet ? "p-5" : "px-20 py-10 items-center justify-center"
          } gap-[30px] box-border w-full`}
         // sx={{
