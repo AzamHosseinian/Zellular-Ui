@@ -57,25 +57,25 @@ function AboutSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const changeSlide = (newIndex) => {
-    setSlideIndex(newIndex);
-  };
+  // const changeSlide = (newIndex) => {
+  //   setSlideIndex(newIndex);
+  // };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSlideIndex((prev) => (prev + 1) % slides.length);
-    }, 7000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setSlideIndex((prev) => (prev + 1) % slides.length);
+  //   }, 7000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  const handleNextSlide = () => {
-    changeSlide((slideIndex + 1) % slides.length);
-  };
+  // const handleNextSlide = () => {
+  //   changeSlide((slideIndex + 1) % slides.length);
+  // };
 
-  const handlePreviousSlide = () => {
-    changeSlide((slideIndex - 1 + slides.length) % slides.length);
-  };
+  // const handlePreviousSlide = () => {
+  //   changeSlide((slideIndex - 1 + slides.length) % slides.length);
+  // };
 
   const logoSize = scrollY >= window.innerHeight * 0.3 ? "30%" : "15%";
   const mobileLogoSize = scrollY >= window.innerHeight * 0.2 ? "25%" : "10%";
@@ -225,6 +225,7 @@ function AboutSection() {
           transition: "transform 1s ease-in-out",
           flex: 1,
           margin: "20px",
+          width: "100%",
         }}
       >
         <Button
