@@ -18,28 +18,28 @@ const Item = ({ item }: Props) => {
           background: "none",
           width: "100%",
           display: "flex",
-          flexDirection: isMobile ? "column" : "row",
+          flexDirection: isMobile || isTablet ? "column" : "row",
           alignItems: "center",
           justifyContent: "center",
           height: "100%",
-          paddingLeft: isMobile ? "16px" : "80px",
-          paddingRight: isMobile ? "16px" : "80px",
+          paddingLeft: isMobile || isTablet ? "16px" : "80px",
+          paddingRight: isMobile || isTablet ? "16px" : "80px",
           bgcolor: "transparent",
           boxShadow: "none",
-          gap: isMobile ? "15px" : "20px",
         }}
       >
         <Typography
           variant="body1"
           sx={{
             fontFamily: "Courier Prime Bold",
-            fontSize: isMobile ? "16px" : isTablet ? "20px" : "32px",
+            fontSize: isMobile ? "16px" : isTablet ? "18px" : "32px",
             color: "#003A6C",
-            textAlign: isMobile ? "center" : "left",
+            textAlign: isMobile || isTablet ? "center" : "left",
             lineHeight: 1.5,
             transition: "opacity 0.5s ease-in-out",
             paddingTop: isMobile ? "20px" : 0,
-            width: isMobile ? "100%" : "70%",
+            width: isMobile || isTablet ? "100%" : "70%",
+            order: isMobile || isTablet ? 2 : 0,
           }}
         >
           {item.text}
@@ -47,12 +47,13 @@ const Item = ({ item }: Props) => {
 
         <Box
           sx={{
-            width: isMobile ? "70%" : "30%",
+            width: isMobile || isTablet ? "50%" : "20%",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            height: isMobile ? "auto" : "100%",
+            height: isMobile || isTablet ? "auto" : "100%",
             minWidth: "200px",
+            order: isMobile || isTablet ? 1 : 1,
           }}
         >
           <img
@@ -60,7 +61,7 @@ const Item = ({ item }: Props) => {
             alt={`Slide ${item.id}`}
             style={{
               width: "100%",
-              maxHeight: isMobile ? "100%" : "80%",
+              maxHeight: isMobile || isTablet ? "100%" : "70%",
               transition: "opacity 0.5s ease-in-out",
               opacity: 1,
             }}
@@ -100,7 +101,7 @@ const CarouselItems = () => {
         duration={700}
         animation={"slide"}
         stopAutoPlayOnHover={true}
-        indicators={false}
+        // indicators={false}
         sx={{ width: "100%" }}
         swipe={true}
         NextIcon={
