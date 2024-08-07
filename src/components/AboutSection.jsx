@@ -10,9 +10,9 @@ import {
 // import ArrowForward from "../assets/images/Icons/arrowforward.svg";
 // import ArrowBack from "../assets/images/Icons/arrowback.svg";
 import LogoType from "../assets/images/AboutSection/logotype.svg";
-import SlideOne from "../assets/images/AboutSection/SlideImages/slide1.svg";
-import SlideTwo from "../assets/images/AboutSection/SlideImages/slide2.svg";
-import SlideThreeGif from "../assets/images/AboutSection/SlideImages/slideTree.gif";
+// import SlideOne from "../assets/images/AboutSection/SlideImages/slide1.svg";
+// import SlideTwo from "../assets/images/AboutSection/SlideImages/slide2.svg";
+// import SlideThreeGif from "../assets/images/AboutSection/SlideImages/slideTree.gif";
 import CarouselItems from "./Carouseltems/Caruoseltems";
 
 function AboutSection() {
@@ -247,6 +247,9 @@ function AboutSection() {
               color: "#003A6C",
               border: "2px solid #003A6C",
               boxShadow: "none",
+            },
+            "&:focus": {
+              outline: "none",
             },
           }}
           onClick={handleButtonClick}
