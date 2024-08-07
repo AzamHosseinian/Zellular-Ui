@@ -37,12 +37,12 @@ function AboutSection() {
     },
   ];
 
-  useEffect(() => {
-    slides.forEach((slide) => {
-      const img = new Image();
-      img.src = slide.image;
-    });
-  }, [slides]);
+  // useEffect(() => {
+  //   slides.forEach((slide) => {
+  //     const img = new Image();
+  //     img.src = slide.image;
+  //   });
+  // }, [slides]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,11 +59,12 @@ function AboutSection() {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      console.log("----");
       setSlideIndex((prev) => (prev + 1) % slides.length);
     }, 7000);
 
     return () => clearInterval(interval);
-  }, [slideIndex]);
+  }, []);
 
   const handleNextSlide = () => {
     changeSlide((slideIndex + 1) % slides.length);
