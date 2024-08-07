@@ -48,7 +48,7 @@ const Item = ({ item }: Props) => {
 
         <Box
           sx={{
-            width: isMobile || isTablet ? "50%" : "20%",
+            width: isMobile ? "50%" : isTablet ? "30%" : "20%",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
