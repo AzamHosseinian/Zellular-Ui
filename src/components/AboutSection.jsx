@@ -7,8 +7,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import ArrowForward from "../assets/images/Icons/arrowforward.svg";
-import ArrowBack from "../assets/images/Icons/arrowback.svg";
+// import ArrowForward from "../assets/images/Icons/arrowforward.svg";
+// import ArrowBack from "../assets/images/Icons/arrowback.svg";
 import LogoType from "../assets/images/AboutSection/logotype.svg";
 import SlideOne from "../assets/images/AboutSection/SlideImages/slide1.svg";
 import SlideTwo from "../assets/images/AboutSection/SlideImages/slide2.svg";
@@ -21,22 +21,22 @@ function AboutSection() {
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   const [scrollY, setScrollY] = useState(0);
-  const [slideIndex, setSlideIndex] = useState(0);
+  // const [slideIndex, setSlideIndex] = useState(0);
 
-  const slides = [
-    {
-      text: "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python.",
-      image: SlideOne,
-    },
-    {
-      text: "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
-      image: SlideTwo,
-    },
-    {
-      text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
-      image: SlideThreeGif,
-    },
-  ];
+  // const slides = [
+  //   {
+  //     text: "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python.",
+  //     image: SlideOne,
+  //   },
+  //   {
+  //     text: "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
+  //     image: SlideTwo,
+  //   },
+  //   {
+  //     text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
+  //     image: SlideThreeGif,
+  //   },
+  // ];
 
   // useEffect(() => {
   //   slides.forEach((slide) => {
@@ -82,7 +82,7 @@ function AboutSection() {
       sx={{
         textAlign: "center",
         bgcolor: "#FDF5E6",
-        height: "1000px",
+        height: isMobile ? "800px" : "1000px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
@@ -99,8 +99,8 @@ function AboutSection() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingTop: isMobile ? "35px" : "80px",
-          paddingBottom: isMobile ? "35px" : "80px",
+          paddingTop: isMobile ? "15px" : "80px",
+          paddingBottom: isMobile ? "15px" : "80px",
           marginLeft: "80px",
         }}
       >
