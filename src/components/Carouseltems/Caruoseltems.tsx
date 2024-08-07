@@ -19,12 +19,12 @@ const Item = ({ item }: Props) => {
     <div className="h-[480px]">
       <Paper
         sx={{
-          width: isMobile ? "100%" : "60%",
+          // width: isMobile ? "100%" : "60%",
           display: "flex",
           alignItems: "center",
-          justifyContent: isMobile ? "center" : "flex-end",
+          // justifyContent: isMobile ? "center" : "flex-end",
           height: "100%",
-          marginRight: isMobile ? "0" : "80px",
+          // marginRight: isMobile ? "0" : "80px",
         }}
       >
         <Typography
