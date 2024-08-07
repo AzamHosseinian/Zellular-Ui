@@ -27,7 +27,7 @@ const Item = ({ item }: Props) => {
           bgcolor: "transparent",
           boxShadow: "none",
           gap: isMobile ? "50px" : isTablet ? "30px" : "80px",
-          borderLeft: "2px dashed #003A6C",
+          // borderLeft: "2px dashed #003A6C",
         }}
       >
         <Typography
