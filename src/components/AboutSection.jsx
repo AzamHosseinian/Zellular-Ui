@@ -7,12 +7,15 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
+import Carousel from "react-material-ui-carousel";
+
 import ArrowForward from "../assets/images/Icons/arrowforward.svg";
 import ArrowBack from "../assets/images/Icons/arrowback.svg";
 import LogoType from "../assets/images/AboutSection/logotype.svg";
 import SlideOne from "../assets/images/AboutSection/SlideImages/slide1.svg";
 import SlideTwo from "../assets/images/AboutSection/SlideImages/slide2.svg";
 import SlideThreeGif from "../assets/images/AboutSection/SlideImages/slideTree.gif";
+import CarouselItems from "./Carouseltems/Caruoseltems";
 
 function AboutSection() {
   const theme = useTheme();
@@ -25,15 +28,15 @@ function AboutSection() {
   const slides = [
     {
       text: "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python.",
-      image: "./src/assets/images/AboutSection/SlideImages/slide1.svg",
+      image: SlideOne,
     },
     {
       text: "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
-      image: "./src/assets/images/AboutSection/SlideImages/slide2.svg",
+      image: SlideTwo,
     },
     {
       text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
-      image: "./src/assets/images/AboutSection/SlideImages/slideTree.gif",
+      image: SlideThreeGif,
     },
   ];
 
@@ -59,7 +62,6 @@ function AboutSection() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("----");
       setSlideIndex((prev) => (prev + 1) % slides.length);
     }, 7000);
 
@@ -111,27 +113,22 @@ function AboutSection() {
         />
       </Box>
 
-      <div
-        className={`relative flex select-none
-         lt-1024:flex-col-reverse
-         border-t-[3px] border-dashed border-[#003A6C] border-b-[3px] min-h-[480px] items-center justify-center ${
-           isTablet ? "p-5" : "px-20 py-10 items-center justify-center"
-         } gap-[30px] box-border w-full`}
-        // sx={{
-        //   position: "relative",
-        //   display: "flex",
-        //   flexDirection: isMobile ? "column-reverse" : "row",
-        //   borderTop: "3px dashed #003A6C",
-        //   borderBottom: "3px dashed #003A6C",
-        //   textAlign: "center",
-        //   alignItems: "center",
-        //   minHeight: "480px",
-        //   justifyContent: "center",
-        //   padding: isTablet ? "20px" : "40px 80px",
-        //   gap: "30px",
-        //   boxSizing: "border-box",
-        //   width: "100%",
-        // }}
+      <Box
+        sx={{
+          position: "relative",
+          display: "flex",
+          flexDirection: isMobile ? "column-reverse" : "row",
+          borderTop: "3px dashed #003A6C",
+          borderBottom: "3px dashed #003A6C",
+          textAlign: "center",
+          alignItems: "center",
+          minHeight: "480px",
+          justifyContent: "center",
+          padding: isTablet ? "20px" : "40px 80px",
+          gap: "30px",
+          boxSizing: "border-box",
+          width: "100%",
+        }}
       >
         <img
           src={ArrowBack}
@@ -149,39 +146,30 @@ function AboutSection() {
           }}
         />
 
-        <div
-          className={`${
-            isMobile
-              ? "w-full items-center mr-0 justify-center text-center flex "
-              : "w-[60%]  flex-end mr-[80px] "
-          } flex justify-center`}
-          // sx={{
-          //   width: isMobile ? "100%" : "60%",
-          //   display: "flex",
-          //   alignItems: "center",
-          //   justifyContent: isMobile ? "center" : "flex-end",
-          //   height: "100%",
-          //   marginRight: isMobile ? "0" : "80px",
-          // }}
+        <Box
+          sx={{
+            width: isMobile ? "100%" : "60%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: isMobile ? "center" : "flex-end",
+            height: "100%",
+            marginRight: isMobile ? "0" : "80px",
+          }}
         >
-          <span
-            className={`font-courierPrime font-bold  text-left ${
-              isTablet ? "text-[20px]" : isMobile ? "text-base" : "text-[32px]"
-            } text-[#003A6C] `}
-            // variant="body1"
-            // sx={{
-            //   fontFamily: "Courier Prime Bold",
-            //   fontSize: isTablet ? "20px" : isMobile ? "16px" : "32px",
-            //   color: "#003A6C",
-            //   textAlign: "left",
-            //   lineHeight: 1.5,
-            //   // transition: "opacity 0.5s ease-in-out",
-            // }}
-            key={slideIndex}
+          <Typography
+            variant="body1"
+            sx={{
+              fontFamily: "Courier Prime Bold",
+              fontSize: isTablet ? "20px" : isMobile ? "16px" : "32px",
+              color: "#003A6C",
+              textAlign: "left",
+              lineHeight: 1.5,
+              transition: "opacity 0.5s ease-in-out",
+            }}
           >
             {slides[slideIndex].text}
-          </span>
-        </div>
+          </Typography>
+        </Box>
 
         <Box
           sx={{
@@ -196,11 +184,11 @@ function AboutSection() {
           <img
             src={slides[slideIndex].image}
             alt={`Slide ${slideIndex + 1}`}
-            loading="lazy"
+            // loading="lazy"
             style={{
               width: "100%",
               maxHeight: "100%",
-              // transition: "opacity 0.5s ease-in-out",
+              transition: "opacity 0.5s ease-in-out",
               opacity: 1,
             }}
             key={slideIndex}
@@ -222,7 +210,7 @@ function AboutSection() {
             zIndex: 1000,
           }}
         />
-      </div>
+      </Box>
 
       <Box
         sx={{
