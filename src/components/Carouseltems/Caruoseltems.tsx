@@ -81,7 +81,7 @@ const CarouselItems = () => {
     {
       id: 3,
       text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
-      image: "../src/assets/images/AboutSection/SlideImages/slide2.svg",
+      image: "../src/assets/images/AboutSection/SlideImages/slideTree.gif",
     },
   ];
   return (
