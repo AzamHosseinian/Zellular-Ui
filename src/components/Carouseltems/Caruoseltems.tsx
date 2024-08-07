@@ -19,6 +19,7 @@ const Item = ({ item }: Props) => {
     <div className="h-[480px]">
       <Paper
         sx={{
+          background: "none",
           // width: isMobile ? "100%" : "60%",
           display: "flex",
           alignItems: "center",
@@ -85,8 +86,15 @@ const CarouselItems = () => {
     },
   ];
   return (
-    <div className="h-[480px] w-full">
-      <Carousel sx={{ width: "100%" }}>
+    <div className="h-[480px] w-full bg-none">
+      <Carousel
+        interval={7000}
+        animation={"slide"}
+        stopAutoPlayOnHover={true}
+        sx={{ width: "100%" }}
+        swipe={true}
+        navButtonsAlwaysVisible={false}
+      >
         {slides.map((item) => (
           <Item key={item.id} item={item} />
         ))}
