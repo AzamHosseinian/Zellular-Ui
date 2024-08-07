@@ -238,7 +238,7 @@ function AboutSection() {
             alignItems: "center",
             fontFamily: "Courier Prime Bold",
             padding: isMobile ? "10px 20px" : "15px 30px",
-            marginLeft: "-20px",
+            marginLeft: "-25px",
             "&:hover": {
               bgcolor: "#FDF5E6",
               color: "#003A6C",
