@@ -20,11 +20,13 @@ const Item = ({ item }: Props) => {
       <Paper
         sx={{
           background: "none",
-          // width: isMobile ? "100%" : "60%",
+          width: "100%",
           display: "flex",
           alignItems: "center",
           // justifyContent: isMobile ? "center" : "flex-end",
           height: "100%",
+          paddingLeft: "80px",
+          paddingRight: "80px",
           // marginRight: isMobile ? "0" : "80px",
         }}
       >
@@ -94,6 +96,13 @@ const CarouselItems = () => {
         sx={{ width: "100%" }}
         swipe={true}
         navButtonsAlwaysVisible={false}
+        navButtonsProps={{
+          style: {
+            backgroundColor: "#8f34eb",
+            opacity: 0.4,
+            zIndex: "1000px",
+          },
+        }}
       >
         {slides.map((item) => (
           <Item key={item.id} item={item} />

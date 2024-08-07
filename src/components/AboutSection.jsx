@@ -122,13 +122,13 @@ function AboutSection() {
           alignItems: "center",
           minHeight: "480px",
           justifyContent: "center",
-          padding: isTablet ? "20px" : "40px 80px",
+          // padding: isTablet ? "20px" : "40px 80px",
           gap: "30px",
           boxSizing: "border-box",
           width: "100%",
         }}
       >
-        <img
+        {/* <img
           src={ArrowBack}
           alt="Arrow back icon"
           onClick={handlePreviousSlide}
@@ -142,7 +142,7 @@ function AboutSection() {
             pointerEvents: slideIndex > 0 ? "auto" : "none",
             zIndex: 1000,
           }}
-        />
+        /> */}
 
         <CarouselItems />
 
@@ -195,7 +195,7 @@ function AboutSection() {
           />
         </Box> */}
 
-        <img
+        {/* <img
           src={ArrowForward}
           alt="Arrow forward icon"
           onClick={handleNextSlide}
@@ -209,7 +209,7 @@ function AboutSection() {
             pointerEvents: slideIndex < slides.length - 1 ? "auto" : "none",
             zIndex: 1000,
           }}
-        />
+        /> */}
       </Box>
 
       <Box
