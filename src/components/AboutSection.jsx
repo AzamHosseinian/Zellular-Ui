@@ -75,7 +75,7 @@ function AboutSection() {
   // };
 
   const logoSize = scrollY >= window.innerHeight * 0.3 ? "30%" : "15%";
-  const mobileLogoSize = scrollY >= window.innerHeight * 0.2 ? "25%" : "10%";
+  const mobileLogoSize = scrollY >= window.innerHeight * 0.2 ? "15%" : "10%";
 
   return (
     <Box
