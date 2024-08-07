@@ -168,15 +168,16 @@ function AboutSection() {
             className={`font-courierPrime font-bold  text-left ${
               isTablet ? "text-[20px]" : isMobile ? "text-base" : "text-[32px]"
             } text-[#003A6C] `}
-            variant="body1"
-            sx={{
-              fontFamily: "Courier Prime Bold",
-              fontSize: isTablet ? "20px" : isMobile ? "16px" : "32px",
-              color: "#003A6C",
-              textAlign: "left",
-              lineHeight: 1.5,
-              // transition: "opacity 0.5s ease-in-out",
-            }}
+            // variant="body1"
+            // sx={{
+            //   fontFamily: "Courier Prime Bold",
+            //   fontSize: isTablet ? "20px" : isMobile ? "16px" : "32px",
+            //   color: "#003A6C",
+            //   textAlign: "left",
+            //   lineHeight: 1.5,
+            //   // transition: "opacity 0.5s ease-in-out",
+            // }}
+            key={slideIndex}
           >
             {slides[slideIndex].text}
           </span>
