@@ -26,7 +26,7 @@ const Item = ({ item }: Props) => {
           paddingRight: isMobile || isTablet ? "16px" : "80px",
           bgcolor: "transparent",
           boxShadow: "none",
-          gap: isMobile ? "50px" : "0px",
+          gap: isMobile ? "50px" : isTablet ? "30px" : "0px",
         }}
       >
         <Typography
