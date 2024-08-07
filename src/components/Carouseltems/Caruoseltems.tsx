@@ -90,7 +90,7 @@ const CarouselItems = () => {
     },
   ];
   return (
-    <div className="h-[480px] w-full bg-none">
+    <div className="h-[480px] w-full bg-none cursor-pointer">
       <Carousel
         interval={7000}
         duration={700}
@@ -98,12 +98,15 @@ const CarouselItems = () => {
         stopAutoPlayOnHover={true}
         sx={{ width: "100%" }}
         swipe={true}
+        NextIcon={<img src="./src/assets/images/Icons/arrowforward.svg" />}
+        PrevIcon={<img src="./src/assets/images/Icons/arrowback.svg" />}
         navButtonsAlwaysVisible={false}
         navButtonsProps={{
           style: {
-            backgroundColor: "#8f34eb",
-            opacity: 0.4,
+            backgroundColor: "rgb(253, 245, 230)",
+            opacity: 1,
             zIndex: "1000px",
+            border: "none",
           },
         }}
       >
