@@ -25,18 +25,15 @@ function AboutSection() {
 
   const slides = [
     {
-      text:
-        "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python.",
+      text: "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python.",
       image: SlideOne,
     },
     {
-      text:
-        "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
+      text: "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
       image: SlideTwo,
     },
     {
-      text:
-        "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
+      text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
       image: SlideThreeGif,
     },
   ];
@@ -241,6 +238,7 @@ function AboutSection() {
             alignItems: "center",
             fontFamily: "Courier Prime Bold",
             padding: isMobile ? "10px 20px" : "15px 30px",
+            marginLeft: "-20px",
             "&:hover": {
               bgcolor: "#FDF5E6",
               color: "#003A6C",
