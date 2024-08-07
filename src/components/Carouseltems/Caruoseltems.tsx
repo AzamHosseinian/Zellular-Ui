@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Typography, Box, useMediaQuery, useTheme } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 interface Props {
   item: { id: number; text: string; image: string };
@@ -96,6 +97,19 @@ const CarouselItems = () => {
     },
   ];
 
+  const Icon = styled("img")(({ theme }) => ({
+    width: "16px", // Default for mobile
+    height: "16px",
+    [theme.breakpoints.up("sm")]: {
+      width: "20px", // Tablet
+      height: "20px",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "32px", // Desktop
+      height: "32px",
+    },
+  }));
+
   return (
     <div className="h-[480px] w-full bg-none cursor-pointer">
       <Carousel
@@ -107,10 +121,10 @@ const CarouselItems = () => {
         sx={{ width: "100%" }}
         swipe={true}
         NextIcon={
-          <img src="./src/assets/images/Icons/arrowforward.svg" alt="Next" />
+          <Icon src="./src/assets/images/Icons/arrowforward.svg" alt="Next" />
         }
         PrevIcon={
-          <img src="./src/assets/images/Icons/arrowback.svg" alt="Previous" />
+          <Icon src="./src/assets/images/Icons/arrowback.svg" alt="Previous" />
         }
         navButtonsAlwaysVisible={false}
         navButtonsProps={{
@@ -122,6 +136,7 @@ const CarouselItems = () => {
             outline: "none",
             boxShadow: "none",
             cursor: "pointer",
+
             // transition: "background-color 0.3s ease",
           },
         }}
