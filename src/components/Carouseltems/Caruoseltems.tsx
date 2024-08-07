@@ -96,6 +96,7 @@ const CarouselItems = () => {
         duration={700}
         animation={"slide"}
         stopAutoPlayOnHover={true}
+        indicators={false}
         sx={{ width: "100%" }}
         swipe={true}
         NextIcon={<img src="./src/assets/images/Icons/arrowforward.svg" />}
