@@ -27,6 +27,7 @@ const Item = ({ item }: Props) => {
           bgcolor: "transparent",
           boxShadow: "none",
           gap: isMobile ? "50px" : isTablet ? "30px" : "80px",
+          borderLeft: "2px dashed #003A6C",
         }}
       >
         <Typography
@@ -77,17 +78,20 @@ const CarouselItems = () => {
   const slides = [
     {
       id: 1,
-      text: "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python.",
+      text:
+        "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python.",
       image: "../src/assets/images/AboutSection/SlideImages/slide1.svg",
     },
     {
       id: 2,
-      text: "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
+      text:
+        "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
       image: "../src/assets/images/AboutSection/SlideImages/slide2.svg",
     },
     {
       id: 3,
-      text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
+      text:
+        "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
       image: "../src/assets/images/AboutSection/SlideImages/slideTree.gif",
     },
   ];
