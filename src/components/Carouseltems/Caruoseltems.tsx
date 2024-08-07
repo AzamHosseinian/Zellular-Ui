@@ -115,10 +115,14 @@ const CarouselItems = () => {
         navButtonsAlwaysVisible={false}
         navButtonsProps={{
           style: {
-            backgroundColor: "rgb(253, 245, 230)",
+            backgroundColor: "transparent",
             opacity: 1,
-            zIndex: "1000px",
+            zIndex: 1000,
             border: "none",
+            outline: "none",
+            boxShadow: "none",
+            cursor: "pointer",
+            // transition: "background-color 0.3s ease",
           },
         }}
       >
