@@ -111,22 +111,27 @@ function AboutSection() {
         />
       </Box>
 
-      <Box
-        sx={{
-          position: "relative",
-          display: "flex",
-          flexDirection: isMobile ? "column-reverse" : "row",
-          borderTop: "3px dashed #003A6C",
-          borderBottom: "3px dashed #003A6C",
-          textAlign: "center",
-          alignItems: "center",
-          minHeight: "480px",
-          justifyContent: "center",
-          padding: isTablet ? "20px" : "40px 80px",
-          gap: "30px",
-          boxSizing: "border-box",
-          width: "100%",
-        }}
+      <div
+        className={`relative flex select-none
+         lt-1024:flex-col-reverse
+         border-t border-dashed border-[#003A6C] border-b min-h-[480px] items-center justify-center ${
+           isTablet ? "p-5" : "px-20 py-10 items-center justify-center"
+         } gap-[30px] box-border w-full`}
+        // sx={{
+        //   position: "relative",
+        //   display: "flex",
+        //   flexDirection: isMobile ? "column-reverse" : "row",
+        //   borderTop: "3px dashed #003A6C",
+        //   borderBottom: "3px dashed #003A6C",
+        //   textAlign: "center",
+        //   alignItems: "center",
+        //   minHeight: "480px",
+        //   justifyContent: "center",
+        //   padding: isTablet ? "20px" : "40px 80px",
+        //   gap: "30px",
+        //   boxSizing: "border-box",
+        //   width: "100%",
+        // }}
       >
         <img
           src={ArrowBack}
@@ -144,17 +149,25 @@ function AboutSection() {
           }}
         />
 
-        <Box
-          sx={{
-            width: isMobile ? "100%" : "60%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: isMobile ? "center" : "flex-end",
-            height: "100%",
-            marginRight: isMobile ? "0" : "80px",
-          }}
+        <div
+          className={`${
+            isMobile
+              ? "w-full items-center mr-0 justify-center text-center flex "
+              : "w-[60%]  flex-end mr-[80px] "
+          } flex justify-center`}
+          // sx={{
+          //   width: isMobile ? "100%" : "60%",
+          //   display: "flex",
+          //   alignItems: "center",
+          //   justifyContent: isMobile ? "center" : "flex-end",
+          //   height: "100%",
+          //   marginRight: isMobile ? "0" : "80px",
+          // }}
         >
-          <Typography
+          <span
+            className={`font-courierPrime font-bold  text-left ${
+              isTablet ? "text-[20px]" : isMobile ? "text-base" : "text-[32px]"
+            } text-[#003A6C] `}
             variant="body1"
             sx={{
               fontFamily: "Courier Prime Bold",
@@ -162,12 +175,12 @@ function AboutSection() {
               color: "#003A6C",
               textAlign: "left",
               lineHeight: 1.5,
-              transition: "opacity 0.5s ease-in-out",
+              // transition: "opacity 0.5s ease-in-out",
             }}
           >
             {slides[slideIndex].text}
-          </Typography>
-        </Box>
+          </span>
+        </div>
 
         <Box
           sx={{
@@ -186,7 +199,7 @@ function AboutSection() {
             style={{
               width: "100%",
               maxHeight: "100%",
-              transition: "opacity 0.5s ease-in-out",
+              // transition: "opacity 0.5s ease-in-out",
               opacity: 1,
             }}
             key={slideIndex}
@@ -208,7 +221,7 @@ function AboutSection() {
             zIndex: 1000,
           }}
         />
-      </Box>
+      </div>
 
       <Box
         sx={{
