@@ -1,24 +1,16 @@
 import React, { useState, Suspense, lazy } from "react";
 import { Box, Typography, Paper } from "@mui/material";
-import bgImage from "../assets/images/advantages/ad-bg.svg";
+import bgImage from "/assets/images/advantages/ad-bg.svg";
 
 // Lazy load the images
-const Icon1 = lazy(() => import("../assets/images/advantages/icon1.svg"));
-const Icon1Hover = lazy(() =>
-  import("../assets/images/advantages/icon1-1.svg")
-);
-const Icon2 = lazy(() => import("../assets/images/advantages/icon2.svg"));
-const Icon2Hover = lazy(() =>
-  import("../assets/images/advantages/icon2-1.svg")
-);
-const Icon3 = lazy(() => import("../assets/images/advantages/icon3.svg"));
-const Icon3Hover = lazy(() =>
-  import("../assets/images/advantages/icon3-1.svg")
-);
-const Icon4 = lazy(() => import("../assets/images/advantages/icon4.svg"));
-const Icon4Hover = lazy(() =>
-  import("../assets/images/advantages/icon4-1.svg")
-);
+const Icon1 = lazy(() => import("/assets/images/advantages/icon1.svg"));
+const Icon1Hover = lazy(() => import("/assets/images/advantages/icon1-1.svg"));
+const Icon2 = lazy(() => import("/assets/images/advantages/icon2.svg"));
+const Icon2Hover = lazy(() => import("/assets/images/advantages/icon2-1.svg"));
+const Icon3 = lazy(() => import("/assets/images/advantages/icon3.svg"));
+const Icon3Hover = lazy(() => import("/assets/images/advantages/icon3-1.svg"));
+const Icon4 = lazy(() => import("/assets/images/advantages/icon4.svg"));
+const Icon4Hover = lazy(() => import("/assets/images/advantages/icon4-1.svg"));
 
 const advantages = [
   {

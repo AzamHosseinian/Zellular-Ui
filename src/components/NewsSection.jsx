@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { useTheme, useMediaQuery } from "@mui/material";
 
 import { Box, Grid, Typography, Paper, IconButton } from "@mui/material";
-import CustomBackIcon from "../assets/images/Icons/arrowback.svg";
-import CustomForwardIcon from "../assets/images/Icons/arrowforward.svg";
-import sdkImage from "../assets/images/NewsSection/Releasing EigenLayer TypeScript and Python SDK.svg";
-import hackathonImage from "../assets/images/NewsSection/Earning Top Place in EigenLayer Hackathon.svg";
-import docsImage from "../assets/images/NewsSection/Releasing Zellular Docs MVP.svg";
+import CustomBackIcon from "/assets/images/Icons/arrowback.svg";
+import CustomForwardIcon from "/assets/images/Icons/arrowforward.svg";
+import sdkImage from "/assets/images/NewsSection/Releasing EigenLayer TypeScript and Python SDK.svg";
+import hackathonImage from "/assets/images/NewsSection/Earning Top Place in EigenLayer Hackathon.svg";
+import docsImage from "/assets/images/NewsSection/Releasing Zellular Docs MVP.svg";
 
 const newsItems = [
   {

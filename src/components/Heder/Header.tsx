@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ZelAnimation from "../ZelAnimation";
-import backgroundImage from "../../assets/images/HeroSection/background.png";
+import backgroundImage from "/assets/images/HeroSection/background.png";
 
 const Header = () => {
   const [isSocialOpen, setSocialOpen] = useState(false);

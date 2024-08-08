@@ -1,10 +1,10 @@
 import { Box, Grid } from "@mui/material";
-import logo from "../assets/images/Footer/footer-logo.svg";
+import logo from "/assets/images/Footer/footer-logo.svg";
 
-import discordIcon from "../assets/images/Footer/discord.svg";
-import emailIcon from "../assets/images/Footer/email.svg";
-import mediumIcon from "../assets/images/Footer/medium.svg";
-import xIcon from "../assets/images/Footer/X.svg";
+import discordIcon from "/assets/images/Footer/discord.svg";
+import emailIcon from "/assets/images/Footer/email.svg";
+import mediumIcon from "/assets/images/Footer/medium.svg";
+import xIcon from "/assets/images/Footer/X.svg";
 
 const Footer = () => {
   const socialMedias = [

@@ -79,21 +79,18 @@ const CarouselItems = () => {
   const slides = [
     {
       id: 1,
-      text:
-        "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, Python and GO, and hosted on EigenLayer and other restaking platforms to ensure security.",
-      image: "../src/assets/images/AboutSection/SlideImages/slide1.svg",
+      text: "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, Python and GO, and hosted on EigenLayer and other restaking platforms to ensure security.",
+      image: "/assets/images/AboutSection/SlideImages/slide1.svg",
     },
     {
       id: 2,
-      text:
-        "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
-      image: "../src/assets/images/AboutSection/SlideImages/slide2.svg",
+      text: "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
+      image: "/assets/images/AboutSection/SlideImages/slide2.svg",
     },
     {
       id: 3,
-      text:
-        "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
-      image: "../src/assets/images/AboutSection/SlideImages/slideTree.gif",
+      text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
+      image: "/assets/images/AboutSection/SlideImages/slideTree.gif",
     },
   ];
 
@@ -121,10 +118,10 @@ const CarouselItems = () => {
         sx={{ width: "100%" }}
         swipe={true}
         NextIcon={
-          <Icon src="./src/assets/images/Icons/arrowforward.svg" alt="Next" />
+          <Icon src="./assets/images/Icons/arrowforward.svg" alt="Next" />
         }
         PrevIcon={
-          <Icon src="./src/assets/images/Icons/arrowback.svg" alt="Previous" />
+          <Icon src="./assets/images/Icons/arrowback.svg" alt="Previous" />
         }
         navButtonsAlwaysVisible={false}
         navButtonsProps={{
