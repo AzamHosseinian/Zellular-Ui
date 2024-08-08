@@ -9,14 +9,6 @@ This project is a React-based UI library developed with Vite. It aims to provide
 - **High Throughput**: Supports +100k transactions per second per zApp, and unlimited throughput across the system.
 - **Dynamic Security**: Enables dynamic security by specifying the amount of restaked ETH required for running nodes.
 
-## Recent Improvements
-
-### SVG Loading Performance
-
-- **Lazy Loading**: Implemented lazy loading for SVG images to defer loading until they are in the viewport.
-- **Optimization**: Ensured efficient caching and server performance for faster image load times.
-- **Code Refactor**: Optimized component structure for better readability and maintainability.
-
 ## Installation
 
 To get started with the project, clone the repository and install the dependencies:
