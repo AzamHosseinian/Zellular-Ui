@@ -97,8 +97,6 @@ const Advantage = () => {
         }}
       >
         <div className="grid grid-cols-[repeat(auto-fit,minmax(301px,1fr))] w-full gap-[68px] max-w-[1414px] ">
-          {" "}
-          {/* Adjusted spacing to roughly 72px */}
           {advantages.map((adv, index) => (
             <div className="flex items-center justify-center" key={index}>
               <Paper
@@ -145,6 +143,7 @@ const Advantage = () => {
                     src={hoveredIcon === adv.id ? adv.hoverIcon : adv.icon}
                     alt={adv.title}
                     style={{ width: "150px", height: "200px" }}
+                    loading="lazy"
                   />
                 </Box>
                 <Typography
