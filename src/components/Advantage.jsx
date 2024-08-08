@@ -1,14 +1,24 @@
-import { useState } from "react";
-import { Box, Grid, Typography, Paper } from "@mui/material";
+import React, { useState, Suspense, lazy } from "react";
+import { Box, Typography, Paper } from "@mui/material";
 import bgImage from "../assets/images/advantages/ad-bg.svg";
-import icon1 from "../assets/images/advantages/icon1.svg";
-import icon1Hover from "../assets/images/advantages/icon1-1.svg";
-import icon2 from "../assets/images/advantages/icon2.svg";
-import icon2Hover from "../assets/images/advantages/icon2-1.svg";
-import icon3 from "../assets/images/advantages/icon3.svg";
-import icon3Hover from "../assets/images/advantages/icon3-1.svg";
-import icon4 from "../assets/images/advantages/icon4.svg";
-import icon4Hover from "../assets/images/advantages/icon4-1.svg";
+
+// Lazy load the images
+const Icon1 = lazy(() => import("../assets/images/advantages/icon1.svg"));
+const Icon1Hover = lazy(() =>
+  import("../assets/images/advantages/icon1-1.svg")
+);
+const Icon2 = lazy(() => import("../assets/images/advantages/icon2.svg"));
+const Icon2Hover = lazy(() =>
+  import("../assets/images/advantages/icon2-1.svg")
+);
+const Icon3 = lazy(() => import("../assets/images/advantages/icon3.svg"));
+const Icon3Hover = lazy(() =>
+  import("../assets/images/advantages/icon3-1.svg")
+);
+const Icon4 = lazy(() => import("../assets/images/advantages/icon4.svg"));
+const Icon4Hover = lazy(() =>
+  import("../assets/images/advantages/icon4-1.svg")
+);
 
 const advantages = [
   {
@@ -16,8 +26,8 @@ const advantages = [
     title: "Flexible Development",
     description:
       "Enables developing decentralized apps using high-level programming languages.",
-    icon: icon1,
-    hoverIcon: icon1Hover,
+    icon: Icon1,
+    hoverIcon: Icon1Hover,
   },
   {
     id: 2,
@@ -31,24 +41,24 @@ const advantages = [
         under a second.
       </>
     ),
-    icon: icon2,
-    hoverIcon: icon2Hover,
+    icon: Icon2,
+    hoverIcon: Icon2Hover,
   },
   {
     id: 3,
     title: "High Throughput",
     description:
       "Supports +100k transactions per second per zApp, and unlimited throughput across the system.",
-    icon: icon3,
-    hoverIcon: icon3Hover,
+    icon: Icon3,
+    hoverIcon: Icon3Hover,
   },
   {
     id: 4,
     title: "Dynamic Security",
     description:
       "Enables dynamic security by specifying the amount of restaked ETH that is required for running nodes.",
-    icon: icon4,
-    hoverIcon: icon4Hover,
+    icon: Icon4,
+    hoverIcon: Icon4Hover,
   },
 ];
 
@@ -139,12 +149,13 @@ const Advantage = () => {
                     my: 2,
                   }}
                 >
-                  <img
-                    src={hoveredIcon === adv.id ? adv.hoverIcon : adv.icon}
-                    alt={adv.title}
-                    style={{ width: "150px", height: "200px" }}
-                    loading="lazy"
-                  />
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <img
+                      src={hoveredIcon === adv.id ? adv.hoverIcon : adv.icon}
+                      alt={adv.title}
+                      style={{ width: "150px", height: "200px" }}
+                    />
+                  </Suspense>
                 </Box>
                 <Typography
                   variant="h6"
