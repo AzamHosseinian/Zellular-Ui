@@ -143,6 +143,7 @@ const Advantage = () => {
                     src={hoveredIcon === adv.id ? adv.hoverIcon : adv.icon}
                     alt={adv.title}
                     style={{ width: "150px", height: "200px" }}
+                    loading="lazy"
                   />
                 </Box>
                 <Typography
