@@ -104,6 +104,8 @@ const Slider = () => {
             marginLeft: "auto",
             width: isMobile ? 32 : 48,
             height: isMobile ? 32 : 48,
+            "&.Mui-focusVisible": { outline: "none" },
+            "&:focus": { outline: "none" },
           }}
         >
           <img src={CustomBackIcon} alt="Previous" />
@@ -181,6 +183,8 @@ const Slider = () => {
             marginRight: "auto",
             width: isMobile ? 32 : 48,
             height: isMobile ? 32 : 48,
+            "&.Mui-focusVisible": { outline: "none" },
+            "&:focus": { outline: "none" },
           }}
         >
           <img src={CustomForwardIcon} alt="Next" />
