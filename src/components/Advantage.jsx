@@ -149,7 +149,7 @@ const Advantage = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    paddingTop: hoveredIcon === adv.id ? "50px" : "150px",
+                    paddingTop: hoveredIcon === adv.id ? "50px" : "110px",
                     fontFamily:
                       hoveredIcon === adv.id
                         ? "Courier Prime"
