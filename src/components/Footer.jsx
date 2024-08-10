@@ -7,6 +7,10 @@ import mediumIcon from "/assets/images/Footer/medium.svg";
 import xIcon from "/assets/images/Footer/X.svg";
 
 const Footer = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
+
   const socialMedias = [
     {
       name: "Medium",
@@ -37,7 +41,11 @@ const Footer = () => {
               alignItems: "center",
             }}
           >
-            <img src={logo} alt="Logo" style={{ height: "30px" }} />
+            <img
+              src={logo}
+              alt="Logo"
+              style={{ height: "30px", paddingLeft: "40px" }}
+            />
           </Box>
         </Grid>
         <Grid>
@@ -82,7 +90,10 @@ const Footer = () => {
                   <img
                     src={social.icon}
                     alt={social.name}
-                    style={{ height: "22px", paddingLeft: "10px" }}
+                    style={{
+                      height: "22px",
+                      paddingLeft: isMobile ? 0 : "10px",
+                    }}
                   />
                 </Box>
               </a>
