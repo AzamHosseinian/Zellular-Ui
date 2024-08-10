@@ -140,6 +140,17 @@ const CarouselItems = () => {
             // transition: "background-color 0.3s ease",
           },
         }}
+        indicatorIconButtonProps={{
+          style: {
+            padding: "4px",
+            color: "#003A6C", // Default indicator color
+          },
+        }}
+        activeIndicatorIconButtonProps={{
+          style: {
+            color: "#92E6A7", // Active indicator color
+          },
+        }}
       >
         {slides.map((item) => (
           <Item key={item.id} item={item} />
