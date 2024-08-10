@@ -10,11 +10,11 @@ import docsImage from "/assets/images/NewsSection/Releasing Zellular Docs MVP.sv
 
 const newsItems = [
   {
-    date: "June 20",
-    title: "Releasing EigenLayer TypeScript and Python SDK",
+    date: "June 27",
+    title: "Releasing Zellular Docs MVP",
     description:
-      "Zellular’s TypeScript and Python SDKs for EigenLayer allow developers to deploy Zellular apps developed in these popular languages on EigenLayer.",
-    image: sdkImage,
+      "Discover more about the Zellular BFT protocol and how to integrate with the Zellular sequencing service with our inaugural documentation release.",
+    image: docsImage,
   },
   {
     date: "June 22",
@@ -24,11 +24,11 @@ const newsItems = [
     image: hackathonImage,
   },
   {
-    date: "June 27",
-    title: "Releasing Zellular Docs MVP",
+    date: "June 20",
+    title: "Releasing EigenLayer TypeScript and Python SDK",
     description:
-      "Discover more about the Zellular BFT protocol and how to integrate with the Zellular sequencing service with our inaugural documentation release.",
-    image: docsImage,
+      "Zellular’s TypeScript and Python SDKs for EigenLayer allow developers to deploy Zellular apps developed in these popular languages on EigenLayer.",
+    image: sdkImage,
   },
 ];
 const Slider = () => {
