@@ -1,6 +1,5 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, useMediaQuery, useTheme } from "@mui/material";
 import logo from "/assets/images/Footer/footer-logo.svg";
-
 import discordIcon from "/assets/images/Footer/discord.svg";
 import emailIcon from "/assets/images/Footer/email.svg";
 import mediumIcon from "/assets/images/Footer/medium.svg";
@@ -9,8 +8,6 @@ import xIcon from "/assets/images/Footer/X.svg";
 const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
-
   const socialMedias = [
     {
       name: "Medium",
@@ -44,7 +41,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="Logo"
-              style={{ height: "30px", paddingLeft: "40px" }}
+              style={{ height: "30px", paddingLeft: isMobile ? 0 : "40px" }}
             />
           </Box>
         </Grid>
@@ -90,10 +87,7 @@ const Footer = () => {
                   <img
                     src={social.icon}
                     alt={social.name}
-                    style={{
-                      height: "22px",
-                      paddingLeft: isMobile ? 0 : "10px",
-                    }}
+                    style={{ height: "22px", paddingLeft: "10px" }}
                   />
                 </Box>
               </a>
