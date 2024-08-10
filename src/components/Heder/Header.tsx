@@ -256,10 +256,10 @@ const Header = () => {
               </div>
 
               <div className="ml-0 lg:ml-[calc(104.5vw_-_75vw_-20px)] flex gap-2">
-                in{" "}
+                in
                 <div className="typing-container text-[20px] md:text-[clamp(24px,5vw,40px)]">
-                  <span className="typing-effect">
-                    any programming language.
+                  <span className="typing-effect italic">
+                    &nbsp;any programming language.
                   </span>
                 </div>
               </div>
