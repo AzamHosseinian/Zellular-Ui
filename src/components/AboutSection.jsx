@@ -6,15 +6,8 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-
-// import ArrowForward from "../assets/images/Icons/arrowforward.svg";
-// import ArrowBack from "../assets/images/Icons/arrowback.svg";
 import LogoType from "/assets/images/AboutSection/logotype.svg";
-// import SlideOne from "../assets/images/AboutSection/SlideImages/slide1.svg";
-// import SlideTwo from "../assets/images/AboutSection/SlideImages/slide2.svg";
-// import SlideThreeGif from "../assets/images/AboutSection/SlideImages/slideTree.gif";
 import CarouselItems from "./Carouseltems/Caruoseltems";
-
 function AboutSection() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -24,29 +17,6 @@ function AboutSection() {
   const handleButtonClick = () => {
     window.open("https://docs.zellular.xyz", "_blank");
   };
-  // const [slideIndex, setSlideIndex] = useState(0);
-
-  // const slides = [
-  //   {
-  //     text: "Zellular is a decentralized sequencer that enables the developing of high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, GO, and Python.",
-  //     image: SlideOne,
-  //   },
-  //   {
-  //     text: "These dapps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
-  //     image: SlideTwo,
-  //   },
-  //   {
-  //     text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
-  //     image: SlideThreeGif,
-  //   },
-  // ];
-
-  // useEffect(() => {
-  //   slides.forEach((slide) => {
-  //     const img = new Image();
-  //     img.src = slide.image;
-  //   });
-  // }, [slides]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,27 +27,7 @@ function AboutSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // const changeSlide = (newIndex) => {
-  //   setSlideIndex(newIndex);
-  // };
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setSlideIndex((prev) => (prev + 1) % slides.length);
-  //   }, 7000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
-  // const handleNextSlide = () => {
-  //   changeSlide((slideIndex + 1) % slides.length);
-  // };
-
-  // const handlePreviousSlide = () => {
-  //   changeSlide((slideIndex - 1 + slides.length) % slides.length);
-  // };
-
-  const logoSize = scrollY >= window.innerHeight * 0.3 ? "30%" : "15%";
+  const logoSize = scrollY >= window.innerHeight * 0.3 ? "30%" : "23%";
   const mobileLogoSize = scrollY >= window.innerHeight * 0.2 ? "15%" : "10%";
 
   return (
@@ -131,88 +81,7 @@ function AboutSection() {
           width: "100%",
         }}
       >
-        {/* <img
-          src={ArrowBack}
-          alt="Arrow back icon"
-          onClick={handlePreviousSlide}
-          style={{
-            position: "absolute",
-            left: isMobile ? "10px" : isTablet ? "5px" : "40px",
-            cursor: slideIndex > 0 ? "pointer" : "default",
-            width: 32,
-            height: 32,
-            opacity: slideIndex > 0 ? 1 : 0.5,
-            pointerEvents: slideIndex > 0 ? "auto" : "none",
-            zIndex: 1000,
-          }}
-        /> */}
-
         <CarouselItems />
-
-        {/* <Box
-          sx={{
-            width: isMobile ? "100%" : "60%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: isMobile ? "center" : "flex-end",
-            height: "100%",
-            marginRight: isMobile ? "0" : "80px",
-          }}
-        >
-          <Typography
-            variant="body1"
-            sx={{
-              fontFamily: "Courier Prime Bold",
-              fontSize: isTablet ? "20px" : isMobile ? "16px" : "32px",
-              color: "#003A6C",
-              textAlign: "left",
-              lineHeight: 1.5,
-              transition: "opacity 0.5s ease-in-out",
-            }}
-          >
-            {slides[slideIndex].text}
-          </Typography>
-        </Box> */}
-
-        {/* <Box
-          sx={{
-            width: isMobile ? "100%" : "20%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: isMobile ? "center" : "flex-start",
-            height: "100%",
-            minWidth: "200px",
-          }}
-        >
-          <img
-            src={slides[slideIndex].image}
-            alt={Slide ${slideIndex + 1}}
-            // loading="lazy"
-            style={{
-              width: "100%",
-              maxHeight: "100%",
-              transition: "opacity 0.5s ease-in-out",
-              opacity: 1,
-            }}
-            key={slideIndex}
-          />
-        </Box> */}
-
-        {/* <img
-          src={ArrowForward}
-          alt="Arrow forward icon"
-          onClick={handleNextSlide}
-          style={{
-            position: "absolute",
-            right: isMobile ? "10px" : isTablet ? "5px" : "40px",
-            cursor: slideIndex < slides.length - 1 ? "pointer" : "default",
-            width: 32,
-            height: 32,
-            opacity: slideIndex < slides.length - 1 ? 1 : 0.5,
-            pointerEvents: slideIndex < slides.length - 1 ? "auto" : "none",
-            zIndex: 1000,
-          }}
-        /> */}
       </Box>
 
       <Box
