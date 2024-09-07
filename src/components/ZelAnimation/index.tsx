@@ -337,19 +337,19 @@ const ZAnimationCircle = () => {
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute ml-10 left-40 bottom-[80px] animate-move42"></div>
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute ml-10 left-40 bottom-1 animate-move41"></div>
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute ml-10 left-44 bottom-[100px] animate-move40"></div>
-      <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute left-0 bottom-1"></div>
+      {/* <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute left-0 bottom-1"></div> */}
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-[118px] bottom-1"></div>
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute ml-2 left-[129px] bottom-[100px]"></div>
-      <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-0 bottom-5"></div>
-      <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-8 bottom-5 animate-moveTop20"></div>
+      {/* <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-0 bottom-5"></div> */}
+      {/* <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-8 bottom-5 animate-moveTop20"></div> */}
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-[118px] bottom-5"></div>
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-[135px] bottom-5"></div>
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-[153px] bottom-5"></div>
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute ml-6 left-[172px] bottom-5"></div>
       <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute left-[214px] bottom-5"></div>
-      <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-0 bottom-9"></div>
-      <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-0 bottom-[52px]"></div>
-      <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-0 bottom-[68px]"></div>
+      {/* <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-0 bottom-9"></div> */}
+      {/* <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-0 bottom-[52px]"></div> */}
+      {/* <div className="w-3 h-3 bg-[#92E6A7] rounded-full absolute  left-0 bottom-[68px]"></div> */}
     </div>
   );
 };
