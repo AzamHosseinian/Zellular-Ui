@@ -251,11 +251,11 @@ const Header = () => {
 
             <div className="ml-[30px] md:ml-[125px] mt-[20px] md:mt-[calc(28vh_-125px)] text-[#92E6A7] text-[clamp(24px,5vw,40px)] leading-[44.98px] font-normal font-courierPrime">
               <div>Develop sub-second finality </div>
-              <div className="ml-0  lg:ml-[calc(92.5vw_-_75vw_-20px)]">
+              <div className="ml-0  lg:ml-[calc(86.2vw_-_75vw_-20px)]">
                 high-throughput dApps
               </div>
 
-              <div className="ml-0 lg:ml-[calc(104.5vw_-_75vw_-20px)] flex gap-2">
+              <div className="ml-0 lg:ml-[calc(92.5vw_-_75vw_-20px)] flex gap-2">
                 in
                 <div className="typing-container text-[20px] md:text-[clamp(24px,5vw,40px)]">
                   <span className="typing-effect italic">
