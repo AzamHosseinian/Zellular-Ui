@@ -3,12 +3,18 @@ import logo from "/assets/images/Footer/footer-logo.svg";
 import discordIcon from "/assets/images/Footer/discord.svg";
 import emailIcon from "/assets/images/Footer/email.svg";
 import mediumIcon from "/assets/images/Footer/medium.svg";
+import githubIcon from "/assets/images/Footer/github.svg";
 import xIcon from "/assets/images/Footer/X.svg";
 
 const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const socialMedias = [
+    {
+      name: "Github",
+      icon: githubIcon,
+      url: "https://github.com/zellular-xyz/",
+    },
     {
       name: "Medium",
       icon: mediumIcon,
