@@ -81,7 +81,7 @@ const TeamSection = () => {
         <div className="w-full flex items-center justify-center mb-[225px]">
           <div className="max-w-[1540px] w-full flex items-center justify-around mt-[152px] lt-1607:px-[80px]">
             <div className="flex relative w-full ">
-              <div className="w-[132px] h-[78px] bg-[#003A6C] rounded-[50%] flex items-center justify-center">
+              <div className="w-[132px]  h-[78px] bg-[#003A6C] rounded-[50%] flex items-center justify-center">
                 <svg
                   width="112"
                   height="24"
