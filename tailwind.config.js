@@ -14,6 +14,8 @@ export default {
         "bt-827": { min: "827px" },
         "lt-827": { max: "827px" },
         "lt-1024": { max: "1024px" },
+        "lt-1607": { max: "1607px" },
+        "lt-1170": { max: "1170px" },
       },
       boxShadow: {
         myShadow: "-10px -10px 0px 0px #003A6C",

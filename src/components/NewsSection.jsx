@@ -7,8 +7,27 @@ import CustomForwardIcon from "/assets/images/Icons/arrowforward.svg";
 import sdkImage from "/assets/images/NewsSection/Releasing EigenLayer TypeScript and Python SDK.svg";
 import hackathonImage from "/assets/images/NewsSection/Earning Top Place in EigenLayer Hackathon.svg";
 import docsImage from "/assets/images/NewsSection/Releasing Zellular Docs MVP.svg";
-
+import launch from "/assets/images/NewsSection/LAUNCHING-zellular.jpg";
 const newsItems = [
+  {
+    date: "September 8",
+    title: "Launching on EigenLayer Testnet",
+    description: (
+      <>
+        Zellular sequencer is now live on EigenLayer testnet. To learn about the
+        conditions and requirements for running a node, refer to{" "}
+        <a
+          href="https://link-to-node-setup-guide.com"
+          target="_blank"
+          className="text-[#92E6A7]"
+        >
+          Node Setup Guide
+        </a>
+        .
+      </>
+    ),
+    image: launch,
+  },
   {
     date: "June 27",
     title: "Releasing Zellular Docs MVP",

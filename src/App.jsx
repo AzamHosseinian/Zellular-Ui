@@ -6,6 +6,7 @@ import AboutSection from "./components/AboutSection";
 import Advantage from "./components/Advantage";
 import Footer from "./components/Footer";
 import "./App.css";
+import TeamSection from "./components/TeamSection/TeamSection";
 
 const App = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -21,6 +22,7 @@ const App = () => {
       <AboutSection onIntersect={handleIntersect} isHovered={isHovered} />
       <Advantage />
       <NewsSection />
+      <TeamSection />
       <Footer />
     </div>
   );
