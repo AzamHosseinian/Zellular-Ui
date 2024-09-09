@@ -437,7 +437,7 @@ const TeamSection = () => {
             </div>
           </div>
         </div>
-        <div className="hidden lt-1024:grid lt-1024:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]  w-full items-center mb-[152px]">
+        <div className="hidden lt-1024:grid lt-1024:grid-cols-[repeat(auto-fit,minmax(350px,1fr))]  w-full items-center mb-[152px]">
           {teamInfo.map((member, index) => (
             <div
               key={index}
