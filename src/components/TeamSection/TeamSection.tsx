@@ -60,8 +60,7 @@ const TeamSection = () => {
 
   return (
     <div
-      className=" border-y-2 border-[#92E6a7] h-[842px]"
-      //   text-[#003A6c]
+      className=" border-y-2 border-[#92E6a7] h-[842px] lt-1024:h-full bg-cover"
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
@@ -71,14 +70,14 @@ const TeamSection = () => {
           <p className="text-[40px] leading-[51px] ml-[80px] mt-[80px] font-spaceGrotesk">
             -Team
           </p>
-          <div className="text-[20px] leading-[22px] flex items-center justify-center font-bold font-courierPrime  w-full lt-1170:mt-5">
-            <div className="max-w-[917px] text-center ">
+          <div className="text-[24px] leading-[32px] lt-1024:leading-[30px] flex items-center justify-center font-bold font-courierPrime  w-full lt-1170:mt-[72px] ">
+            <div className="max-w-[917px] text-center px-0 lt-1024:px-10">
               Zellular and its sub-projects are developed and maintained by a
               passionate and experienced global team with a variety of expertise
             </div>
           </div>
         </div>
-        <div className="w-full flex items-center justify-center mb-[225px]">
+        <div className="w-full flex items-center justify-center mb-[225px] lt-1024:hidden">
           <div className="max-w-[1540px] w-full flex items-center justify-around mt-[152px] lt-1607:px-[80px]">
             <div className="flex relative w-full ">
               <div className="w-[132px]  h-[78px] bg-[#003A6C] rounded-[50%] flex items-center justify-center">
@@ -437,6 +436,52 @@ const TeamSection = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="hidden lt-1024:grid lt-1024:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]  w-full items-center mb-[152px]">
+          {teamInfo.map((member, index) => (
+            <div
+              key={index}
+              className={` text-[#003A6C] font-courierPrime mt-[80px] flex flex-col justify-center  items-center`}
+            >
+              <div
+                style={{ backgroundImage: `url(${member.imgSrc})` }}
+                className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
+              ></div>
+              <div className="mt-[20px] flex flex-col items-center justify-center">
+                <div className="text-[40px]">{member.name}</div>
+                <div className="flex items-center text-[24px] font-normal gap-3">
+                  <div>{member.position}</div>
+                  <svg
+                    width="110"
+                    height="6"
+                    viewBox="0 0 110 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.466878 3C0.466878 4.47276 1.66079 5.66667 3.13354 5.66667C4.6063 5.66667 5.80021 4.47276 5.80021 3C5.80021 1.52724 4.6063 0.333333 3.13354 0.333333C1.66079 0.333333 0.466878 1.52724 0.466878 3ZM104.467 3C104.467 4.47276 105.661 5.66667 107.134 5.66667C108.606 5.66667 109.8 4.47276 109.8 3C109.8 1.52724 108.606 0.333333 107.134 0.333333C105.661 0.333333 104.467 1.52724 104.467 3ZM3.13354 3.5H107.134V2.5H3.13354V3.5Z"
+                      fill="#003A6C"
+                    />
+                  </svg>
+
+                  <a href={member.xLink} target="_blank">
+                    <svg
+                      width="26"
+                      height="24"
+                      viewBox="0 0 26 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.28169 0C1.99073 0 0.133545 1.79086 0.133545 4V20C0.133545 22.2091 1.99073 24 4.28169 24H20.8743C23.1652 24 25.0224 22.2091 25.0224 20V4C25.0224 1.79086 23.1652 0 20.8743 0H4.28169ZM5.5178 5.14286H10.2215L13.5618 9.71987L17.615 5.14286H19.0965L14.2308 10.6362L20.2308 18.8571H15.5282L11.6521 13.5469L6.94836 18.8571H5.46688L10.9831 12.6306L5.5178 5.14286ZM7.78632 6.28571L16.1463 17.7143H17.9622L9.60229 6.28571H7.78632Z"
+                        fill="#003A6C"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
