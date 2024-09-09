@@ -77,6 +77,7 @@ const TeamSection = () => {
             </div>
           </div>
         </div>
+
         <div className="w-full flex items-center justify-center mb-[225px] lt-1024:hidden">
           <div className="max-w-[1540px] w-full flex items-center justify-around mt-[152px] lt-1607:px-[80px]">
             <div className="flex relative w-full ">
@@ -178,9 +179,14 @@ const TeamSection = () => {
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
               <div
-                style={{ backgroundImage: `url(${teamInfo[0].imgSrc})` }}
-                className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div>
+              // style={{ backgroundImage: `url(${teamInfo[0].imgSrc})` }}
+              // className={`w-[226px] h-[226px] border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
+              >
+                <img
+                  src={teamInfo[0].imgSrc}
+                  className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
+                />
+              </div>
               <div className="mt-[37px] ml-8">
                 <div className="text-[40px]">{teamInfo[0].name}</div>
                 <div className="flex items-center text-[24px] font-normal gap-3">
@@ -221,10 +227,14 @@ const TeamSection = () => {
                 selectedMember == 1 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              <div
+              {/* <div
                 style={{ backgroundImage: `url(${teamInfo[1].imgSrc})` }}
                 className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div>
+              ></div> */}
+              <img
+                src={teamInfo[1].imgSrc}
+                className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
+              />
               <div className="mt-[37px] ml-8">
                 <div className="text-[40px]">{teamInfo[1].name}</div>
                 <div className="flex items-center text-[24px] font-normal gap-3">
@@ -265,10 +275,14 @@ const TeamSection = () => {
                 selectedMember == 2 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              <div
+              {/* <div
                 style={{ backgroundImage: `url(${teamInfo[2].imgSrc})` }}
                 className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div>
+              ></div> */}
+              <img
+                src={teamInfo[2].imgSrc}
+                className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
+              />
               <div className="mt-[37px] ml-8">
                 <div className="text-[40px]">{teamInfo[2].name}</div>
                 <div className="flex items-center text-[24px] font-normal gap-3">
@@ -309,10 +323,14 @@ const TeamSection = () => {
                 selectedMember == 3 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              <div
+              {/* <div
                 style={{ backgroundImage: `url(${teamInfo[3].imgSrc})` }}
                 className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div>
+              ></div> */}
+              <img
+                src={teamInfo[3].imgSrc}
+                className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
+              />
               <div className="mt-[37px] ml-8">
                 <div className="text-[40px]">{teamInfo[3].name}</div>
                 <div className="flex items-center text-[24px] font-normal gap-3">
@@ -353,10 +371,14 @@ const TeamSection = () => {
                 selectedMember == 4 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              <div
+              {/* <div
                 style={{ backgroundImage: `url(${teamInfo[4].imgSrc})` }}
                 className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div>
+              ></div> */}
+              <img
+                src={teamInfo[4].imgSrc}
+                className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
+              />
               <div className="mt-[37px] ml-8">
                 <div className="text-[40px]">{teamInfo[4].name}</div>
                 <div className="flex items-center text-[24px] font-normal gap-3">
@@ -397,10 +419,14 @@ const TeamSection = () => {
                 selectedMember == 5 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              <div
+              {/* <div
                 style={{ backgroundImage: `url(${teamInfo[5].imgSrc})` }}
                 className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div>
+              ></div> */}
+              <img
+                src={teamInfo[5].imgSrc}
+                className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
+              />
               <div className="mt-[37px] ml-8">
                 <div className="text-[40px]">{teamInfo[5].name}</div>
                 <div className="flex items-center text-[24px] font-normal gap-3">
@@ -437,6 +463,7 @@ const TeamSection = () => {
             </div>
           </div>
         </div>
+
         <div className="hidden lt-1024:grid lt-1024:grid-cols-[repeat(auto-fit,minmax(350px,1fr))]  w-full items-center mb-[152px]">
           {teamInfo.map((member, index) => (
             <div
