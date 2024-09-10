@@ -38,15 +38,23 @@ const TeamSection = () => {
     {
       id: 5,
       name: "Seraji",
-      position: "IT",
+      position: "Frontend Dev",
       imgSrc: "./assets/images/team/seraji.png",
       darkImg: "./assets/images/team/bw/seraji.png",
       xLink: "https://x.com/NexusEngDev",
     },
     {
       id: 6,
+      name: "Teymur",
+      position: "Backend Dev",
+      imgSrc: "./assets/images/team/teymur.png",
+      darkImg: "./assets/images/team/bw/teymur.png",
+      xLink: "https://x.com/sadeghte",
+    },
+    {
+      id: 7,
       name: "Lafa",
-      position: "Advisor",
+      position: "Senior Advisor",
       imgSrc: "./assets/images/team/lafa.png",
       darkImg: "./assets/images/team/bw/lafa.png",
       xLink: "https://x.com/lafachief",
@@ -162,13 +170,18 @@ const TeamSection = () => {
                   className={`w-[47px] h-[47px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[420px] top-[10px]`}
                   onMouseOver={() => handleHover(4)}
                 ></div>
+                <div
+                  style={{ backgroundImage: `url(${teamInfo[5].darkImg})` }}
+                  className={`w-[47px] h-[47px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[435px] bottom-[25px]`}
+                  onMouseOver={() => handleHover(5)}
+                ></div>
               </div>
 
               <div className="absolute w-[641px] h-[378px] border-2 border-[#003A6C] rounded-[50%] -top-[154px] -left-8">
                 <div
-                  style={{ backgroundImage: `url(${teamInfo[5].darkImg})` }}
+                  style={{ backgroundImage: `url(${teamInfo[6].darkImg})` }}
                   className={`w-[47px] h-[47px] bg-cover rounded-full cursor-pointer border-2 border-[#92E6A7] flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[535px] bottom-[42px]`}
-                  onMouseOver={() => handleHover(5)}
+                  onMouseOver={() => handleHover(6)}
                 ></div>
               </div>
             </div>
@@ -178,10 +191,7 @@ const TeamSection = () => {
                 selectedMember == 0 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              <div
-              // style={{ backgroundImage: `url(${teamInfo[0].imgSrc})` }}
-              // className={`w-[226px] h-[226px] border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              >
+              <div>
                 <img
                   src={teamInfo[0].imgSrc}
                   className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
@@ -227,10 +237,6 @@ const TeamSection = () => {
                 selectedMember == 1 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              {/* <div
-                style={{ backgroundImage: `url(${teamInfo[1].imgSrc})` }}
-                className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div> */}
               <img
                 src={teamInfo[1].imgSrc}
                 className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
@@ -275,10 +281,6 @@ const TeamSection = () => {
                 selectedMember == 2 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              {/* <div
-                style={{ backgroundImage: `url(${teamInfo[2].imgSrc})` }}
-                className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div> */}
               <img
                 src={teamInfo[2].imgSrc}
                 className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
@@ -323,10 +325,6 @@ const TeamSection = () => {
                 selectedMember == 3 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              {/* <div
-                style={{ backgroundImage: `url(${teamInfo[3].imgSrc})` }}
-                className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div> */}
               <img
                 src={teamInfo[3].imgSrc}
                 className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
@@ -371,10 +369,6 @@ const TeamSection = () => {
                 selectedMember == 4 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              {/* <div
-                style={{ backgroundImage: `url(${teamInfo[4].imgSrc})` }}
-                className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div> */}
               <img
                 src={teamInfo[4].imgSrc}
                 className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
@@ -445,6 +439,54 @@ const TeamSection = () => {
                   </svg>
 
                   <a href={teamInfo[5].xLink} target="_blank">
+                    <svg
+                      width="26"
+                      height="24"
+                      viewBox="0 0 26 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.28169 0C1.99073 0 0.133545 1.79086 0.133545 4V20C0.133545 22.2091 1.99073 24 4.28169 24H20.8743C23.1652 24 25.0224 22.2091 25.0224 20V4C25.0224 1.79086 23.1652 0 20.8743 0H4.28169ZM5.5178 5.14286H10.2215L13.5618 9.71987L17.615 5.14286H19.0965L14.2308 10.6362L20.2308 18.8571H15.5282L11.6521 13.5469L6.94836 18.8571H5.46688L10.9831 12.6306L5.5178 5.14286ZM7.78632 6.28571L16.1463 17.7143H17.9622L9.60229 6.28571H7.78632Z"
+                        fill="#003A6C"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className={`${
+                selectedMember == 6 ? "flex flex-col" : "hidden"
+              } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
+            >
+              {/* <div
+                style={{ backgroundImage: `url(${teamInfo[5].imgSrc})` }}
+                className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
+              ></div> */}
+              <img
+                src={teamInfo[6].imgSrc}
+                className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
+              />
+              <div className="mt-[37px] ml-8">
+                <div className="text-[40px]">{teamInfo[6].name}</div>
+                <div className="flex items-center text-[24px] font-normal gap-3">
+                  <div>{teamInfo[6].position}</div>
+                  <svg
+                    width="110"
+                    height="6"
+                    viewBox="0 0 110 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.466878 3C0.466878 4.47276 1.66079 5.66667 3.13354 5.66667C4.6063 5.66667 5.80021 4.47276 5.80021 3C5.80021 1.52724 4.6063 0.333333 3.13354 0.333333C1.66079 0.333333 0.466878 1.52724 0.466878 3ZM104.467 3C104.467 4.47276 105.661 5.66667 107.134 5.66667C108.606 5.66667 109.8 4.47276 109.8 3C109.8 1.52724 108.606 0.333333 107.134 0.333333C105.661 0.333333 104.467 1.52724 104.467 3ZM3.13354 3.5H107.134V2.5H3.13354V3.5Z"
+                      fill="#003A6C"
+                    />
+                  </svg>
+
+                  <a href={teamInfo[6].xLink} target="_blank">
                     <svg
                       width="26"
                       height="24"
