@@ -172,7 +172,7 @@ const TeamSection = () => {
                 ></div>
                 <div
                   style={{ backgroundImage: `url(${teamInfo[5].darkImg})` }}
-                  className={`w-[47px] h-[47px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[510px] top-[105px]`}
+                  className={`w-[47px] h-[47px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[510px] top-[108px]`}
                   onMouseOver={() => handleHover(5)}
                 ></div>
               </div>
