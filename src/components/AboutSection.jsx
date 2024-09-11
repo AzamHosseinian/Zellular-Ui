@@ -41,27 +41,27 @@ function AboutSection() {
         justifyContent: "flex-start",
         alignItems: "flex-start",
         boxSizing: "border-box",
+        background: "url('./assets/images/AboutSection/about-bg .png')",
       }}
     >
       <Box
         id="about"
         sx={{
-          width: isMobile ? mobileLogoSize : logoSize,
-          height: isMobile ? mobileLogoSize : logoSize,
-          transition: "width 0.8s, height 0.8s",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingTop: isMobile ? "15px" : "80px",
-          paddingBottom: isMobile ? "15px" : "80px",
-          marginLeft: "80px",
+          marginBottom: "130px",
         }}
       >
-        <img
+        <div className="flex  gap-4 font-courierPrime text-[24px] font-thin leading-[27px] text-[#003A6C] mt-[80px] ml-[80px]">
+          <div className="w-6 h-6 rounded-full bg-[#003A6C]"></div>
+          ABOUT ZELLULAR
+        </div>
+        {/* <img
           src={LogoType}
           alt="Zellular Logotype"
           style={{ width: "100%", height: "100%", minWidth: "200px" }}
-        />
+        /> */}
       </Box>
 
       <Box
@@ -69,13 +69,10 @@ function AboutSection() {
           position: "relative",
           display: "flex",
           flexDirection: isMobile ? "column-reverse" : "row",
-          borderTop: "3px dashed #003A6C",
-          borderBottom: "3px dashed #003A6C",
           textAlign: "center",
           alignItems: "center",
           minHeight: "480px",
           justifyContent: "center",
-          // padding: isTablet ? "20px" : "40px 80px",
           gap: "30px",
           boxSizing: "border-box",
           width: "100%",
@@ -84,48 +81,14 @@ function AboutSection() {
         <CarouselItems />
       </Box>
 
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          marginLeft: "80px",
-          transition: "transform 1s ease-in-out",
-          flex: 1,
-          margin: "20px",
-          width: "100%",
-        }}
-      >
-        <Button
-          aria-label="Build on Zellular"
-          variant="contained"
-          sx={{
-            bgcolor: "#92E6A7",
-            fontSize: isMobile ? "16px" : "24px",
-            color: "#003A6C",
-            borderRadius: "70px",
-            textTransform: "none",
-            display: "flex",
-            alignItems: "center",
-            fontFamily: "Courier Prime Bold",
-            padding: isMobile ? "10px 20px" : "15px 30px",
-            marginLeft: "-25px",
-            "&:hover": {
-              bgcolor: "#FDF5E6",
-              color: "#003A6C",
-              border: "2px solid #003A6C",
-              boxShadow: "none",
-            },
-            "&:focus": {
-              outline: "none",
-            },
-          }}
+      <div className=" flex w-full items-center justify-center mt-[80px] font-courierPrime font-bold">
+        <div
           onClick={handleButtonClick}
+          className="bg-[#003a6c] hover:bg-[#92e3a7] hover:text-[#003a6c] hover:border-[#003a6c] border cursor-pointer border-[#92e3a7] w-[265px] h-[70px] text-[#92e3a7] text-[20px] flex items-center justify-center"
         >
           Build on Zellular
-        </Button>
-      </Box>
+        </div>
+      </div>
     </Box>
   );
 }

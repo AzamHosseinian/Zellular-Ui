@@ -13,7 +13,7 @@ const Item = ({ item }: Props) => {
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   return (
-    <div className="h-[480px] border-l border-3 border-gray-600">
+    <div className="h-[480px]">
       <Paper
         sx={{
           background: "none",
@@ -28,14 +28,13 @@ const Item = ({ item }: Props) => {
           bgcolor: "transparent",
           boxShadow: "none",
           gap: isMobile ? "50px" : isTablet ? "30px" : "80px",
-          // borderLeft: "2px dashed #003A6C",
         }}
       >
         <Typography
           variant="body1"
           sx={{
-            fontFamily: "Courier Prime Bold",
-            fontSize: isMobile ? "16px" : isTablet ? "18px" : "32px",
+            fontFamily: "Courier Prime",
+            fontSize: isMobile ? "16px" : isTablet ? "18px" : "24px",
             color: "#003A6C",
             textAlign: isMobile || isTablet ? "center" : "left",
             lineHeight: 1.5,
@@ -79,20 +78,17 @@ const CarouselItems = () => {
   const slides = [
     {
       id: 1,
-      text:
-        "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, Python and GO, and hosted on EigenLayer and other restaking platforms to ensure security.",
+      text: "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, Python and GO, and hosted on EigenLayer and other restaking platforms to ensure security.",
       image: "/assets/images/AboutSection/SlideImages/slide1.svg",
     },
     {
       id: 2,
-      text:
-        "Zellular Apps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
+      text: "Zellular Apps can be decentralized as Byzantine Fault Tolerant (BFT) services replicated & hosted on Eigenlayer and other restaking platforms to ensure security.",
       image: "/assets/images/AboutSection/SlideImages/slide2.svg",
     },
     {
       id: 3,
-      text:
-        "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
+      text: "Zellular enables the replicas to maintain uniformity of their database state by applying updates in the same sequence.",
       image: "/assets/images/AboutSection/SlideImages/slideTree.gif",
     },
   ];
@@ -111,7 +107,7 @@ const CarouselItems = () => {
   }));
 
   return (
-    <div className="h-[480px] w-full bg-none cursor-pointer">
+    <div className="h-[396px] w-full max-w-[1276px] bg-none cursor-pointer border border-[#003a6c] flex  items-center">
       <Carousel
         interval={7000}
         duration={700}
@@ -136,18 +132,19 @@ const CarouselItems = () => {
             outline: "none",
             boxShadow: "none",
             cursor: "pointer",
-
             // transition: "background-color 0.3s ease",
           },
         }}
         indicatorIconButtonProps={{
           style: {
+            display: "none",
             padding: "4px",
             color: "#003A6C", // Default indicator color
           },
         }}
         activeIndicatorIconButtonProps={{
           style: {
+            display: "none",
             color: "#92E6A7", // Active indicator color
           },
         }}
