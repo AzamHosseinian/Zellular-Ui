@@ -89,99 +89,93 @@ const TeamSection = () => {
         <div className="w-full flex items-center justify-center mb-[225px] lt-1024:hidden">
           <div className="max-w-[1540px] w-full flex items-center justify-around mt-[152px] lt-1607:px-[80px]">
             <div className="flex relative w-full ">
-              <div className="w-[132px]  h-[78px] bg-[#003A6C] rounded-[50%] flex items-center justify-center">
+              <div className="w-[184px]  h-[108px] bg-[#003A6C] rounded-[50%] flex items-center justify-center -mt-[15px]">
                 <svg
-                  width="112"
-                  height="24"
-                  viewBox="0 0 112 24"
+                  width="157"
+                  height="32"
+                  viewBox="0 0 157 32"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M11.5042 7.52832C14.2069 7.52832 15.4995 8.95836 15.4995 11.1321C15.4995 13.0687 14.4713 14.3242 12.8555 14.9158L3.95538 18.1919C3.43079 18.4047 3.13387 18.7579 3.13387 19.2644C3.13387 19.8603 3.51473 20.222 4.3079 20.222H15.1763V23.2609H4.13374C1.46149 23.2609 0.139526 21.8308 0.139526 19.656C0.139526 17.8993 0.991458 16.499 2.78345 15.8436L11.714 12.592C12.3603 12.3536 12.5366 11.9067 12.5366 11.4897C12.5366 10.8938 12.1547 10.5671 11.3321 10.5671H0.697689V7.52832H11.5042Z"
+                    d="M16.4946 9.86719C20.2839 9.86719 22.0962 11.8722 22.0962 14.92C22.0962 17.6351 20.6546 19.3955 18.3893 20.2249L5.91063 24.8182C5.17512 25.1166 4.75883 25.6119 4.75883 26.322C4.75883 27.1574 5.29281 27.6646 6.40489 27.6646H21.6431V31.9253H6.1607C2.41403 31.9253 0.560547 29.9203 0.560547 26.871C0.560547 24.408 1.75501 22.4447 4.26751 21.5258L16.7888 16.9668C17.6949 16.6326 17.9421 16.006 17.9421 15.4212C17.9421 14.5858 17.4066 14.1278 16.2533 14.1278H1.34313V9.86719H16.4946Z"
                     fill="#FDF5E6"
                   />
                   <path
-                    d="M28.9543 7.52832C32.6264 7.52832 34.1823 9.31587 34.1823 12.3536C34.1823 15.2435 32.7428 16.881 28.9249 16.881H21.5523V18.0131C21.5523 19.2644 22.228 20.188 23.9308 20.188H33.4185V23.2566H23.9308C20.0488 23.2566 18.5265 21.052 18.5265 18.0727V12.7111C18.5265 9.7319 20.0541 7.52832 23.9308 7.52832H28.9543ZM21.5523 14.4093H28.8367C30.5154 14.4093 31.1281 13.6943 31.1281 12.5324C31.1281 11.3407 30.4525 10.5671 28.9249 10.5671H23.9308C22.228 10.5671 21.5523 11.5248 21.5523 12.7409V14.4093Z"
+                    d="M40.9608 9.86719C46.1093 9.86719 48.2908 12.3734 48.2908 16.6326C48.2908 20.6844 46.2726 22.9803 40.9196 22.9803H30.5827V24.5676C30.5827 26.322 31.5301 27.6169 33.9175 27.6169H47.2199V31.9193H33.9175C28.4748 31.9193 26.3403 28.8282 26.3403 24.6511V17.1339C26.3403 12.9568 28.4821 9.86719 33.9175 9.86719H40.9608ZM30.5827 19.5148H40.796C43.1496 19.5148 44.0087 18.5123 44.0087 16.8832C44.0087 15.2124 43.0614 14.1278 40.9196 14.1278H33.9175C31.5301 14.1278 30.5827 15.4705 30.5827 17.1756V19.5148Z"
                     fill="#FDF5E6"
                   />
                   <path
-                    d="M41.1144 2.28505V18.6251C41.1144 18.8324 41.0742 19.0377 40.9959 19.2292C40.9176 19.4208 40.8029 19.5947 40.6584 19.7413C40.5138 19.8878 40.3421 20.004 40.1532 20.0833C39.9643 20.1625 39.7619 20.2032 39.5575 20.2031C39.1447 20.2031 38.7488 20.0369 38.4569 19.741C38.1649 19.4451 38.0008 19.0437 38.0005 18.6251V2.28505C38.0005 1.86628 38.1645 1.46465 38.4565 1.16853C38.7485 0.872413 39.1445 0.706055 39.5575 0.706055C39.762 0.705915 39.9645 0.746662 40.1535 0.825964C40.3424 0.905267 40.5141 1.02157 40.6587 1.16822C40.8033 1.31487 40.918 1.489 40.9962 1.68063C41.0744 1.87227 41.1146 2.07766 41.1144 2.28505Z"
+                    d="M58.0103 2.5166V25.4265C58.0103 25.7172 57.9538 26.005 57.8441 26.2735C57.7343 26.542 57.5735 26.786 57.3708 26.9914C57.1681 27.1969 56.9274 27.3598 56.6626 27.4709C56.3977 27.582 56.1139 27.6391 55.8273 27.6389C55.2486 27.6389 54.6935 27.4058 54.2842 26.991C53.8748 26.5761 53.6447 26.0134 53.6443 25.4265V2.5166C53.6443 1.92945 53.8743 1.36634 54.2837 0.951161C54.6931 0.535981 55.2483 0.302735 55.8273 0.302735C56.114 0.302539 56.398 0.359668 56.6629 0.470856C56.9278 0.582043 57.1686 0.745108 57.3713 0.950723C57.5741 1.15634 57.7349 1.40047 57.8445 1.66916C57.9541 1.93784 58.0105 2.22581 58.0103 2.5166Z"
                     fill="#FDF5E6"
                   />
                   <path
-                    d="M48.6918 2.28505V18.6251C48.6918 18.8324 48.6516 19.0377 48.5733 19.2292C48.495 19.4208 48.3803 19.5947 48.2357 19.7413C48.0911 19.8878 47.9195 20.004 47.7306 20.0833C47.5417 20.1625 47.3393 20.2032 47.1349 20.2031C46.7221 20.2031 46.3262 20.0369 46.0343 19.741C45.7423 19.4451 45.5782 19.0437 45.5779 18.6251V2.28505C45.5779 1.86628 45.7419 1.46465 46.0339 1.16853C46.3259 0.872413 46.7219 0.706055 47.1349 0.706055C47.3394 0.705915 47.5419 0.746662 47.7308 0.825964C47.9198 0.905267 48.0915 1.02157 48.2361 1.16822C48.3807 1.31487 48.4954 1.489 48.5736 1.68063C48.6518 1.87227 48.692 2.07766 48.6918 2.28505Z"
+                    d="M68.634 2.5166V25.4265C68.634 25.7172 68.5776 26.005 68.4678 26.2735C68.3581 26.542 68.1973 26.786 67.9946 26.9914C67.7918 27.1969 67.5512 27.3598 67.2863 27.4709C67.0215 27.582 66.7377 27.6391 66.451 27.6389C65.8723 27.6389 65.3173 27.4058 64.908 26.991C64.4986 26.5761 64.2685 26.0134 64.2681 25.4265V2.5166C64.2681 1.92945 64.4981 1.36634 64.9074 0.951161C65.3168 0.535981 65.8721 0.302735 66.451 0.302735C66.7378 0.302539 67.0217 0.359668 67.2867 0.470856C67.5516 0.582043 67.7923 0.745108 67.9951 0.950723C68.1978 1.15634 68.3586 1.40047 68.4683 1.66916C68.5779 1.93784 68.6342 2.22581 68.634 2.5166Z"
                     fill="#FDF5E6"
                   />
                   <path
-                    d="M56.2108 7.52832V16.9417C56.2108 18.7877 57.5622 20.188 60.0288 20.188H62.5552C65.0229 20.188 66.3448 18.7877 66.3448 16.9417V7.52832H69.399V17.0598C69.399 20.6944 67.1076 23.2566 62.6727 23.2566H59.7938C55.3589 23.2566 53.0675 20.6944 53.0675 17.0598V7.52832H56.2108Z"
+                    d="M79.1762 9.86719V23.0653C79.1762 25.6536 81.0709 27.6169 84.5292 27.6169H88.0714C91.5313 27.6169 93.3848 25.6536 93.3848 23.0653V9.86719H97.6669V23.2309C97.6669 28.327 94.4542 31.9193 88.2362 31.9193H84.1997C77.9817 31.9193 74.769 28.327 74.769 23.2309V9.86719H79.1762Z"
                     fill="#FDF5E6"
                   />
                   <path
-                    d="M76.8905 2.28505V18.6251C76.8905 18.8324 76.8502 19.0377 76.772 19.2292C76.6937 19.4208 76.579 19.5947 76.4344 19.7413C76.2898 19.8878 76.1182 20.004 75.9293 20.0833C75.7404 20.1625 75.5379 20.2032 75.3335 20.2031C74.9209 20.2031 74.5251 20.0368 74.2333 19.7409C73.9415 19.445 73.7776 19.0436 73.7776 18.6251V2.28505C73.7775 2.07775 73.8176 1.87244 73.8957 1.68088C73.9739 1.48931 74.0884 1.31524 74.2329 1.1686C74.3774 1.02196 74.549 0.905635 74.7378 0.82627C74.9267 0.746905 75.1291 0.706055 75.3335 0.706055C75.538 0.705915 75.7405 0.746662 75.9295 0.825964C76.1185 0.905267 76.2902 1.02157 76.4348 1.16822C76.5794 1.31487 76.6941 1.489 76.7722 1.68063C76.8504 1.87227 76.8906 2.07766 76.8905 2.28505Z"
+                    d="M108.171 2.5166V25.4265C108.171 25.7172 108.114 26.005 108.004 26.2735C107.895 26.542 107.734 26.786 107.531 26.9914C107.328 27.1969 107.088 27.3598 106.823 27.4709C106.558 27.582 106.274 27.6391 105.988 27.6389C105.409 27.6389 104.854 27.4058 104.445 26.9909C104.036 26.576 103.806 26.0133 103.806 25.4265V2.5166C103.806 2.22594 103.862 1.93809 103.972 1.6695C104.081 1.40091 104.242 1.15685 104.445 0.951251C104.647 0.745655 104.888 0.58256 105.152 0.471284C105.417 0.360009 105.701 0.302735 105.988 0.302735C106.274 0.302539 106.558 0.359668 106.823 0.470856C107.088 0.582043 107.329 0.745108 107.532 0.950723C107.734 1.15634 107.895 1.40047 108.005 1.66916C108.115 1.93784 108.171 2.22581 108.171 2.5166Z"
                     fill="#FDF5E6"
                   />
                   <path
-                    d="M91.283 7.52832C95.1597 7.52832 96.6873 9.73296 96.6873 12.7111V20.0986C96.6873 22.3628 96.0998 23.2566 93.4852 23.2566H86.2312C82.5591 23.2566 81.0315 21.4393 81.0315 18.46C81.0315 15.601 82.4416 13.9326 86.2595 13.9326H93.6321V12.7409C93.6321 11.5194 92.9575 10.5671 91.2536 10.5671H81.9716V7.52832H91.283ZM93.6321 19.3836V16.4352H86.3193C84.6742 16.4352 84.0867 17.1204 84.0867 18.2813C84.0867 19.4421 84.7036 20.188 86.2595 20.188H92.7812C93.3981 20.188 93.6321 19.9496 93.6321 19.3836Z"
+                    d="M128.35 9.86719C133.785 9.86719 135.927 12.9582 135.927 17.1339V27.4916C135.927 30.6662 135.103 31.9193 131.438 31.9193H121.267C116.118 31.9193 113.977 29.3713 113.977 25.1942C113.977 21.1856 115.954 18.8465 121.307 18.8465H131.643V17.1756C131.643 15.463 130.698 14.1278 128.309 14.1278H115.295V9.86719H128.35ZM131.643 26.4891V22.3552H121.39C119.084 22.3552 118.26 23.316 118.26 24.9435C118.26 26.5711 119.125 27.6169 121.307 27.6169H130.45C131.315 27.6169 131.643 27.2827 131.643 26.4891Z"
                     fill="#FDF5E6"
                   />
                   <path
-                    d="M111.638 7.52832V10.5671H106.175C104.794 10.5671 104.181 11.2215 104.181 12.5888V23.2566H101.067V12.1153C101.067 8.95836 102.214 7.52832 105.264 7.52832H111.638Z"
+                    d="M156.888 9.86719V14.1278H149.229C147.293 14.1278 146.434 15.0453 146.434 16.9623V31.9193H142.068V16.2984C142.068 11.8722 143.676 9.86719 147.952 9.86719H156.888Z"
                     fill="#FDF5E6"
                   />
                 </svg>
               </div>
 
-              <div className="absolute w-[197px] h-[116px] border-2 border-[#003A6C] rounded-[50%] -top-5 -left-[2px]">
+              <div className="absolute w-[281px] h-[166px] border-2 border-[#003A6C] rounded-[50%] -top-11 -left-[4px]">
                 <div
                   style={{ backgroundImage: `url(${teamInfo[0].darkImg})` }}
-                  className={`w-[47px] border-2  border-[#92E6A7] h-[47px]  bg-cover rounded-full cursor-pointer  z-50 bg-[#92E6A7] flex items-center justify-center absolute left-[130px] -top-[10px]`}
+                  className={`w-[53px] border-2  border-[#92E6A7] h-[53px]  bg-cover rounded-full cursor-pointer  z-50 bg-[#92E6A7] flex items-center justify-center absolute left-[190px] -top-[15px]`}
                   onMouseOver={() => handleHover(0)}
                 ></div>
-              </div>
-
-              <div className="absolute w-[257px] h-[151px] border-2 border-[#003A6C] rounded-[50%] -top-[38px] -left-[4px]">
                 <div
                   style={{ backgroundImage: `url(${teamInfo[1].darkImg})` }}
-                  className={`w-[47px] h-[47px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute left-[160px] -bottom-4`}
+                  className={`w-[53px] h-[53px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute left-[215px] -bottom-1`}
                   onMouseOver={() => handleHover(1)}
                 ></div>
               </div>
 
-              <div className="absolute w-[342px] h-[200px] border-2  border-[#003A6C] rounded-[50%] -top-[63px] -left-[8px]">
+              <div className="absolute w-[395px] h-[232px] border-2 border-[#003A6C] rounded-[50%] -top-[77px] -left-[10px]">
                 <div
                   style={{ backgroundImage: `url(${teamInfo[2].darkImg})` }}
-                  className={`w-[47px] h-[47px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute left-[293px] top-[25px]`}
+                  className={`w-[53px] h-[53px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute left-[360px] top-[85px]`}
                   onMouseOver={() => handleHover(2)}
                 ></div>
               </div>
 
-              <div className="absolute w-[430px] h-[253px] border-2  border-[#003A6C] rounded-[50%] -top-[90px] -left-4">
-                <div
-                  style={{ backgroundImage: `url(${teamInfo[3].darkImg})` }}
-                  className={`w-[47px] h-[47px] bg-cover  border-2 border-[#92E6A7] rounded-full cursor-pointer z-50 flex items-center justify-center bg-[#92E6A7] absolute left-[330px] bottom-2`}
-                  onMouseOver={() => handleHover(3)}
-                ></div>
-              </div>
-
-              <div className="absolute w-[542px] h-[320px] border-2 border-[#003A6C] rounded-[50%] -top-[124px] -left-6">
+              <div className="absolute w-[520px] h-[306px] border-2  border-[#003A6C] rounded-[50%] -top-[112px] -left-[16px]">
                 <div
                   style={{ backgroundImage: `url(${teamInfo[4].darkImg})` }}
-                  className={`w-[47px] h-[47px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[420px] top-[10px]`}
+                  className={`w-[53px] h-[53px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[380px] top-[0px]`}
                   onMouseOver={() => handleHover(4)}
                 ></div>
                 <div
                   style={{ backgroundImage: `url(${teamInfo[5].darkImg})` }}
-                  className={`w-[47px] h-[47px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[510px] top-[108px]`}
+                  className={`w-[53px] h-[53px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[400px] top-[235px]`}
                   onMouseOver={() => handleHover(5)}
                 ></div>
               </div>
 
-              <div className="absolute w-[641px] h-[378px] border-2 border-[#003A6C] rounded-[50%] -top-[154px] -left-8">
+              <div className="absolute w-[657px] h-[387px] border-2  border-[#003A6C] rounded-[50%] -top-[152px] -left-[26px]">
                 <div
                   style={{ backgroundImage: `url(${teamInfo[6].darkImg})` }}
-                  className={`w-[47px] h-[47px] bg-cover rounded-full cursor-pointer border-2 border-[#92E6A7] flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[535px] bottom-[42px]`}
+                  className={`w-[53px] h-[53px] bg-cover rounded-full cursor-pointer border-2 border-[#92E6A7] flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[590px] top-[75px]`}
                   onMouseOver={() => handleHover(6)}
+                ></div>
+                <div
+                  style={{ backgroundImage: `url(${teamInfo[3].darkImg})` }}
+                  className={`w-[53px] h-[53px] bg-cover  border-2 border-[#92E6A7] rounded-full cursor-pointer z-50 flex items-center justify-center bg-[#92E6A7] absolute left-[585px] bottom-[70px]`}
+                  onMouseOver={() => handleHover(3)}
                 ></div>
               </div>
             </div>
@@ -413,10 +407,6 @@ const TeamSection = () => {
                 selectedMember == 5 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              {/* <div
-                style={{ backgroundImage: `url(${teamInfo[5].imgSrc})` }}
-                className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div> */}
               <img
                 src={teamInfo[5].imgSrc}
                 className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
@@ -461,10 +451,6 @@ const TeamSection = () => {
                 selectedMember == 6 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
-              {/* <div
-                style={{ backgroundImage: `url(${teamInfo[5].imgSrc})` }}
-                className={`w-[226px] h-[226px] bg-cover border-8 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
-              ></div> */}
               <img
                 src={teamInfo[6].imgSrc}
                 className="w-[226px] h-[226px]  border-8 border-[#92E6A7] rounded-full "
