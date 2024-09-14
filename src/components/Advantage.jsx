@@ -103,6 +103,7 @@ const Advantage = () => {
                     fontFamily: "Chakra Petch",
                     textAlign: "left",
                     fontSize: "56px",
+                    fontWeight: "bold",
                     paddingBottom: "20px",
                   }}
                 >
