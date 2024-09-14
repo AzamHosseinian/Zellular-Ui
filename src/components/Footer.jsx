@@ -18,7 +18,7 @@ const Footer = () => {
     {
       name: "Medium",
       icon: mediumIcon,
-      url: "https://medium.com/@zellular",
+      url: "https://medium.com/zellular",
     },
     { name: "X", icon: xIcon, url: "https://x.com/zellular_xyz" },
     {

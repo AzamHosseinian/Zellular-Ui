@@ -53,15 +53,10 @@ function AboutSection() {
           marginBottom: "130px",
         }}
       >
-        <div className="flex  gap-4 font-courierPrime text-[24px] font-thin leading-[27px] text-[#003A6C] mt-[80px] ml-[80px]">
-          <div className="w-6 h-6 rounded-full bg-[#003A6C]"></div>
+        <div className="flex gap-4 font-courierPrime text-[24px] items-center font-thin leading-[27px] text-[#003A6C] mt-[80px] ml-[80px]">
+          <div className="w-5 h-5 rounded-full bg-[#003A6C] -mt-1"></div>
           ABOUT ZELLULAR
         </div>
-        {/* <img
-          src={LogoType}
-          alt="Zellular Logotype"
-          style={{ width: "100%", height: "100%", minWidth: "200px" }}
-        /> */}
       </Box>
 
       <Box
@@ -71,7 +66,7 @@ function AboutSection() {
           flexDirection: isMobile ? "column-reverse" : "row",
           textAlign: "center",
           alignItems: "center",
-          minHeight: "480px",
+          // minHeight: "480px",
           justifyContent: "center",
           gap: "30px",
           boxSizing: "border-box",
@@ -81,7 +76,7 @@ function AboutSection() {
         <CarouselItems />
       </Box>
 
-      <div className=" flex w-full items-center justify-center my-[80px] font-courierPrime font-bold">
+      <div className=" flex w-full items-center justify-center mt-[80px] mb-[150px] font-courierPrime font-bold">
         <div
           onClick={handleButtonClick}
           className="bg-[#003a6c] hover:bg-[#92e3a7] hover:text-[#003a6c] hover:border-[#003a6c] border cursor-pointer border-[#92e3a7] w-[265px] h-[70px] text-[#92e3a7] text-[20px] flex items-center justify-center"

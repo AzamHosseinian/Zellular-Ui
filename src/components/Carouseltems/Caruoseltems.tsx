@@ -78,7 +78,7 @@ const CarouselItems = () => {
   const slides = [
     {
       id: 1,
-      text: "Zellular is a decentralized sequencer that enables developing high-throughput dapps (100,000+ TPS) implemented in high-level languages such as JS, Python and GO, and hosted on EigenLayer and other restaking platforms to ensure security.",
+      text: "Zellular is a light-weight consensus layer & decentralized sequencer that enables developing high-throughput dapps (500,000+ TPS)",
       image: "/assets/images/AboutSection/SlideImages/slide1.svg",
     },
     {

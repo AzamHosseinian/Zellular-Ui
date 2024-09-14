@@ -81,10 +81,11 @@ const TeamSection = () => {
               TEAM
             </div>
           </div>
-          <div className="text-[20px] leading-[32px] lt-1024:leading-[30px] flex items-center justify-center font-bold font-courierPrime  w-full lt-1170:mt-[72px] ">
-            <div className="max-w-[917px] text-center px-0 lt-1024:px-10">
+          <div className="text-[24px] leading-[32px] lt-1024:leading-[30px] flex items-center justify-center font-bold font-courierPrime  w-full lt-1170:mt-[72px] ">
+            <div className="max-w-[1017px] text-center px-0 lt-1024:px-10">
               Zellular and its sub-projects are developed and maintained by a
-              passionate and experienced global team with a variety of expertise
+              passionate and experienced global team with a variety of
+              expertise.
             </div>
           </div>
         </div>
