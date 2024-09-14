@@ -29,7 +29,7 @@ const Header = () => {
         <div className="animate-fadeIn opacity-0 sm:animate-none sm:opacity-100">
           <div className="navigation ">
             <div className="flex items-center w-full h-[140px] lg:h-[calc(4.5vw_+_4.5vh)] ml-[clamp(30px,5vw,88px)]">
-              <div className="w-full lt-1024:max-w-[170px] max-w-[calc(26vh_+_12vw)]">
+              <div className="w-full lt-1770:max-w-[170px] max-w-[calc(26vh_+_12vw)]">
                 <svg
                   width="61"
                   height="48"
@@ -114,6 +114,12 @@ const Header = () => {
                       </div>
                     </div>
                   )}
+                </div>
+                <div
+                  className="cursor-pointer"
+                  onClick={() => openLink("https://docs.zellular.xyz")}
+                >
+                  DOCS
                 </div>
               </div>
             </div>
@@ -230,6 +236,15 @@ const Header = () => {
                           </div>
                         </div>
                       )}
+                    </li>
+
+                    <li className="mb-1">
+                      <span
+                        className="block p-4 text-[18px] font-semibold text-[#FDF5E6]  hover:text-[#92E6A7] rounded cursor-pointer"
+                        onClick={() => openLink("https://docs.zellular.xyz")}
+                      >
+                        DOCS
+                      </span>
                     </li>
                   </ul>
                 </nav>

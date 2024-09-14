@@ -11,11 +11,13 @@ export default {
       },
       screens: {
         "lt-1596": { max: "1520px", min: "640px" },
-        "bt-827": { min: "827px" },
+        "bt-827": { min: "956px" },
         "lt-827": { max: "827px" },
         "lt-1024": { max: "1024px" },
         "lt-1607": { max: "1607px" },
+        "lt-1770": { max: "1770px" },
         "lt-1170": { max: "1170px" },
+        "lt-1212": { max: "1212px" },
       },
       boxShadow: {
         myShadow: "-10px -10px 0px 0px #003A6C",
