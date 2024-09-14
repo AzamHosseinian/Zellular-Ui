@@ -77,7 +77,7 @@ const Advantage = () => {
           borderRadius: 2,
         }}
       >
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(301px,1fr))] w-full gap-[20px] lg:gap-[68px] max-w-[1414px] ">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] w-full gap-[20px] lg:gap-[30px] max-w-[1600px] ">
           {advantages.map((adv, index) => (
             <div className="flex items-center justify-center" key={index}>
               <Paper
@@ -86,7 +86,7 @@ const Advantage = () => {
                   padding: 2,
                   backgroundColor: "#FDF5E6",
                   color: "#003A6C",
-                  width: "310px",
+                  width: "340px",
                   height: "645px",
                   border: "2px solid #003A6C",
                   alignItems: "center",
