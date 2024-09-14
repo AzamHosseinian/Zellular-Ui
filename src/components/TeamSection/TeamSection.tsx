@@ -33,7 +33,7 @@ const TeamSection = () => {
       position: "R&D",
       imgSrc: "./assets/images/team/paslar.png",
       darkImg: "./assets/images/team/bw/paslar.png",
-      xLink: "https://x.com/paslar_a",
+      xLink: "https://x.com/zellular_xyz",
     },
     {
       id: 5,
@@ -41,7 +41,7 @@ const TeamSection = () => {
       position: "Frontend Dev",
       imgSrc: "./assets/images/team/seraji.png",
       darkImg: "./assets/images/team/bw/seraji.png",
-      xLink: "https://x.com/NexusEngDev",
+      xLink: "https://x.com/zellular_xyz",
     },
     {
       id: 6,
@@ -49,7 +49,7 @@ const TeamSection = () => {
       position: "Backend Dev",
       imgSrc: "./assets/images/team/teymur.png",
       darkImg: "./assets/images/team/bw/teymur.png",
-      xLink: "https://x.com/sadeghte",
+      xLink: "https://x.com/zellular_xyz",
     },
     {
       id: 7,
