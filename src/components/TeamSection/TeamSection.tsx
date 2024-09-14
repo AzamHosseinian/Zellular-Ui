@@ -74,11 +74,14 @@ const TeamSection = () => {
       }}
     >
       <div>
-        <div className="text-[#003a6c]">
-          <p className="text-[40px] leading-[51px] ml-[80px] mt-[80px] font-spaceGrotesk">
-            -Team
-          </p>
-          <div className="text-[24px] leading-[32px] lt-1024:leading-[30px] flex items-center justify-center font-bold font-courierPrime  w-full lt-1170:mt-[72px] ">
+        <div className="text-[#003a6c] ">
+          <div className="flex gap-4 ml-[83px] mt-[75px] items-center ">
+            <div className="w-5 h-5 bg-[#003A6C] rounded-full -mt-1"></div>
+            <div className="text-[24px] leading-[26px] font-courierPrime font-normal">
+              TEAM
+            </div>
+          </div>
+          <div className="text-[20px] leading-[32px] lt-1024:leading-[30px] flex items-center justify-center font-bold font-courierPrime  w-full lt-1170:mt-[72px] ">
             <div className="max-w-[917px] text-center px-0 lt-1024:px-10">
               Zellular and its sub-projects are developed and maintained by a
               passionate and experienced global team with a variety of expertise

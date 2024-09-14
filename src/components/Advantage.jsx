@@ -65,15 +65,19 @@ const Advantage = () => {
         backgroundSize: "cover",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        paddingTop: 4,
+        // alignItems: "center",
+
         minHeight: "100svh",
         borderTop: "4px solid #003A6C",
         borderBottom: "4px solid #003A6C",
         width: "100vw",
       }}
     >
-      <Typography
+      <div className="flex gap-4 text-[#003A6C] items-center ml-[80px] my-[80px] font-courierPrime text-[24px]">
+        <div className="w-5 h-5 bg-[#003A6C] rounded-full -mt-1"></div>
+        <div>ADVANTAGES</div>
+      </div>
+      {/* <Typography
         variant="h4"
         sx={{
           paddingTop: 4,
@@ -86,7 +90,7 @@ const Advantage = () => {
         }}
       >
         -Advantages
-      </Typography>
+      </Typography> */}
       <Box
         sx={{
           width: "100%",

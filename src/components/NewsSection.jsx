@@ -88,25 +88,15 @@ const Slider = () => {
       id="news"
       sx={{
         backgroundColor: "#FDF5E6",
-        padding: "90px  30px",
-        textAlign: "center",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
         marginBottom: "150px",
       }}
     >
-      <Typography
-        variant="h4"
-        sx={{
-          color: "#003A6C",
-          fontFamily: "Space Grotesk",
-          marginBottom: 8,
-          fontSize: "40px",
-        }}
-      >
-        - News -
-      </Typography>
+      <div className="text-[#003A6C] text-[24px] font-normal flex items-center gap-4 font-courierPrime mt-[80px] ml-[80px] mb-[80px]">
+        <div className="w-5 h-5 rounded-full bg-[#003A6C] -mt-1"></div>
+        <div>NEWS</div>
+      </div>
       <Box
         sx={{
           display: "flex",
