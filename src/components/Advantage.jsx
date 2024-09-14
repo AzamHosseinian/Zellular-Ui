@@ -13,7 +13,7 @@ import icon4Hover from "/assets/images/advantages/icon4-1.svg";
 const advantages = [
   {
     id: 1,
-    title: "Flexible Development",
+    title: "Flexibility in Development",
     description:
       "Enables developing decentralized apps using high-level programming languages.",
     icon: icon1,
@@ -22,15 +22,7 @@ const advantages = [
   {
     id: 2,
     title: "Rapid Finality",
-    description: (
-      <>
-        Achieves state
-        <br />
-        finalization in
-        <br />
-        under a second.
-      </>
-    ),
+    description: "Achieves state finalization in under a second.",
     icon: icon2,
     hoverIcon: icon2Hover,
   },
@@ -38,7 +30,7 @@ const advantages = [
     id: 3,
     title: "High Throughput",
     description:
-      "Supports +100k transactions per second per zApp, and unlimited throughput across the system.",
+      "Supports 100k transactions per second per zApp, and unlimited throughput across the system.",
     icon: icon3,
     hoverIcon: icon3Hover,
   },
@@ -46,7 +38,7 @@ const advantages = [
     id: 4,
     title: "Dynamic Security",
     description:
-      "Enables dynamic security by specifying the amount of restaked ETH that is required for running nodes.",
+      "Enables zApps to hire required level of security from EigenLayer by specifying the amount of restaked ETH that is required for their nodes.",
     icon: icon4,
     hoverIcon: icon4Hover,
   },
@@ -65,8 +57,6 @@ const Advantage = () => {
         backgroundSize: "cover",
         display: "flex",
         flexDirection: "column",
-        // alignItems: "center",
-
         minHeight: "100svh",
         borderTop: "4px solid #003A6C",
         borderBottom: "4px solid #003A6C",
@@ -77,20 +67,7 @@ const Advantage = () => {
         <div className="w-5 h-5 bg-[#003A6C] rounded-full -mt-1"></div>
         <div>ADVANTAGES</div>
       </div>
-      {/* <Typography
-        variant="h4"
-        sx={{
-          paddingTop: 4,
-          color: "#003A6C",
-          fontFamily: "Space Grotesk",
-          marginBottom: 2,
-          alignSelf: "flex-start",
-          marginLeft: "5%",
-          fontSize: "40px",
-        }}
-      >
-        -Advantages
-      </Typography> */}
+
       <Box
         sx={{
           width: "100%",
@@ -109,18 +86,13 @@ const Advantage = () => {
                   padding: 2,
                   backgroundColor: "#FDF5E6",
                   color: "#003A6C",
-                  width: "302px",
+                  width: "310px",
                   height: "645px",
                   border: "2px solid #003A6C",
                   alignItems: "center",
                   borderRadius: 0,
                   boxShadow: "none",
                   transition: "all 0.1s ease",
-                  "&:hover": {
-                    backgroundColor: "#003A6C",
-                    color: "#FDF5E6",
-                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-                  },
                 }}
                 onMouseEnter={() => setHoveredIcon(adv.id)}
                 onMouseLeave={() => setHoveredIcon(null)}
@@ -128,9 +100,9 @@ const Advantage = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontFamily: "Courier Prime",
+                    fontFamily: "Chakra Petch",
                     textAlign: "left",
-                    fontSize: "70px",
+                    fontSize: "56px",
                     paddingBottom: "20px",
                   }}
                 >
@@ -144,27 +116,21 @@ const Advantage = () => {
                   }}
                 >
                   <img
-                    src={hoveredIcon === adv.id ? adv.hoverIcon : adv.icon}
+                    src={adv.icon}
                     alt={adv.title}
                     style={{ width: "150px", height: "200px" }}
                     loading="lazy"
                   />
                 </Box>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    paddingTop: hoveredIcon === adv.id ? "50px" : "110px",
-                    fontFamily:
-                      hoveredIcon === adv.id
-                        ? "Courier Prime"
-                        : "Courier Prime Bold",
-                    fontSize: hoveredIcon === adv.id ? "18px" : "32px",
-                    textAlign: "left",
-                    paddingRight: hoveredIcon === adv.id ? 0 : "40px",
-                  }}
-                >
-                  {hoveredIcon === adv.id ? adv.description : adv.title}
-                </Typography>
+                <div className="flex justify-center text-center w-full mb-[60px]">
+                  <div className="text-[26px] font-chakraPetch font-bold text-center leading-[33px] max-w-[170px]">
+                    {adv.title}
+                  </div>
+                </div>
+
+                <div className="text-[18px] font-courierPrime leading-[23px] font-normal">
+                  {adv.description}
+                </div>
               </Paper>
             </div>
           ))}
