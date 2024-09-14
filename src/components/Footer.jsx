@@ -38,7 +38,7 @@ const Footer = () => {
         color: "#FFFFFF",
       }}
     >
-      <div className="flex flex-col md:flex-row gap-10  justify-between items-center px-5 py-8">
+      <div className="flex flex-col md:flex-row gap-10 justify-between items-center px-4 md:px-10 lg:px-16 py-8">
         <Grid item xs={12} md={6}>
           <Box
             sx={{
@@ -49,7 +49,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="Logo"
-              style={{ height: "30px", paddingLeft: isMobile ? 0 : "40px" }}
+              // style={{ height: "30px", paddingLeft: isMobile ? 0 : "40px" }}
             />
           </Box>
         </Grid>
@@ -57,48 +57,50 @@ const Footer = () => {
           <Box
             sx={{
               display: "flex",
+              gap: "40px",
+              // paddingRight: "30px",
             }}
           >
             {socialMedias.map((social, index) => (
-              <a
-                href={social.url}
-                key={index}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
-              >
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginRight: "40px",
-                    paddingTop: "5px",
-                    position: "relative",
-                    "&:hover .green-circle": {
-                      display: "block",
-                    },
-                  }}
+              <div key={index}>
+                <a
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
                 >
                   <Box
-                    className="green-circle"
                     sx={{
-                      display: "none",
-                      width: 10,
-                      height: 10,
-                      backgroundColor: "#92E6A7",
-                      borderRadius: "50%",
-                      position: "absolute",
-                      top: 0,
-                      left: -10,
+                      display: "flex",
+                      alignItems: "center",
+                      paddingTop: "5px",
+                      position: "relative",
+                      "&:hover .green-circle": {
+                        display: "block",
+                      },
                     }}
-                  />
-                  <img
-                    src={social.icon}
-                    alt={social.name}
-                    style={{ height: "22px", paddingLeft: "10px" }}
-                  />
-                </Box>
-              </a>
+                  >
+                    <Box
+                      className="green-circle"
+                      sx={{
+                        display: "none",
+                        width: 10,
+                        height: 10,
+                        backgroundColor: "#92E6A7",
+                        borderRadius: "50%",
+                        position: "absolute",
+                        top: 0,
+                        left: -10,
+                      }}
+                    />
+                    <img
+                      src={social.icon}
+                      alt={social.name}
+                      style={{ height: "22px", minWidth: "22px" }}
+                    />
+                  </Box>
+                </a>
+              </div>
             ))}
           </Box>
         </Grid>
