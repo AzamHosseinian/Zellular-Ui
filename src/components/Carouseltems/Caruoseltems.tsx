@@ -34,7 +34,7 @@ const Item = ({ item }: Props) => {
           variant="body1"
           sx={{
             fontFamily: "Courier Prime",
-            fontSize: isMobile ? "16px" : isTablet ? "18px" : "24px",
+            fontSize: isMobile ? "16px" : isTablet ? "18px" : "26px",
             color: "#003A6C",
             textAlign: isMobile || isTablet ? "center" : "left",
             lineHeight: 1.5,
@@ -49,7 +49,7 @@ const Item = ({ item }: Props) => {
 
         <Box
           sx={{
-            width: isMobile ? "50%" : isTablet ? "30%" : "20%",
+            width: isMobile ? "50%" : isTablet ? "30%" : "392px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

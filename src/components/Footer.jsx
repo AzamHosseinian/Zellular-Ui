@@ -5,6 +5,7 @@ import emailIcon from "/assets/images/Footer/email.svg";
 import mediumIcon from "/assets/images/Footer/medium.svg";
 import githubIcon from "/assets/images/Footer/github.svg";
 import xIcon from "/assets/images/Footer/X.svg";
+import docIcon from "/assets/images/Footer/docs.svg";
 
 const Footer = () => {
   const theme = useTheme();
@@ -27,6 +28,7 @@ const Footer = () => {
       url: "https://discord.com/invite/zellular",
     },
     { name: "Email", icon: emailIcon, url: "mailto:info@zellular.xyz" },
+    { name: "Docs", icon: docIcon, url: "https://docs.zellular.xyz" },
   ];
 
   return (
@@ -36,7 +38,7 @@ const Footer = () => {
         color: "#FFFFFF",
       }}
     >
-      <div className="flex flex-col md:flex-row gap-10 sm:gap-10 justify-between items-center px-5 py-8">
+      <div className="flex flex-col md:flex-row gap-10  justify-between items-center px-5 py-8">
         <Grid item xs={12} md={6}>
           <Box
             sx={{
