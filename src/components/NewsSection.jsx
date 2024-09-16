@@ -17,7 +17,7 @@ const newsItems = [
         Zellular sequencer is now live on EigenLayer testnet. To learn about the
         conditions and requirements for running a node, refer to{" "}
         <a
-          href="https://link-to-node-setup-guide.com"
+          href="https://docs.zellular.xyz/sdk.html"
           target="_blank"
           className="text-[#92E6A7]"
         >

@@ -107,7 +107,7 @@ const CarouselItems = () => {
   }));
 
   return (
-    <div className="h-[396px] w-full max-w-[1276px] bg-none cursor-pointer border border-[#003a6c] flex  items-center">
+    <div className="h-[396px] w-full max-w-[1350px] bg-none cursor-pointer border border-[#003a6c] flex  items-center bg-[#FDF5E6]">
       <Carousel
         interval={7000}
         duration={700}
