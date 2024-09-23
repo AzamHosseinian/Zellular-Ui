@@ -76,7 +76,7 @@ function AboutSection() {
         <CarouselItems />
       </Box>
 
-      <div className=" flex w-full items-center justify-center mt-[80px] mb-[150px] font-courierPrime font-bold">
+      <div className=" flex w-full items-center justify-center mt-[120px] mb-[100px] font-courierPrime font-bold">
         <div
           onClick={handleButtonClick}
           className="bg-[#003a6c] hover:bg-[#92e3a7] hover:text-[#003a6c] hover:border-[#003a6c] border cursor-pointer border-[#92e3a7] w-[265px] h-[70px] text-[#92e3a7] text-[20px] flex items-center justify-center"

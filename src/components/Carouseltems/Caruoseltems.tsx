@@ -137,14 +137,15 @@ const CarouselItems = () => {
         }}
         indicatorIconButtonProps={{
           style: {
-            display: "none",
-            padding: "4px",
+            // display: "none",
+            padding: "2px",
+            marginTop: "-50px",
             color: "#003A6C", // Default indicator color
           },
         }}
         activeIndicatorIconButtonProps={{
           style: {
-            display: "none",
+            // display: "none",
             color: "#92E6A7", // Active indicator color
           },
         }}

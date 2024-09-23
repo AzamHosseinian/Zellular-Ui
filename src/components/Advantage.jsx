@@ -30,7 +30,7 @@ const advantages = [
     id: 3,
     title: "High Throughput",
     description:
-      "Supports 100k transactions per second per zApp, and unlimited throughput across the system.",
+      "Supports 500k transactions per second per zApp, and unlimited throughput across the system.",
     icon: icon3,
     hoverIcon: icon3Hover,
   },
