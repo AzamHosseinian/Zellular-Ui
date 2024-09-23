@@ -102,7 +102,7 @@ const Header = () => {
                       </div>
                       <div
                         className="cursor-pointer"
-                        onClick={() => openLink("https://medium.com/@zellular")}
+                        onClick={() => openLink("https://medium.com/zellular")}
                       >
                         Medium
                       </div>

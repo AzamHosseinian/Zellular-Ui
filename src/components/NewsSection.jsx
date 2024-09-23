@@ -85,7 +85,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="pb-[170px]">
+    <div className="pb-[170px]" id="news">
       <div className="text-[#003A6C] text-[24px] font-normal flex items-center gap-4 font-courierPrime mt-[80px] ml-[80px] mb-[80px]">
         <div className="w-5 h-5 rounded-full bg-[#003A6C] -mt-1"></div>
         <div>NEWS</div>
