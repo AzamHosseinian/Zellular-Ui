@@ -44,42 +44,31 @@ function AboutSection() {
         background: "url('./assets/images/AboutSection/about-bg .png')",
       }}
     >
-      <Box
+      <div
         id="about"
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginBottom: "130px",
-        }}
+        className="mb-[130px] lt-1024:mb-[64px] lt-1024:mt-[64px] w-full flex items-center justify-center sm:justify-start ml-0 sm:ml-[80px] mt-[80px]"
+
+        // sx={{
+        //   display: "flex",
+        //   alignItems: "center",
+        //   justifyContent: "center",
+        //   marginBottom: "130px",
+        // }}
       >
-        <div className="flex gap-4 font-courierPrime text-[24px] items-center font-thin leading-[27px] text-[#003A6C] mt-[80px] ml-[80px]">
-          <div className="w-5 h-5 rounded-full bg-[#003A6C] -mt-1"></div>
+        <div className="flex gap-2 sm:gap-4 font-courierPrime text-base sm:text-[20px] md:text-[24px] items-center font-thin leading-[27px] text-[#003A6C] ">
+          <div className="w-[12px] h-[12px] sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full bg-[#003A6C] -mt-1"></div>
           ABOUT ZELLULAR
         </div>
-      </Box>
+      </div>
 
-      <Box
-        sx={{
-          position: "relative",
-          display: "flex",
-          flexDirection: isMobile ? "column-reverse" : "row",
-          textAlign: "center",
-          alignItems: "center",
-          // minHeight: "480px",
-          justifyContent: "center",
-          gap: "30px",
-          boxSizing: "border-box",
-          width: "100%",
-        }}
-      >
+      <div className="relative flex text-center items-center justify-center gap-[30px] w-full px-5 sm:p-0">
         <CarouselItems />
-      </Box>
+      </div>
 
-      <div className=" flex w-full items-center justify-center mt-[120px] mb-[100px] font-courierPrime font-bold">
+      <div className=" flex w-full items-center justify-center mt-[80px] mb-[148px] lt-1550:mt-[64ps] lt-1550:mb-[88px] lt-1024:mt-[64px] lt-1024:mb-[64px] font-courierPrime font-bold">
         <div
           onClick={handleButtonClick}
-          className="bg-[#003a6c] hover:bg-[#92e3a7] hover:text-[#003a6c] hover:border-[#003a6c] border cursor-pointer border-[#92e3a7] w-[265px] h-[70px] text-[#92e3a7] text-[20px] flex items-center justify-center"
+          className="bg-[#003a6c] hover:bg-[#92e3a7] hover:text-[#003a6c] hover:border-[#003a6c] border cursor-pointer border-[#92e3a7] w-[244px] h-[68px] lg:w-[265px] lg:h-[70px] text-[#92e3a7] text-[18px] lg:text-[20px] flex items-center justify-center"
         >
           Build on Zellular
         </div>

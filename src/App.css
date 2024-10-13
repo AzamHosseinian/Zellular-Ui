@@ -84,3 +84,12 @@
   width: 100%;
   overflow-x: hidden;
 }
+
+.filling-content::after {
+  content: "";
+  background-color: #92e6a7;
+  position: absolute;
+  border-radius: 100%;
+  /* top: -5px; */
+  /* left: -20px; */
+}

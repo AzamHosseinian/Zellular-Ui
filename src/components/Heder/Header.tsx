@@ -26,13 +26,14 @@ const Header = () => {
     >
       <div>
         <ZelAnimation />
-        <div className="animate-fadeIn opacity-0 sm:animate-none sm:opacity-100">
+        <div className="">
           <div className="navigation ">
             <div className="flex items-center w-full h-[140px] lg:h-[calc(4.5vw_+_4.5vh)] ml-[clamp(30px,5vw,88px)]">
-              <div className="w-full lt-1770:max-w-[170px] max-w-[calc(26vh_+_12vw)]">
+              <div className="w-full  lt-1770:max-w-[320px] max-w-[calc(26vh_+_8vw)]">
                 <svg
-                  width="61"
-                  height="48"
+                  className="w-[62px] h-[48px] lt-1590:w-[36px] lt-1550:h-[28px]"
+                  // width={"61"}
+                  // height={"48"}
                   viewBox="0 0 61 48"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -49,24 +50,18 @@ const Header = () => {
               </div>
 
               {/* Hamburger Menu for Mobile */}
-              <div className="bt-827:hidden absolute right-10">
-                <button
-                  className="flex flex-col items-center justify-center  w-10 h-10 text-[#92E6A7]  rounded-lg bg-[#FDF5E6] p-2  focus:outline-none"
+              <div className="hidden lt-1024:flex absolute right-10">
+                <div
+                  className="flex flex-col gap-[3px]"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  aria-label="Toggle Menu"
                 >
-                  <svg
-                    className="h-6 w-6 fill-current"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                  </svg>
-                </button>
+                  <div className="w-2 h-2 bg-[#92E6A7] rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#92E6A7] rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#92E6A7] rounded-full"></div>
+                </div>
               </div>
 
-              <div className="bt-827:flex hidden gap-[56px] text-[#92E6A7] text-[24px] font-courierPrime font-bold leading-[26.95px] ">
+              <div className="lt-1024:hidden flex gap-[50px] lt-1230:gap-[36px] text-[#92E6A7] text-[24px] lt-1550:text-base font-courierPrime font-bold leading-[26.95px] ">
                 <div
                   className="menu-item cursor-pointer"
                   onClick={() => scrollToSection("about")}
@@ -251,12 +246,11 @@ const Header = () => {
               </div>
             )}
 
-            <div className="md:mt-[calc(28vh_-100px)] mt-[120px] relative font-spaceGrotesk text-[clamp(1.5rem,3vw_+_1rem,5rem)]">
-              <div className="h-6 w-6 bg-[#92E6A7] absolute rounded-full left-4 md:left-20 top-2 md:-top-3"></div>
-              <div className="leading-[80px] text-[#FDF5E6] ml-10 md:ml-28 font-bold">
+            <div className="mt-[175px] lt-1024:mt-[60px] relative font-spaceGrotesk lt-414:text-[22px] lt-616:text-[28px] lt-1550:text-[48px] text-[80px] flex flex-col lt-1024:items-center">
+              <div className="leading-[80px] lt-414:-mt-[60px] text-[#FDF5E6] ml-10 md:ml-28 lt-1024:ml-0 font-bold filling-content relative after:w-3 after:h-3 after:top-5 after:-left-4 after:bt-414:w-4 after:bt-414:h-4 after:bt-414:-top-0 after:bt-768:w-5 after:bt-768:h-5 after:bt-768:-left-5 after:bt-768:-top-0">
                 <div>Filling the Gap between</div>
               </div>
-              <div className="leading-[80px] text-[#FDF5E6] justify-center ml-[40px] md:ml-[110px] lg:ml-[calc(112vw_-_75vw_-20px)] -mt-9 md:-mt-5 lg:mt-3 font-bold">
+              <div className="leading-[80px] text-[#FDF5E6] justify-center lt-1024:ml-[calc(112vw_-_74vw)] lg:ml-[calc(112vw_-_77vw_-25px)] lt-1550:-mt-5 lt-616:-mt-10 -mt-9 md:-mt-5 lg:mt-3 font-bold lt-414:-mt-12">
                 <div>
                   {" "}
                   Web2 <span className="font-cabinetGrotesk">& </span> Web3
@@ -264,7 +258,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="ml-[30px] md:ml-[125px] mt-[20px] md:mt-[calc(28vh_-125px)] text-[#92E6A7] text-[clamp(24px,5vw,40px)] leading-[44.98px] font-normal font-courierPrime">
+            <div className="ml-0 bt-1024:ml-[125px] flex flex-col lt-1024:items-center mt-[calc(22vh_-125px)] text-[#92E6A7] lt-616:text-[20px] lt-1550:text-[24px] lt-616:leading-7 text-[clamp(24px,5vw,40px)] leading-[44.98px] font-normal font-courierPrime">
               <div>Develop sub-second finality </div>
               <div className="ml-0  lg:ml-[calc(86.5vw_-_75vw_-20px)]">
                 high-throughput dApps
@@ -272,20 +266,30 @@ const Header = () => {
 
               <div className="ml-0 lg:ml-[calc(92.5vw_-_75vw_-20px)] flex gap-2">
                 in
-                <div className="typing-container text-[20px] md:text-[clamp(24px,5vw,40px)]">
+                <div className="typing-container text-[20px] md:text-[clamp(24px,5vw,40px)] lt-1550:text-[24px] lt-616:text-[20px]">
                   <span className="typing-effect italic">
                     &nbsp;any programming language.
                   </span>
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-10 left-0 right-0 w-full flex items-center justify-center text-[#FDF5E6] text-[16px] sm:text-[24px] font-courierPrime font-normal">
+
+            <div className="mt-[130px] bt-616:mt-[100px] lt-375:mt-[80px]  bt-1024:absolute bottom-10 left-0 right-0 w-full flex items-center justify-center text-[#FDF5E6] text-[16px] sm:text-[24px] font-courierPrime font-normal ">
               <div className="flex items-center justify-center relative">
-                <div className="w-2 h-2 sm:w-4 sm:h-4 bg-[#92E6A7] rounded-full"></div>
-                <div className="text-base bt-827:text-[24px] ml-2">
+                <div className="w-2 h-2 sm:w-4 sm:h-4 bg-[#92E6A7] rounded-full -mt-[5px]"></div>
+                <div className=" text-[24px] lt-1550:text-base ml-2">
                   Secured by EigenLayer
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="absolute bottom-5 left-2 right-2">
+            <div className="bt-1024:hidden mt-24 w-full flex items-center justify-center lt-414:hidden">
+              <img src="./assets/images/HeaderIcon/tablet.svg" />
+            </div>
+
+            <div className="bt-414:hidden mt-[140px] w-full flex items-center justify-center ">
+              <img src="./assets/images/HeaderIcon/tablet.svg" />
             </div>
           </div>
         </div>

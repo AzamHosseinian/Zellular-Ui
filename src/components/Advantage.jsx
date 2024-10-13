@@ -63,80 +63,46 @@ const Advantage = () => {
         width: "100vw",
       }}
     >
-      <div className="flex gap-4 text-[#003A6C] items-center ml-[80px] my-[80px] font-courierPrime text-[24px]">
-        <div className="w-5 h-5 bg-[#003A6C] rounded-full -mt-1"></div>
-        <div>ADVANTAGES</div>
+      <div
+        id="advantages"
+        className="mb-[130px] lt-1024:mb-[64px] lt-1024:mt-[64px] w-full flex items-center justify-center sm:justify-start ml-0 sm:ml-[80px] mt-[80px]"
+      >
+        <div className="flex sm:gap-4 gap-2 font-courierPrime text-base sm:text-[20px] md:text-[24px] items-center font-thin leading-[27px] text-[#003A6C] ">
+          <div className="w-[12px] h-[12px] sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full bg-[#003A6C] -mt-1"></div>
+          ADVANTAGES
+        </div>
       </div>
 
-      <Box
-        sx={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          padding: 4,
-          borderRadius: 2,
-        }}
-      >
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] w-full gap-[20px] lg:gap-[30px] max-w-[1600px] ">
+      <div className="w-full flex justify-center rounded-[2px] lt-1024:mb-[140px]">
+        <div className="flex gap-[40px] justify-center flex-wrap w-full">
           {advantages.map((adv, index) => (
-            <div className="flex items-center justify-center" key={index}>
-              <Paper
-                elevation={3}
-                sx={{
-                  padding: 2,
-                  backgroundColor: "#FDF5E6",
-                  color: "#003A6C",
-                  width: "340px",
-                  height: "645px",
-                  border: "2px solid #003A6C",
-                  alignItems: "center",
-                  borderRadius: 0,
-                  boxShadow: "none",
-                  transition: "all 0.1s ease",
-                }}
-                onMouseEnter={() => setHoveredIcon(adv.id)}
-                onMouseLeave={() => setHoveredIcon(null)}
-              >
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontFamily: "Chakra Petch",
-                    textAlign: "left",
-                    fontSize: "56px",
-                    fontWeight: "bold",
-                    paddingBottom: "20px",
-                  }}
-                >
+            <div className="flex items-stretch justify-center" key={index}>
+              <div className=" bg-[#FDF5E6] text-[#003A6C] border-2 border-[#003A6C] items-center  w-[340px] lt-1550:w-[255px]  lt-414:w-[240px]">
+                <div className="font-spaceGrotesk p-0 text-left text-[56px] lt-1550:text-[48px] lt-1550:font-semibold font-medium mt-2 ml-[24px]">
                   0{adv.id}
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    my: 2,
-                  }}
-                >
+                </div>
+                <div className="flex justify-center mt-[20px]">
                   <img
                     src={adv.icon}
                     alt={adv.title}
-                    style={{ width: "150px", height: "200px" }}
+                    className="w-[150px] h-[200px] lt-1024:h-[80px] lt-1024:w-[100px] lt-1550:h-[180px] lt-1550:w-[120px]"
                     loading="lazy"
                   />
-                </Box>
-                <div className="flex justify-center text-center w-full mb-[60px]">
-                  <div className="text-[26px] font-chakraPetch font-bold text-center leading-[33px] max-w-[170px]">
+                </div>
+                <div className="flex w-full mb-[60px] mt-[50px] justify-center text-center">
+                  <div className="text-[26px]  p-0 font-chakraPetch font-bold  leading-[33px] max-w-[170px]">
                     {adv.title}
                   </div>
                 </div>
 
-                <div className="text-[18px] font-courierPrime leading-[23px] font-normal">
+                <div className="text-center text-[20px] mb-2 lt-375:leading-5 md:leading-[24px] mx-2  lt-1550:text-[16px] lt-1024:text-[14px] font-courierPrime  font-normal text-[#003A6C]">
                   {adv.description}
                 </div>
-              </Paper>
+              </div>
             </div>
           ))}
         </div>
-      </Box>
+      </div>
     </Box>
   );
 };

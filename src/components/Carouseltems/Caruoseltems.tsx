@@ -34,7 +34,7 @@ const Item = ({ item }: Props) => {
           variant="body1"
           sx={{
             fontFamily: "Courier Prime",
-            fontSize: isMobile ? "16px" : isTablet ? "18px" : "26px",
+            fontSize: isMobile ? "16px" : isTablet ? "22px" : "26px",
             color: "#003A6C",
             textAlign: isMobile || isTablet ? "center" : "left",
             lineHeight: 1.5,
@@ -107,7 +107,7 @@ const CarouselItems = () => {
   }));
 
   return (
-    <div className="h-[396px] w-full max-w-[1350px] bg-none cursor-pointer border border-[#003a6c] flex  items-center bg-[#FDF5E6]">
+    <div className=" w-full max-w-[1350px] bg-none cursor-pointer border border-[#003a6c] flex  items-center bg-[#FDF5E6]">
       <Carousel
         interval={7000}
         duration={700}

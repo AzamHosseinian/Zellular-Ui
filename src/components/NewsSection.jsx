@@ -56,7 +56,7 @@ const Slider = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const isTablet = useMediaQuery(
-    theme.breakpoints.up("sm") + " and (min-width:1024px)"
+    theme.breakpoints.up("sm") + " and (min-width:768px)"
   );
 
   const isDesktop = useMediaQuery("(min-width:1421px)");
@@ -84,37 +84,33 @@ const Slider = () => {
   };
 
   return (
-    <div className="pb-[170px]" id="news">
-      <div className="text-[#003A6C] text-[24px] font-normal flex items-center gap-4 font-courierPrime mt-[80px] ml-[80px] mb-[80px]">
-        <div className="w-5 h-5 rounded-full bg-[#003A6C] -mt-1"></div>
-        <div>NEWS</div>
-      </div>
-      <div className="flex items-center md:justify-between justify-center gap-[92px] lt-1770:gap-[20px] ">
-        <div className="leftButton">
-          <IconButton
-            onClick={handlePrev}
-            disabled={currentIndex === 0}
-            sx={{
-              "&:hover": { backgroundColor: "transparent" },
-              // marginRight: isMobile ? "5px" : "20px",
-              // marginLeft: "auto",
-              width: 48,
-              height: 48,
-              "&.Mui-focusVisible": { outline: "none" },
-              "&:focus": { outline: "none" },
-              opacity: currentIndex === 0 ? 0.5 : 1,
-            }}
-          >
-            <img src={CustomBackIcon} alt="Previous" />
-          </IconButton>
+    <div className="pb-[170px] select-none" id="news">
+      <div
+        id="news"
+        className="mb-[130px] lt-1024:mb-[64px] lt-1024:mt-[64px] w-full flex items-center justify-center sm:justify-start ml-0 sm:ml-[80px] mt-[80px]"
+      >
+        <div className="flex sm:gap-4 gap-2 font-courierPrime text-base sm:text-[20px] md:text-[24px] items-center font-thin leading-[27px] text-[#003A6C] ">
+          <div className="w-[12px] h-[12px] sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full bg-[#003A6C] -mt-1"></div>
+          NEWS
         </div>
-        <div className="newsContent flex gap-10 lt-1596:gap-2 lt-1420:gap-10 ">
+      </div>
+      <div className="flex items-center md:justify-between justify-center gap-[92px] lt-1770:gap-[20px] ml-[20px] lt-827:ml-[5px]">
+        <div
+          className={`w-[48px] h-[48px] lt-827:w-[20px] lt-827:h-[30px] cursor-pointer ${
+            currentIndex === 0 ? "opacity-[0.5]" : "opacity-[1]"
+          }`}
+          onClick={handlePrev}
+          disabled={currentIndex === 0}
+        >
+          <img src={CustomBackIcon} alt="Previous" />
+        </div>
+        <div className="newsContent flex gap-10 lt-827:gap-4 ">
           {getItemsToShow().map((item, index) => (
             <div
               key={index}
-              className="flex items-center justify-center transition-all hover:shadow-myShadow  duration-[0.2s] ease-[ease] hover:translate-x-[5px] hover:translate-y-[-5px]"
+              className="flex items-center justify-center transition-all hover:shadow-myShadow duration-[0.2s] ease-[ease] hover:translate-x-[5px] hover:translate-y-[-5px]"
             >
-              <div className="max-w-[480px] h-[500px] border-2 border-[#003A6C]">
+              <div className="max-w-[480px] h-[500px] lt-827:h-[400px] border-2 border-[#003A6C]">
                 <div>
                   <img
                     src={item.image}
@@ -125,14 +121,14 @@ const Slider = () => {
                     }}
                   />
                 </div>
-                <div className="text-[#003A6C] pt-8 px-2 sm:px-8 font-courierPrime">
-                  <div className="mb-6 text-[18px] font-normal leading-5">
+                <div className="text-[#003A6C] pt-8 px-2 sm:px-8 lt-827:pt-[24px] lt-827:px-[24px] font-courierPrime">
+                  <div className="mb-6 text-[18px] lt-827:text-[10px] lt-827:mb-[16px] font-normal leading-5">
                     {item.date}
                   </div>
-                  <div className="mb-10 sm:text-[24px] font-bold leading-[27px] h-[40px] text-[16px]">
+                  <div className="mb-10 lt-827:mb-[24px] lg:text-[24px] lt-827:text[14px] font-bold lg:leading-[27px] h-[40px] text-[16px]">
                     {item.title}
                   </div>
-                  <div className="font-normal text-[16px] sm:text-[20px] leading-[22px] ">
+                  <div className="font-normal text-[16px] sm:text-[20px] leading-[22px] lt-827:text-[12px] ">
                     {item.description}
                   </div>
                 </div>
@@ -140,24 +136,16 @@ const Slider = () => {
             </div>
           ))}
         </div>
-        <div className="rightButton">
-          <IconButton
-            onClick={handleNext}
-            disabled={currentIndex + slidesToShow >= newsItems.length}
-            sx={{
-              "&:hover": { backgroundColor: "transparent" },
-              // marginLeft: isMobile ? "5px" : "20px",
-              // marginRight: "auto",
-              width: 48,
-              height: 48,
-              "&.Mui-focusVisible": { outline: "none" },
-              "&:focus": { outline: "none" },
-              opacity:
-                currentIndex + slidesToShow >= newsItems.length ? 0.5 : 1,
-            }}
-          >
-            <img src={CustomForwardIcon} alt="Next" />
-          </IconButton>
+        <div
+          className={`rightButton w-[48px] h-[48px] lt-827:w-[20px] lt-827:h-[30px] mr-[5px] cursor-pointer ${
+            currentIndex + slidesToShow >= newsItems.length
+              ? "opacity-[0.5]"
+              : "opacity-[1]}"
+          }`}
+          onClick={handleNext}
+          disabled={currentIndex + slidesToShow >= newsItems.length}
+        >
+          <img src={CustomForwardIcon} alt="Next" />
         </div>
       </div>
     </div>

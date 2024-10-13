@@ -124,13 +124,13 @@ const Advantage = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontFamily: "Courier Prime",
+                    fontFamily: "Space Grotesk",
                     textAlign: "left",
                     fontSize: "70px",
                     paddingBottom: "20px",
                   }}
                 >
-                  0{adv.id}
+                  {/* 0{adv.id} */}
                 </Typography>
                 <Box
                   sx={{
