@@ -73,7 +73,7 @@ const Advantage = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-center rounded-[2px] lt-1024:mb-[140px] pb-[200px]">
+      <div className="w-full flex justify-center rounded-[2px] lt-1024:mb-[140px] pb-[80px]">
         <div className="flex gap-[40px] justify-center flex-wrap w-full">
           {advantages.map((adv, index) => (
             <div className="flex items-stretch justify-center" key={index}>
