@@ -10,7 +10,7 @@ const ZelAnimation = () => {
             <div className="lt-1280:hidden bt-1440:hidden">
               <FullCircleRow />
               <FullCircleRow />
-              <FullCircleRow />
+              {/* <FullCircleRow /> */}
               {/* <FullCircleRow /> */}
               {/* <FullCircleRow /> */}
               {/* <FullCircleRow />
@@ -44,7 +44,7 @@ const ZelAnimation = () => {
             <div className="lt-1280:hidden bt-1440:hidden">
               <FullCircleRow />
               <FullCircleRow />
-              <FullCircleRow />
+              {/* <FullCircleRow /> */}
               {/* <FullCircleRow /> */}
               {/* <FullCircleRow /> */}
               {/* <FullCircleRow />
