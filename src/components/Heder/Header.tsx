@@ -274,7 +274,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="mt-[130px] bt-616:mt-[100px] lt-375:mt-[80px]  bt-1024:absolute bottom-10 left-0 right-0 w-full flex items-center justify-center text-[#FDF5E6] text-[16px] sm:text-[24px] font-courierPrime font-normal ">
+            <div className=" mt-[calc(28vh_-125px)] bt-1024:absolute bottom-10 left-0 right-0 w-full flex items-center justify-center text-[#FDF5E6] text-[16px] sm:text-[24px] font-courierPrime font-normal ">
               <div className="flex items-center justify-center relative">
                 <div className="w-2 h-2 sm:w-4 sm:h-4 bg-[#92E6A7] rounded-full -mt-[5px]"></div>
                 <div className=" text-[24px] lt-1550:text-base ml-2">
