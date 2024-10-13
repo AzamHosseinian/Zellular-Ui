@@ -11,11 +11,11 @@ const ZelAnimation = () => {
               <FullCircleRow />
               <FullCircleRow />
               <FullCircleRow />
+              {/* <FullCircleRow /> */}
+              {/* <FullCircleRow /> */}
+              {/* <FullCircleRow />
               <FullCircleRow />
-              <FullCircleRow />
-              <FullCircleRow />
-              <FullCircleRow />
-              <FullCircleRow />
+              <FullCircleRow /> */}
             </div>
             <FullCircleRow />
             <FullCircleRow />
@@ -45,11 +45,11 @@ const ZelAnimation = () => {
               <FullCircleRow />
               <FullCircleRow />
               <FullCircleRow />
+              {/* <FullCircleRow /> */}
+              {/* <FullCircleRow /> */}
+              {/* <FullCircleRow />
               <FullCircleRow />
-              <FullCircleRow />
-              <FullCircleRow />
-              <FullCircleRow />
-              <FullCircleRow />
+              <FullCircleRow /> */}
             </div>
           </div>
         </div>
