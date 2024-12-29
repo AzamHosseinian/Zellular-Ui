@@ -81,40 +81,48 @@ const Header = () => {
                   <span>Advantages</span>
                 </div>
                 <div
-                  className="menu-item cursor-pointer relative"
-                  onClick={() => setSocialOpen(!isSocialOpen)}
-                >
-                  <span>Social Media</span>
-                  {isSocialOpen && (
-                    <div className="social-dropdown">
-                      <div
-                        className="cursor-pointer"
-                        onClick={() =>
-                          openLink("https://discord.com/invite/zellular")
-                        }
-                      >
-                        Discord
-                      </div>
-                      <div
-                        className="cursor-pointer"
-                        onClick={() => openLink("https://medium.com/zellular")}
-                      >
-                        Medium
-                      </div>
-                      <div
-                        className="cursor-pointer"
-                        onClick={() => openLink("https://x.com/zellular_xyz")}
-                      >
-                        X
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div
                   className="cursor-pointer"
                   onClick={() => openLink("https://docs.zellular.xyz")}
                 >
-                  DOCS
+                  Docs
+                </div>
+                <div className=" flex justify-center items-center gap-2">
+                  <img
+                    src="./assets/images/socials/gitBook.svg"
+                    alt=""
+                    width={34}
+                    height={23}
+                    className="cursor-pointer"
+                    onClick={() =>
+                      openLink("https://zellular.gitbook.io/zellular-docs")
+                    }
+                  />
+                  <img
+                    src="./assets/images/socials/medium.svg"
+                    alt=""
+                    width={54}
+                    height={26}
+                    className="cursor-pointer"
+                    onClick={() => openLink("https://medium.com/zellular")}
+                  />
+                  <img
+                    src="./assets/images/socials/x.svg"
+                    alt=""
+                    width={36}
+                    height={26}
+                    className="cursor-pointer"
+                    onClick={() => openLink("https://x.com/zellular_xyz")}
+                  />
+                  <img
+                    src="./assets/images/socials/discord.svg"
+                    alt=""
+                    width={44}
+                    height={26}
+                    className="cursor-pointer"
+                    onClick={() =>
+                      openLink("https://discord.com/invite/zellular")
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -196,50 +204,58 @@ const Header = () => {
                         Advantages
                       </span>
                     </li>
-                    <li className="mb-1 relative">
-                      <span
-                        className="block p-4 text-[18px] font-semibold text-[#FDF5E6]  hover:text-[#92E6A7] rounded cursor-pointer"
-                        onClick={() => setSocialOpen(!isSocialOpen)}
-                      >
-                        Social Media
-                      </span>
-                      {isSocialOpen && (
-                        <div className="absolute left-0 mt-2 w-48 bg-transparent  rounded-md">
-                          <div
-                            className="cursor-pointer p-2  text-[#FDF5E6] ml-8"
-                            onClick={() =>
-                              openLink("https://discord.com/invite/zellular")
-                            }
-                          >
-                            Discord
-                          </div>
-                          <div
-                            className="cursor-pointer p-2 text-[#FDF5E6] ml-8"
-                            onClick={() =>
-                              openLink("https://medium.com/@zellular")
-                            }
-                          >
-                            Medium
-                          </div>
-                          <div
-                            className="cursor-pointer p-2  text-[#FDF5E6] ml-8"
-                            onClick={() =>
-                              openLink("https://x.com/zellular_xyz")
-                            }
-                          >
-                            X
-                          </div>
-                        </div>
-                      )}
-                    </li>
-
                     <li className="mb-1">
                       <span
                         className="block p-4 text-[18px] font-semibold text-[#FDF5E6]  hover:text-[#92E6A7] rounded cursor-pointer"
                         onClick={() => openLink("https://docs.zellular.xyz")}
                       >
-                        DOCS
+                        Docs
                       </span>
+                    </li>
+
+                    <li className="mb-1 relative">
+                      <div className="absolute flex justify-around mt-5 w-full bg-transparent  rounded-md">
+                        <img
+                          src="./assets/images/socials/gitBook.svg"
+                          alt=""
+                          width={34}
+                          height={23}
+                          className="cursor-pointer"
+                          onClick={() =>
+                            openLink(
+                              "https://zellular.gitbook.io/zellular-docs"
+                            )
+                          }
+                        />
+                        <img
+                          src="./assets/images/socials/medium.svg"
+                          alt=""
+                          width={54}
+                          height={26}
+                          className="cursor-pointer"
+                          onClick={() =>
+                            openLink("https://medium.com/zellular")
+                          }
+                        />
+                        <img
+                          src="./assets/images/socials/x.svg"
+                          alt=""
+                          width={36}
+                          height={26}
+                          className="cursor-pointer"
+                          onClick={() => openLink("https://x.com/zellular_xyz")}
+                        />
+                        <img
+                          src="./assets/images/socials/discord.svg"
+                          alt=""
+                          width={44}
+                          height={26}
+                          className="cursor-pointer"
+                          onClick={() =>
+                            openLink("https://discord.com/invite/zellular")
+                          }
+                        />
+                      </div>
                     </li>
                   </ul>
                 </nav>
