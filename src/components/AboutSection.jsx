@@ -1,34 +1,34 @@
 import React, { useState, useEffect } from "react";
 import {
   Box,
-  Button,
-  Typography,
-  useTheme,
-  useMediaQuery,
+  // Button,
+  // Typography,
+  // useTheme,
+  // useMediaQuery,
 } from "@mui/material";
-import LogoType from "/assets/images/AboutSection/logotype.svg";
+// import LogoType from "/assets/images/AboutSection/logotype.svg";
 import CarouselItems from "./Carouseltems/Caruoseltems";
 function AboutSection() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  // const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
-  const [scrollY, setScrollY] = useState(0);
+  // const [scrollY, setScrollY] = useState(0);
   const handleButtonClick = () => {
     window.open("https://docs.zellular.xyz", "_blank");
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-  const logoSize = scrollY >= window.innerHeight * 0.3 ? "30%" : "23%";
-  const mobileLogoSize = scrollY >= window.innerHeight * 0.2 ? "15%" : "10%";
+  // const logoSize = scrollY >= window.innerHeight * 0.3 ? "30%" : "23%";
+  // const mobileLogoSize = scrollY >= window.innerHeight * 0.2 ? "15%" : "10%";
 
   return (
     <Box
@@ -46,14 +46,7 @@ function AboutSection() {
     >
       <div
         id="about"
-        className="mb-[130px] lt-1024:mb-[64px] lt-1024:mt-[64px] w-full flex items-center justify-center sm:justify-start ml-0 sm:ml-[80px] mt-[80px]"
-
-        // sx={{
-        //   display: "flex",
-        //   alignItems: "center",
-        //   justifyContent: "center",
-        //   marginBottom: "130px",
-        // }}
+        className="mb-[130px] lt-1024:mb-[64px] lt-1024:mt-[64px] w-full sm:w-auto flex items-center justify-center sm:justify-start ml-0 sm:ml-[80px] mt-[80px]"
       >
         <div className="flex gap-2 sm:gap-4 font-courierPrime text-base sm:text-[20px] md:text-[24px] items-center font-thin leading-[27px] text-[#003A6C] ">
           <div className="w-[12px] h-[12px] sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full bg-[#003A6C] -mt-1"></div>
