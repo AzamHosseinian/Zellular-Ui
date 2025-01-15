@@ -33,6 +33,7 @@ export default {
         "lt-1170": { max: "1170px" },
         "lt-1212": { max: "1212px" },
         "lt-1420": { max: "1420px" },
+        "lt-940": { max: "940px" },
       },
       boxShadow: {
         myShadow: "-10px -10px 0px 0px #003A6C",

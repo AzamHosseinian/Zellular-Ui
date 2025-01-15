@@ -29,11 +29,9 @@ const Header = () => {
         <div className="">
           <div className="navigation ">
             <div className="flex items-center w-full h-[140px] lg:h-[calc(4.5vw_+_4.5vh)] ml-[clamp(30px,5vw,88px)]">
-              <div className="w-full  lt-1770:max-w-[320px] max-w-[calc(26vh_+_8vw)]">
+              <div className="w-full lt-1770:max-w-[260px] max-w-[calc(26vh_+_8vw)]">
                 <svg
                   className="w-[62px] h-[48px] lt-1590:w-[36px] lt-1550:h-[28px]"
-                  // width={"61"}
-                  // height={"48"}
                   viewBox="0 0 61 48"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +59,7 @@ const Header = () => {
                 </div>
               </div>
 
-              <div className="lt-1024:hidden flex gap-[50px] lt-1230:gap-[36px] text-[#92E6A7] text-[24px] lt-1550:text-base font-courierPrime font-bold leading-[26.95px] ">
+              <div className="lt-1024:hidden flex gap-[50px] lt-1280:gap-[36px] text-[#92E6A7] text-[24px] lt-1550:text-base font-courierPrime font-bold leading-[26.95px] ">
                 <div
                   className="menu-item cursor-pointer"
                   onClick={() => scrollToSection("about")}

@@ -74,15 +74,15 @@ const TeamSection = () => {
       }}
     >
       <div>
-        <div className="text-[#003a6c] ">
+        <div className="text-[#003a6c]">
           <div className="lt-1024:mb-[34px] lt-1550:mb-10 lt-1024:mt-[64px] w-full flex items-center justify-center sm:justify-start ml-0 sm:ml-[80px] mt-[80px]">
             <div className="flex lg:gap-4 gap-2 font-courierPrime text-base lt-1550:text-[20px] lg:text-[24px] items-center font-thin leading-[27px] text-[#003A6C] ">
               <div className="lt-1550:w-[16px] lt-1550:h-[16px] w-[20px] h-[20px] sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full bg-[#003A6C] -mt-1"></div>
               TEAM
             </div>
           </div>
-          <div className="text-[20px] lt-1550:text-[18px] lt-827:text-[14px] lt-827:font-bold leading-[32px] lt-1024:leading-[25px] flex items-center justify-center font-bold font-courierPrime  w-full  lt-827:mt-[90px]">
-            <div className="max-w-[1017px] lt-827:max-w-[480px] text-center px-0 lt-1024:px-10 ">
+          <div className="text-[20px] lt-1550:text-[18px] lt-940:text-[14px] lt-940:font-bold leading-[32px] lt-1024:leading-[25px] flex items-center justify-center font-bold font-courierPrime  w-full  lt-940:mt-[90px]">
+            <div className="max-w-[1017px] lt-940:max-w-[480px] text-center px-0 lt-1024:px-10 ">
               Zellular and its sub-projects are developed and maintained by a
               passionate and experienced global team with a variety of
               expertise.
@@ -93,57 +93,57 @@ const TeamSection = () => {
         <div className="w-full flex items-center justify-center mb-[225px] lt-616:hidden">
           <div className="max-w-[1540px] w-full flex items-center justify-around mt-[152px] lt-1607:pl-[80px] lt-1170:pr-10">
             <div className="flex relative w-full ">
-              <div className="w-[184px] h-[108px] lt-827:w-[100px] lt-827:h-[58px] bg-[#003A6C] rounded-[50%] flex items-center justify-center -mt-[15px]">
+              <div className="w-[184px] h-[108px] lt-940:w-[100px] lt-940:h-[58px] bg-[#003A6C] rounded-[50%] flex items-center justify-center -mt-[15px]">
                 <img
                   src="/assets/images/team/zel.svg"
                   alt=""
-                  className="w-[157px] h-[32px] lt-827:w-[84px] lt-827:h-[16px]"
+                  className="w-[157px] h-[32px] lt-940:w-[84px] lt-940:h-[16px]"
                 />
               </div>
 
-              <div className="absolute w-[281px] lt-827:w-[152px] lt-827:h-[90px]  h-[166px] border-2 border-[#003A6C] rounded-[50%] -top-11 -left-[4px] lt-827:-top-[31px]">
+              <div className="absolute w-[281px] lt-940:w-[152px] lt-940:h-[90px]  h-[166px] border-2 border-[#003A6C] rounded-[50%] -top-11 -left-[4px] lt-940:-top-[31px]">
                 <div
                   style={{ backgroundImage: `url(${teamInfo[0].darkImg})` }}
-                  className={`w-[53px] h-[53px] lt-827:w-[32px] lt-827:h-[32px] border-2  border-[#92E6A7]  bg-cover rounded-full cursor-pointer  z-50 bg-[#92E6A7] flex items-center justify-center absolute lt-827:left-[90px] lt-827:-top-[12px] left-[190px] -top-[15px]`}
+                  className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] border-2  border-[#92E6A7]  bg-cover rounded-full cursor-pointer  z-50 bg-[#92E6A7] flex items-center justify-center absolute lt-940:left-[90px] lt-940:-top-[12px] left-[190px] -top-[15px]`}
                   onMouseOver={() => handleHover(0)}
                 ></div>
                 <div
                   style={{ backgroundImage: `url(${teamInfo[1].darkImg})` }}
-                  className={`w-[53px] h-[53px] lt-827:w-[32px] lt-827:h-[32px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute lt-827:left-[90px] lt-827:-bottom-3 left-[215px] -bottom-1`}
+                  className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute lt-940:left-[90px] lt-940:-bottom-3 left-[215px] -bottom-1`}
                   onMouseOver={() => handleHover(1)}
                 ></div>
               </div>
 
-              <div className="absolute w-[395px] h-[232px] lt-827:w-[214px] lt-827:h-[124px] border-2 border-[#003A6C] rounded-[50%] -top-[77px] lt-827:-top-[48px] -left-[10px]">
+              <div className="absolute w-[395px] h-[232px] lt-940:w-[214px] lt-940:h-[124px] border-2 border-[#003A6C] rounded-[50%] -top-[77px] lt-940:-top-[48px] -left-[10px]">
                 <div
                   style={{ backgroundImage: `url(${teamInfo[2].darkImg})` }}
-                  className={`w-[53px] h-[53px] lt-827:w-[32px] lt-827:h-[32px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute lt-827:left-[192px] lt-827:top-[45px]  left-[360px] top-[85px]`}
+                  className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute lt-940:left-[192px] lt-940:top-[45px]  left-[360px] top-[85px]`}
                   onMouseOver={() => handleHover(2)}
                 ></div>
               </div>
 
-              <div className="absolute w-[520px] h-[306px] lt-827:w-[281px] lt-827:h-[163px] border-2  border-[#003A6C] rounded-[50%] -top-[112px] lt-827:-top-[68px] -left-[16px]">
+              <div className="absolute w-[520px] h-[306px] lt-940:w-[281px] lt-940:h-[163px] border-2  border-[#003A6C] rounded-[50%] -top-[112px] lt-940:-top-[68px] -left-[16px]">
                 <div
                   style={{ backgroundImage: `url(${teamInfo[4].darkImg})` }}
-                  className={`w-[53px] h-[53px] lt-827:w-[32px] lt-827:h-[32px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute lt-827:left-[210px] lt-827:top-[0px] left-[380px] top-[0px]`}
+                  className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute lt-940:left-[210px] lt-940:top-[0px] left-[380px] top-[0px]`}
                   onMouseOver={() => handleHover(4)}
                 ></div>
                 <div
                   style={{ backgroundImage: `url(${teamInfo[5].darkImg})` }}
-                  className={`w-[53px] h-[53px] lt-827:w-[32px] lt-827:h-[32px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute lt-827:left-[215px] lt-827:top-[122px] left-[400px] top-[235px]`}
+                  className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute lt-940:left-[215px] lt-940:top-[122px] left-[400px] top-[235px]`}
                   onMouseOver={() => handleHover(5)}
                 ></div>
               </div>
 
-              <div className="absolute w-[657px] h-[387px] lt-827:w-[356px] lt-827:h-[207px] border-2  border-[#003A6C] rounded-[50%] -top-[152px] -left-[26px] lt-827:-top-[90px]">
+              <div className="absolute w-[657px] h-[387px] lt-940:w-[356px] lt-940:h-[207px] border-2  border-[#003A6C] rounded-[50%] -top-[152px] -left-[26px] lt-940:-top-[90px]">
                 <div
                   style={{ backgroundImage: `url(${teamInfo[6].darkImg})` }}
-                  className={`w-[53px] h-[53px] lt-827:w-[32px] lt-827:h-[32px] bg-cover rounded-full cursor-pointer border-2 border-[#92E6A7] flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[590px] top-[75px] lt-827:left-[320px] lt-827:top-[40px]`}
+                  className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] bg-cover rounded-full cursor-pointer border-2 border-[#92E6A7] flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[590px] top-[75px] lt-940:left-[320px] lt-940:top-[40px]`}
                   onMouseOver={() => handleHover(6)}
                 ></div>
                 <div
                   style={{ backgroundImage: `url(${teamInfo[3].darkImg})` }}
-                  className={`w-[53px] h-[53px] lt-827:w-[32px] lt-827:h-[32px] bg-cover  border-2 border-[#92E6A7] rounded-full cursor-pointer z-50 flex items-center justify-center bg-[#92E6A7] absolute left-[585px] bottom-[70px] lt-827:left-[325px] lt-827:bottom-[50px]`}
+                  className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] bg-cover  border-2 border-[#92E6A7] rounded-full cursor-pointer z-50 flex items-center justify-center bg-[#92E6A7] absolute left-[585px] bottom-[70px] lt-940:left-[325px] lt-940:bottom-[50px]`}
                   onMouseOver={() => handleHover(3)}
                 ></div>
               </div>
@@ -157,14 +157,14 @@ const TeamSection = () => {
               <div>
                 <img
                   src={teamInfo[0].imgSrc}
-                  className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-827:w-[120px] lt-827:h-[120px]   border-4 border-[#92E6A7] rounded-full "
+                  className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
                 />
               </div>
-              <div className="mt-[35px] ml-8 lt-827:ml-0">
-                <div className="text-[40px] lt-827:text-[20px]">
+              <div className="mt-[35px] ml-8 lt-940:ml-0">
+                <div className="text-[40px] lt-940:text-[20px]">
                   {teamInfo[0].name}
                 </div>
-                <div className="flex items-center text-[24px] lt-827:text-[20px] font-normal lt-827:gap-1 gap-3">
+                <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
                   <div>{teamInfo[0].position}</div>
                   <svg
                     width="110"
@@ -204,16 +204,16 @@ const TeamSection = () => {
             >
               <img
                 src={teamInfo[1].imgSrc}
-                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-827:w-[120px] lt-827:h-[120px]   border-4 border-[#92E6A7] rounded-full "
+                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
               />
-              <div className="mt-[35px] ml-8 lt-827:ml-0">
-                <div className="text-[40px] lt-827:text-[20px]">
+              <div className="mt-[35px] ml-8 lt-940:ml-0">
+                <div className="text-[40px] lt-940:text-[20px]">
                   {teamInfo[1].name}
                 </div>
-                <div className="flex items-center text-[24px] lt-827:text-[20px] font-normal lt-827:gap-1 gap-3">
+                <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
                   <div>{teamInfo[1].position}</div>
                   <svg
-                    className="w-[110px] lt-827:w-[48px]"
+                    className="w-[110px] lt-940:w-[48px]"
                     // width="110"
                     // height="6"
                     viewBox="0 0 110 6"
@@ -228,7 +228,7 @@ const TeamSection = () => {
 
                   <a href={teamInfo[1].xLink} target="_blank">
                     <svg
-                      className="w-[26px] h-[24px] lt-827:w-[16px] lt-827:h-[16px]"
+                      className="w-[26px] h-[24px] lt-940:w-[16px] lt-940:h-[16px]"
                       // width="26"
                       // height="24"
                       viewBox="0 0 26 24"
@@ -252,13 +252,13 @@ const TeamSection = () => {
             >
               <img
                 src={teamInfo[2].imgSrc}
-                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-827:w-[120px] lt-827:h-[120px]   border-4 border-[#92E6A7] rounded-full "
+                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
               />
-              <div className="mt-[35px] ml-8 lt-827:ml-0">
-                <div className="text-[40px] lt-827:text-[20px]">
+              <div className="mt-[35px] ml-8 lt-940:ml-0">
+                <div className="text-[40px] lt-940:text-[20px]">
                   {teamInfo[2].name}
                 </div>
-                <div className="flex items-center text-[24px] lt-827:text-[20px] font-normal lt-827:gap-1 gap-3">
+                <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
                   <div>{teamInfo[2].position}</div>
                   <svg
                     width="110"
@@ -298,13 +298,13 @@ const TeamSection = () => {
             >
               <img
                 src={teamInfo[3].imgSrc}
-                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-827:w-[120px] lt-827:h-[120px]   border-4 border-[#92E6A7] rounded-full "
+                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
               />
-              <div className="mt-[35px] ml-8 lt-827:ml-0">
-                <div className="text-[40px] lt-827:text-[20px]">
+              <div className="mt-[35px] ml-8 lt-940:ml-0">
+                <div className="text-[40px] lt-940:text-[20px]">
                   {teamInfo[3].name}
                 </div>
-                <div className="flex items-center text-[24px] lt-827:text-[20px] font-normal lt-827:gap-1 gap-3">
+                <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
                   <div>{teamInfo[3].position}</div>
                   <svg
                     width="110"
@@ -344,13 +344,13 @@ const TeamSection = () => {
             >
               <img
                 src={teamInfo[4].imgSrc}
-                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-827:w-[120px] lt-827:h-[120px]   border-4 border-[#92E6A7] rounded-full "
+                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
               />
-              <div className="mt-[35px] ml-8 lt-827:ml-0">
-                <div className="text-[40px] lt-827:text-[20px]">
+              <div className="mt-[35px] ml-8 lt-940:ml-0">
+                <div className="text-[40px] lt-940:text-[20px]">
                   {teamInfo[4].name}
                 </div>
-                <div className="flex items-center text-[24px] lt-827:text-[20px] font-normal lt-827:gap-1 gap-3">
+                <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
                   <div>{teamInfo[4].position}</div>
                   <svg
                     width="110"
@@ -390,13 +390,13 @@ const TeamSection = () => {
             >
               <img
                 src={teamInfo[5].imgSrc}
-                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-827:w-[120px] lt-827:h-[120px]   border-4 border-[#92E6A7] rounded-full "
+                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
               />
-              <div className="mt-[35px] ml-8 lt-827:ml-0">
-                <div className="text-[40px] lt-827:text-[20px]">
+              <div className="mt-[35px] ml-8 lt-940:ml-0">
+                <div className="text-[40px] lt-940:text-[20px]">
                   {teamInfo[5].name}
                 </div>
-                <div className="flex items-center text-[24px] lt-827:text-[20px] font-normal lt-827:gap-1 gap-3">
+                <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
                   <div>{teamInfo[5].position}</div>
                   <svg
                     width="110"
@@ -436,13 +436,13 @@ const TeamSection = () => {
             >
               <img
                 src={teamInfo[6].imgSrc}
-                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-827:w-[120px] lt-827:h-[120px]   border-4 border-[#92E6A7] rounded-full "
+                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
               />
-              <div className="mt-[35px] ml-8 lt-827:ml-0">
-                <div className="text-[40px] lt-827:text-[20px]">
+              <div className="mt-[35px] ml-8 lt-940:ml-0">
+                <div className="text-[40px] lt-940:text-[20px]">
                   {teamInfo[6].name}
                 </div>
-                <div className="flex items-center text-[24px] lt-827:text-[20px] font-normal lt-827:gap-1 gap-3">
+                <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
                   <div>{teamInfo[6].position}</div>
                   <svg
                     width="110"
@@ -485,11 +485,11 @@ const TeamSection = () => {
             >
               <div
                 style={{ backgroundImage: `url(${member.imgSrc})` }}
-                className={`w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-827:w-[120px] lt-827:h-[120px]  bg-cover border-4 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
+                className={`w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]  bg-cover border-4 border-[#92E6A7] bg-[#92E6A7] rounded-full flex items-center justify-center p-5`}
               ></div>
               <div className="mt-[20px] flex flex-col items-center justify-center">
                 <div className="text-[20px]">{member.name}</div>
-                <div className="flex items-center lt-827:text-[20px] gap-3">
+                <div className="flex items-center lt-940:text-[20px] gap-3">
                   <div>{member.position}</div>
                   <svg
                     width="110"
@@ -506,7 +506,7 @@ const TeamSection = () => {
 
                   <a href={member.xLink} target="_blank">
                     <svg
-                      className="w-[26px] h-[24px] lt-827:w-[16px] lt-827:h-[16px]"
+                      className="w-[26px] h-[24px] lt-940:w-[16px] lt-940:h-[16px]"
                       viewBox="0 0 26 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
