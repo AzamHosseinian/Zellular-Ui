@@ -3,14 +3,14 @@ import backgroundImage from "/assets/images/team/bg-team.svg";
 
 const TeamSection = () => {
   const teamInfo = [
-    {
-      id: 1,
-      name: "Bob",
-      position: "CEO",
-      imgSrc: "./assets/images/team/bob.png",
-      darkImg: "./assets/images/team/bw/bob.png",
-      xLink: "https://x.com/0xbobx",
-    },
+    // {
+    //   id: 1,
+    //   name: "Bob",
+    //   position: "CEO",
+    //   imgSrc: "./assets/images/team/bob.png",
+    //   darkImg: "./assets/images/team/bw/bob.png",
+    //   xLink: "https://x.com/0xbobx",
+    // },
     {
       id: 2,
       name: "Mahdi",
@@ -22,7 +22,7 @@ const TeamSection = () => {
     {
       id: 3,
       name: "Robert",
-      position: "COO",
+      position: "CFO",
       imgSrc: "./assets/images/team/robert.png",
       darkImg: "./assets/images/team/bw/robert.png",
       xLink: "https://x.com/robwal2001",
@@ -102,13 +102,13 @@ const TeamSection = () => {
               </div>
 
               <div className="absolute w-[281px] lt-940:w-[152px] lt-940:h-[90px]  h-[166px] border-2 border-[#003A6C] rounded-[50%] -top-11 -left-[4px] lt-940:-top-[31px]">
-                <div
+                {/* <div
                   style={{ backgroundImage: `url(${teamInfo[0].darkImg})` }}
                   className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] border-2  border-[#92E6A7]  bg-cover rounded-full cursor-pointer  z-50 bg-[#92E6A7] flex items-center justify-center absolute lt-940:left-[90px] lt-940:-top-[12px] left-[190px] -top-[15px]`}
                   onMouseOver={() => handleHover(0)}
-                ></div>
+                ></div> */}
                 <div
-                  style={{ backgroundImage: `url(${teamInfo[1].darkImg})` }}
+                  style={{ backgroundImage: `url(${teamInfo[0].darkImg})` }}
                   className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute lt-940:left-[90px] lt-940:-bottom-3 left-[215px] -bottom-1`}
                   onMouseOver={() => handleHover(1)}
                 ></div>
@@ -116,7 +116,7 @@ const TeamSection = () => {
 
               <div className="absolute w-[395px] h-[232px] lt-940:w-[214px] lt-940:h-[124px] border-2 border-[#003A6C] rounded-[50%] -top-[77px] lt-940:-top-[48px] -left-[10px]">
                 <div
-                  style={{ backgroundImage: `url(${teamInfo[2].darkImg})` }}
+                  style={{ backgroundImage: `url(${teamInfo[1].darkImg})` }}
                   className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] border-2 border-[#92E6A7] bg-cover flex items-center justify-center rounded-full cursor-pointer z-50 bg-[#92E6A7] absolute lt-940:left-[192px] lt-940:top-[45px]  left-[360px] top-[85px]`}
                   onMouseOver={() => handleHover(2)}
                 ></div>
@@ -124,12 +124,12 @@ const TeamSection = () => {
 
               <div className="absolute w-[520px] h-[306px] lt-940:w-[281px] lt-940:h-[163px] border-2  border-[#003A6C] rounded-[50%] -top-[112px] lt-940:-top-[68px] -left-[16px]">
                 <div
-                  style={{ backgroundImage: `url(${teamInfo[4].darkImg})` }}
+                  style={{ backgroundImage: `url(${teamInfo[3].darkImg})` }}
                   className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute lt-940:left-[210px] lt-940:top-[0px] left-[380px] top-[0px]`}
                   onMouseOver={() => handleHover(4)}
                 ></div>
                 <div
-                  style={{ backgroundImage: `url(${teamInfo[5].darkImg})` }}
+                  style={{ backgroundImage: `url(${teamInfo[4].darkImg})` }}
                   className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] bg-cover rounded-full border-2 border-[#92E6A7] cursor-pointer flex items-center justify-center z-50 bg-[#92E6A7] absolute lt-940:left-[215px] lt-940:top-[122px] left-[400px] top-[235px]`}
                   onMouseOver={() => handleHover(5)}
                 ></div>
@@ -137,19 +137,19 @@ const TeamSection = () => {
 
               <div className="absolute w-[657px] h-[387px] lt-940:w-[356px] lt-940:h-[207px] border-2  border-[#003A6C] rounded-[50%] -top-[152px] -left-[26px] lt-940:-top-[90px]">
                 <div
-                  style={{ backgroundImage: `url(${teamInfo[6].darkImg})` }}
+                  style={{ backgroundImage: `url(${teamInfo[5].darkImg})` }}
                   className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] bg-cover rounded-full cursor-pointer border-2 border-[#92E6A7] flex items-center justify-center z-50 bg-[#92E6A7] absolute left-[590px] top-[75px] lt-940:left-[320px] lt-940:top-[40px]`}
                   onMouseOver={() => handleHover(6)}
                 ></div>
                 <div
-                  style={{ backgroundImage: `url(${teamInfo[3].darkImg})` }}
+                  style={{ backgroundImage: `url(${teamInfo[2].darkImg})` }}
                   className={`w-[53px] h-[53px] lt-940:w-[32px] lt-940:h-[32px] bg-cover  border-2 border-[#92E6A7] rounded-full cursor-pointer z-50 flex items-center justify-center bg-[#92E6A7] absolute left-[585px] bottom-[70px] lt-940:left-[325px] lt-940:bottom-[50px]`}
                   onMouseOver={() => handleHover(3)}
                 ></div>
               </div>
             </div>
 
-            <div
+            {/* <div
               className={`${
                 selectedMember == 0 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
@@ -195,7 +195,7 @@ const TeamSection = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div
               className={`${
@@ -203,15 +203,15 @@ const TeamSection = () => {
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
               <img
-                src={teamInfo[1].imgSrc}
+                src={teamInfo[0].imgSrc}
                 className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
               />
               <div className="mt-[35px] ml-8 lt-940:ml-0">
                 <div className="text-[40px] lt-940:text-[20px]">
-                  {teamInfo[1].name}
+                  {teamInfo[0].name}
                 </div>
                 <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
-                  <div>{teamInfo[1].position}</div>
+                  <div>{teamInfo[0].position}</div>
                   <svg
                     className="w-[110px] lt-940:w-[48px]"
                     // width="110"
@@ -226,7 +226,7 @@ const TeamSection = () => {
                     />
                   </svg>
 
-                  <a href={teamInfo[1].xLink} target="_blank">
+                  <a href={teamInfo[0].xLink} target="_blank">
                     <svg
                       className="w-[26px] h-[24px] lt-940:w-[16px] lt-940:h-[16px]"
                       // width="26"
@@ -248,6 +248,52 @@ const TeamSection = () => {
             <div
               className={`${
                 selectedMember == 2 ? "flex flex-col" : "hidden"
+              } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
+            >
+              <img
+                src={teamInfo[1].imgSrc}
+                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
+              />
+              <div className="mt-[35px] ml-8 lt-940:ml-0">
+                <div className="text-[40px] lt-940:text-[20px]">
+                  {teamInfo[1].name}
+                </div>
+                <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
+                  <div>{teamInfo[1].position}</div>
+                  <svg
+                    width="110"
+                    height="6"
+                    viewBox="0 0 110 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.466878 3C0.466878 4.47276 1.66079 5.66667 3.13354 5.66667C4.6063 5.66667 5.80021 4.47276 5.80021 3C5.80021 1.52724 4.6063 0.333333 3.13354 0.333333C1.66079 0.333333 0.466878 1.52724 0.466878 3ZM104.467 3C104.467 4.47276 105.661 5.66667 107.134 5.66667C108.606 5.66667 109.8 4.47276 109.8 3C109.8 1.52724 108.606 0.333333 107.134 0.333333C105.661 0.333333 104.467 1.52724 104.467 3ZM3.13354 3.5H107.134V2.5H3.13354V3.5Z"
+                      fill="#003A6C"
+                    />
+                  </svg>
+
+                  <a href={teamInfo[1].xLink} target="_blank">
+                    <svg
+                      width="26"
+                      height="24"
+                      viewBox="0 0 26 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.28169 0C1.99073 0 0.133545 1.79086 0.133545 4V20C0.133545 22.2091 1.99073 24 4.28169 24H20.8743C23.1652 24 25.0224 22.2091 25.0224 20V4C25.0224 1.79086 23.1652 0 20.8743 0H4.28169ZM5.5178 5.14286H10.2215L13.5618 9.71987L17.615 5.14286H19.0965L14.2308 10.6362L20.2308 18.8571H15.5282L11.6521 13.5469L6.94836 18.8571H5.46688L10.9831 12.6306L5.5178 5.14286ZM7.78632 6.28571L16.1463 17.7143H17.9622L9.60229 6.28571H7.78632Z"
+                        fill="#003A6C"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className={`${
+                selectedMember == 3 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
               <img
@@ -293,7 +339,7 @@ const TeamSection = () => {
 
             <div
               className={`${
-                selectedMember == 3 ? "flex flex-col" : "hidden"
+                selectedMember == 4 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
               <img
@@ -339,7 +385,7 @@ const TeamSection = () => {
 
             <div
               className={`${
-                selectedMember == 4 ? "flex flex-col" : "hidden"
+                selectedMember == 5 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
               <img
@@ -385,7 +431,7 @@ const TeamSection = () => {
 
             <div
               className={`${
-                selectedMember == 5 ? "flex flex-col" : "hidden"
+                selectedMember == 6 ? "flex flex-col" : "hidden"
               } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
             >
               <img
@@ -412,52 +458,6 @@ const TeamSection = () => {
                   </svg>
 
                   <a href={teamInfo[5].xLink} target="_blank">
-                    <svg
-                      width="26"
-                      height="24"
-                      viewBox="0 0 26 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.28169 0C1.99073 0 0.133545 1.79086 0.133545 4V20C0.133545 22.2091 1.99073 24 4.28169 24H20.8743C23.1652 24 25.0224 22.2091 25.0224 20V4C25.0224 1.79086 23.1652 0 20.8743 0H4.28169ZM5.5178 5.14286H10.2215L13.5618 9.71987L17.615 5.14286H19.0965L14.2308 10.6362L20.2308 18.8571H15.5282L11.6521 13.5469L6.94836 18.8571H5.46688L10.9831 12.6306L5.5178 5.14286ZM7.78632 6.28571L16.1463 17.7143H17.9622L9.60229 6.28571H7.78632Z"
-                        fill="#003A6C"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className={`${
-                selectedMember == 6 ? "flex flex-col" : "hidden"
-              } text-[#003A6C] font-courierPrime w-full max-w-[400px] lt-1170:max-w-[200px]`}
-            >
-              <img
-                src={teamInfo[6].imgSrc}
-                className="w-[240px] h-[240px] lt-1550:w-[180px] lt-1550:h-[180px] lt-940:w-[120px] lt-940:h-[120px]   border-4 border-[#92E6A7] rounded-full "
-              />
-              <div className="mt-[35px] ml-8 lt-940:ml-0">
-                <div className="text-[40px] lt-940:text-[20px]">
-                  {teamInfo[6].name}
-                </div>
-                <div className="flex items-center text-[24px] lt-940:text-[20px] font-normal lt-940:gap-1 gap-3">
-                  <div>{teamInfo[6].position}</div>
-                  <svg
-                    width="110"
-                    height="6"
-                    viewBox="0 0 110 6"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0.466878 3C0.466878 4.47276 1.66079 5.66667 3.13354 5.66667C4.6063 5.66667 5.80021 4.47276 5.80021 3C5.80021 1.52724 4.6063 0.333333 3.13354 0.333333C1.66079 0.333333 0.466878 1.52724 0.466878 3ZM104.467 3C104.467 4.47276 105.661 5.66667 107.134 5.66667C108.606 5.66667 109.8 4.47276 109.8 3C109.8 1.52724 108.606 0.333333 107.134 0.333333C105.661 0.333333 104.467 1.52724 104.467 3ZM3.13354 3.5H107.134V2.5H3.13354V3.5Z"
-                      fill="#003A6C"
-                    />
-                  </svg>
-
-                  <a href={teamInfo[6].xLink} target="_blank">
                     <svg
                       width="26"
                       height="24"
